@@ -25,7 +25,7 @@
                     <li><a href="#" class="nav-link" onclick="showBrandsModal(); return false;"><i class="fas fa-car"></i> Автомобили</a></li>
                     <li><a href="#" class="nav-link" onclick="showInstructions(); return false;"><i class="fas fa-book"></i> Инструкция</a></li>
                     <li><a href="#" class="nav-link"><i class="fas fa-info-circle"></i> О проекте</a></li>
-                    <li><a href="#" class="nav-link"><i class="fas fa-envelope"></i> Контакты</a></li>
+                    <li><a href="#" class="nav-link" onclick="showContacts(); return false;"><i class="fas fa-envelope"></i> Контакты</a></li>
                 </ul>
                 <div class="nav-actions">
                     <button class="search-toggle-btn" onclick="toggleSearch(); return false;">
@@ -139,19 +139,7 @@
     </section>
 
     <!-- Футер -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>GRAN TURISMO 7</h3>
-                    <p>Официальный каталог автомобилей</p>
-                </div>
-                <div class="footer-section">
-                    <p>&copy; 2024 Sony Interactive Entertainment. Все права защищены.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+
 
     <!-- Модальное окно для деталей автомобиля -->
     <div id="carModal" class="modal">
@@ -306,8 +294,38 @@
                 </div>
                 <div class="footer-description">
                     <h3>Gran Turismo 7 Каталог</h3>
-                    <p>Полная коллекция автомобилей с детальными характеристиками и изображениями. Все данные загружаются из локальных папок.</p>
+                    <p>Gran Turismo 7 Каталог - это современный веб-сайт, созданный для демонстрации полной коллекции автомобилей из игры Gran Turismo 7. Проект включает в себя детальную информацию о каждом автомобиле, включая технические характеристики, изображения и скриншоты.
+<br><br>
+                        Сайт разработан с использованием современных веб-технологий и демонстрирует возможности создания красивых и функциональных интерфейсов с применением стиля Liquid Glass и премиального минимализма.</p>
                 </div>
+                
+                <!-- Компактная карточка автора -->
+                <div class="footer-author-compact">
+                    <div class="author-compact-card">
+                        <div class="author-compact-info">
+                            <div class="author-compact-avatar">
+                                <img src="images/contacts/ava.jpg" alt="Радыгин Иван Олегович" class="author-compact-img">
+                            </div>
+                            <div class="author-compact-details">
+                                <h4 class="author-compact-name">Радыгин Иван</h4>
+                                <p class="author-compact-title">Автор проекта</p>
+                            </div>
+                        </div>
+                        <div class="author-compact-social">
+                            <a href="https://vk.com/limited_edition_24" target="_blank" class="social-compact-link vk-link" title="ВКонтакте">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                            <a href="https://t.me/delbraun" target="_blank" class="social-compact-link telegram-link" title="Telegram">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="tel:+79994459069" class="social-compact-link phone-link" title="Телефон">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+
             </div>
             <div class="footer-divider"></div>
             <div class="footer-bottom">
@@ -333,6 +351,56 @@
             </div>
         </div>
     </footer>
+
+    <!-- Модальное окно контактов -->
+    <div id="contactsModal" class="modal contacts-modal">
+        <div class="modal-content contacts-modal-content">
+            <div class="modal-header">
+                <button class="close-btn" onclick="closeContacts()">
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="modal-title">
+                    <i class="fas fa-envelope"></i>
+                    <span>Контакты</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="contacts-content">
+                    <div class="developer-info">
+                        <div class="developer-avatar">
+                            <img src="images/contacts/ava.jpg" alt="Радыгин Иван Олегович" class="avatar-img">
+                        </div>
+                        <div class="developer-details">
+                            <h3 class="developer-name">Радыгин Иван</h3>
+                            <p class="developer-title">Разработчик проекта</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contacts-section">
+                        <h4><i class="fas fa-phone"></i> Телефон</h4>
+                        <a href="tel:+79994459069" class="contact-link">+7 (999) 445-90-69</a>
+                    </div>
+                    
+                    <div class="contacts-section">
+                        <h4><i class="fab fa-vk"></i> ВКонтакте</h4>
+                        <a href="https://vk.com/limited_edition_24" target="_blank" class="contact-link">@limited_edition_24</a>
+                    </div>
+                    
+                    <div class="contacts-section">
+                        <h4><i class="fab fa-telegram"></i> Telegram</h4>
+                        <a href="https://t.me/delbraun" target="_blank" class="contact-link">@delbraun</a>
+                    </div>
+                    
+                    <div class="project-info">
+                        <h4><i class="fas fa-info-circle"></i> О проекте</h4>
+                        <p>Gran Turismo 7 Каталог - это современный веб-сайт, созданный для демонстрации полной коллекции автомобилей из игры Gran Turismo 7. Проект включает в себя детальную информацию о каждом автомобиле, включая технические характеристики, изображения и скриншоты.</p>
+                        <p>Сайт разработан с использованием современных веб-технологий и демонстрирует возможности создания красивых и функциональных интерфейсов с применением стиля Liquid Glass и премиального минимализма.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

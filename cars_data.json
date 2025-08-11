@@ -2897,5 +2897,131 @@
       "width": "1 974 мм",
       "height": "880 мм"
     }
+  },
+  {
+    "id": 94,
+    "brand": "Chevrolet",
+    "name": "Camaro SS '16",
+    "name_short": "Camaro SS",
+    "year": "16",
+    "type": "modern",
+    "power": "460 л. с. / 6 000 об/мин",
+    "torque": "617,4 Н/м / 4 500 об/мин",
+    "weight": "1 672 кг",
+    "price": "N/A",
+    "image": "images/cars/Chevrolet/Camaro SS '16/car3217.png",
+    "brand_logo": "images/cars/Chevrolet/tnr7.png",
+    "screenshots": [
+      "images/cars/Chevrolet/Camaro SS '16/car3217_1_01-CxqjJKi8.jpg",
+      "images/cars/Chevrolet/Camaro SS '16/car3217_1_02-CLRGWnKS.jpg",
+      "images/cars/Chevrolet/Camaro SS '16/car3217_2_01-B5YtKvxl.jpg",
+      "images/cars/Chevrolet/Camaro SS '16/car3217_2_02-BTXUMwBB.jpg",
+      "images/cars/Chevrolet/Camaro SS '16/car3217_3_01-C95vpmSe.jpg"
+    ],
+    "description": "Спортивная модель 6-го поколения Camaro с 6,2-литровым двигателем LT1.",
+    "category": "ТР 564.68",
+    "pp": "564.68",
+    "displacement": "6 162 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 783 мм",
+      "width": "1 897 мм",
+      "height": "1 349 мм"
+    }
+  },
+  {
+    "id": 95,
+    "brand": "Chevrolet",
+    "name": "Camaro Z28 '69",
+    "name_short": "Camaro Z28",
+    "year": "69",
+    "type": "modern",
+    "power": "294 л. с. / 6 000 об/мин",
+    "torque": "392,9 Н/м / 4 000 об/мин",
+    "weight": "1 415 кг",
+    "price": "N/A",
+    "image": "images/cars/Chevrolet/Camaro Z28 '69/car31.png",
+    "brand_logo": "images/cars/Chevrolet/tnr7.png",
+    "screenshots": [
+      "images/cars/Chevrolet/Camaro Z28 '69/car31_1_01-BKuuDPOJ.jpg",
+      "images/cars/Chevrolet/Camaro Z28 '69/car31_2_01-Cu_34JsY.jpg",
+      "images/cars/Chevrolet/Camaro Z28 '69/car31_2_02-B9zXBa5T.jpg",
+      "images/cars/Chevrolet/Camaro Z28 '69/car31_3_01-SBtgovxn.jpg"
+    ],
+    "description": "Самая популярная модель первого поколения Camaro, знаменитая своим дизайном и скоростью.",
+    "category": "ТР 456.80",
+    "pp": "456.80",
+    "displacement": "4 949 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 724 мм",
+      "width": "1 880 мм",
+      "height": "1 311 мм"
+    }
+  },
+  {
+    "id": 96,
+    "brand": "Chevrolet",
+    "name": "Camaro ZL1 1LE Package '18",
+    "name_short": "Camaro ZL1 1LE Package",
+    "year": "18",
+    "type": "modern",
+    "power": "659 л. с. / 6 500 об/мин",
+    "torque": "868,2 Н/м / 3 500 об/мин",
+    "weight": "1 732 кг",
+    "price": "N/A",
+    "image": "images/cars/Chevrolet/Camaro ZL1 1LE Package '18/car3387.png",
+    "brand_logo": "images/cars/Chevrolet/tnr7.png",
+    "screenshots": [
+      "images/cars/Chevrolet/Camaro ZL1 1LE Package '18/car3387_1_01-Woxo-foE.jpg",
+      "images/cars/Chevrolet/Camaro ZL1 1LE Package '18/car3387_2_01-DjAPZ0S7.jpg",
+      "images/cars/Chevrolet/Camaro ZL1 1LE Package '18/car3387_2_02-Bb2Vwz9g.jpg",
+      "images/cars/Chevrolet/Camaro ZL1 1LE Package '18/car3387_3_01-C50ULLHK.jpg"
+    ],
+    "description": "Вершина развития 6-го поколения Camaro. Этот автомобиль с мотором LT1 мощностью 659 л. с. отлично проявил себя на трассе Nürburgring.",
+    "category": "ТР 637.78",
+    "pp": "637.78",
+    "displacement": "6 162 см³",
+    "drivetrain": "FR",
+    "aspiration": "НГ (нагнетатель)",
+    "dimensions": {
+      "length": "4 784 мм",
+      "width": "1 897 мм",
+      "height": "1 330 мм"
+    }
+  },
+  {
+    "id": 97,
+    "brand": "Chevrolet",
+    "name": "Chevelle SS 454 '70",
+    "name_short": "Chevelle SS 454",
+    "year": "70",
+    "type": "modern",
+    "power": "456 л. с. / 5 500 об/мин",
+    "torque": "677,0 Н/м / 3 500 об/мин",
+    "weight": "1 762 кг",
+    "price": "N/A",
+    "image": "images/cars/Chevrolet/Chevelle SS 454 '70/car36.png",
+    "brand_logo": "images/cars/Chevrolet/tnr7.png",
+    "screenshots": [
+      "images/cars/Chevrolet/Chevelle SS 454 '70/car36_1_01-B5fCRpH6.jpg",
+      "images/cars/Chevrolet/Chevelle SS 454 '70/car36_1_02-DKFI98Qz.jpg",
+      "images/cars/Chevrolet/Chevelle SS 454 '70/car36_2_01-wQWUw-f_.jpg",
+      "images/cars/Chevrolet/Chevelle SS 454 '70/car36_2_02-Cz0ZHenJ.jpg",
+      "images/cars/Chevrolet/Chevelle SS 454 '70/car36_3_01-BVIeczBp.jpg"
+    ],
+    "description": "Эта машина с массивным и очень мощным мотором пользуется популярностью в дрэг-рейсинге.",
+    "category": "ТР 470.57",
+    "pp": "470.57",
+    "displacement": "7 443 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "5 009 мм",
+      "width": "1 915 мм",
+      "height": "1 336 мм"
+    }
   }
 ]

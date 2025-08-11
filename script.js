@@ -1310,3 +1310,33 @@ function selectBrand(brandName) {
         }, 3000);
     }
 }
+
+// Функция показа модального окна контактов
+function showContacts() {
+    // Воспроизводим звук открытия модального окна
+    playOpenSound();
+    
+    const contactsModal = document.getElementById('contactsModal');
+    if (contactsModal) {
+        contactsModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        
+        // Добавляем обработчик клавиши Escape
+        const handleEscape = function(e) {
+            if (e.key === 'Escape') {
+                closeContacts();
+                document.removeEventListener('keydown', handleEscape);
+            }
+        };
+        document.addEventListener('keydown', handleEscape);
+    }
+}
+
+// Функция закрытия модального окна контактов
+function closeContacts() {
+    const contactsModal = document.getElementById('contactsModal');
+    if (contactsModal) {
+        contactsModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
