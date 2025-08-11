@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+/* Плавная прокрутка для якорей */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Модальное окно инструкции */
 .instructions-modal {
     position: fixed;
