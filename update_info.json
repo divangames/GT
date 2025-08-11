@@ -1,0 +1,147 @@
+{
+  "total_cars": 93,
+  "new_cars_count": 28,
+  "last_update": "2025-08-11T22:46:19.229942",
+  "new_cars": [
+    {
+      "brand": "BMW",
+      "name": "3.0 CSL '71",
+      "year": "71"
+    },
+    {
+      "brand": "BMW",
+      "name": "3.0 CSL '73",
+      "year": "73"
+    },
+    {
+      "brand": "BMW",
+      "name": "BMW VGT",
+      "year": ""
+    },
+    {
+      "brand": "BMW",
+      "name": "i3 '15",
+      "year": "15"
+    },
+    {
+      "brand": "BMW",
+      "name": "M2 Competition '18",
+      "year": "18"
+    },
+    {
+      "brand": "BMW",
+      "name": "M3 '03",
+      "year": "03"
+    },
+    {
+      "brand": "BMW",
+      "name": "M3 '07",
+      "year": "07"
+    },
+    {
+      "brand": "BMW",
+      "name": "M3 '89",
+      "year": "89"
+    },
+    {
+      "brand": "BMW",
+      "name": "M3 '97",
+      "year": "97"
+    },
+    {
+      "brand": "BMW",
+      "name": "M3 GT '11",
+      "year": "11"
+    },
+    {
+      "brand": "BMW",
+      "name": "M3 Sport Evolution '89",
+      "year": "89"
+    },
+    {
+      "brand": "BMW",
+      "name": "M4 '14",
+      "year": "14"
+    },
+    {
+      "brand": "BMW",
+      "name": "M4 Gr.4",
+      "year": ""
+    },
+    {
+      "brand": "BMW",
+      "name": "M4 Safety Car",
+      "year": ""
+    },
+    {
+      "brand": "BMW",
+      "name": "M6 GT3 Endurance Model '16",
+      "year": "16"
+    },
+    {
+      "brand": "BMW",
+      "name": "M6 GT3 Sprint Model '16",
+      "year": "16"
+    },
+    {
+      "brand": "BMW",
+      "name": "McLaren F1 GTR Race Car '97",
+      "year": "97"
+    },
+    {
+      "brand": "BMW",
+      "name": "Z4 3.0i '03",
+      "year": "03"
+    },
+    {
+      "brand": "BMW",
+      "name": "Z4 GT3 '11",
+      "year": "11"
+    },
+    {
+      "brand": "BMW",
+      "name": "Z8 '01",
+      "year": "01"
+    },
+    {
+      "brand": "Bugatti",
+      "name": "Bugatti VGT",
+      "year": ""
+    },
+    {
+      "brand": "Bugatti",
+      "name": "Bugatti VGT (Gr.1)",
+      "year": ""
+    },
+    {
+      "brand": "Bugatti",
+      "name": "Chiron '16",
+      "year": "16"
+    },
+    {
+      "brand": "Bugatti",
+      "name": "Veyron 16.4 '13",
+      "year": "13"
+    },
+    {
+      "brand": "Bugatti",
+      "name": "Veyron Gr.4",
+      "year": ""
+    },
+    {
+      "brand": "BVLGARI",
+      "name": "BVLGARI Aluminium VGT",
+      "year": ""
+    },
+    {
+      "brand": "Chaparral",
+      "name": "2J '70",
+      "year": "70"
+    },
+    {
+      "brand": "Chaparral",
+      "name": "Chaparral 2X VGT",
+      "year": ""
+    }
+  ]
+}

@@ -22,7 +22,7 @@
                     <span class="logo-text">GRAN TURISMO 7</span>
                 </a>
                 <ul class="nav-menu">
-                    <li><a href="#" class="nav-link"><i class="fas fa-car"></i> Автомобили</a></li>
+                    <li><a href="#" class="nav-link" onclick="showBrandsModal(); return false;"><i class="fas fa-car"></i> Автомобили</a></li>
                     <li><a href="#" class="nav-link" onclick="showInstructions(); return false;"><i class="fas fa-book"></i> Инструкция</a></li>
                     <li><a href="#" class="nav-link"><i class="fas fa-info-circle"></i> О проекте</a></li>
                     <li><a href="#" class="nav-link"><i class="fas fa-envelope"></i> Контакты</a></li>
@@ -41,52 +41,7 @@
         </div>
     </nav>
 
-    <!-- Главная секция -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="hero-particles"></div>
-            <div class="hero-grid"></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <i class="fas fa-trophy"></i>
-                <span>Официальный каталог</span>
-            </div>
-            <h1 class="hero-title">
-                <span class="title-line">КАТАЛОГ</span>
-                <span class="title-line highlight">АВТОМОБИЛЕЙ</span>
-            </h1>
-            <p class="hero-subtitle">Полная коллекция автомобилей Gran Turismo 7 с детальными характеристиками и изображениями</p>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">400+</span>
-                    <span class="stat-label">Автомобилей</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Брендов</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">1000+</span>
-                    <span class="stat-label">Изображений</span>
-                </div>
-            </div>
-            <div class="hero-actions">
-                <button class="hero-btn primary" onclick="scrollToFilters(); return false;">
-                    <i class="fas fa-search"></i>
-                    Начать поиск
-                </button>
-                <button class="hero-btn secondary" onclick="showInstructions(); return false;">
-                    <i class="fas fa-play"></i>
-                    Как использовать
-                </button>
-            </div>
-        </div>
-        <div class="hero-scroll-indicator">
-            <div class="scroll-arrow"></div>
-            <span>Прокрутите вниз</span>
-        </div>
-    </section>
+  
 
     <!-- Фильтры и поиск -->
     <section class="filters-section" id="filters">
@@ -222,6 +177,27 @@
                     </button>
                 </div>
             </div>
+
+    <!-- Модальное окно с марками автомобилей -->
+    <div id="brandsModal" class="modal brands-modal">
+        <div class="modal-content brands-modal-content">
+            <div class="modal-header">
+                <button class="close-btn" onclick="closeBrandsModal()">
+                    <span>✕</span>
+                    <span>Закрыть</span>
+                </button>
+                <div class="modal-title">
+                    <i class="fas fa-car"></i>
+                    <span>Марки автомобилей</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="brands-grid" id="brandsGrid">
+                    <!-- Марки будут загружены через JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
             <div class="modal-body">
                 <!-- Слайдер скриншотов -->
                 <div class="car-screenshots" id="carScreenshots">

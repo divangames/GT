@@ -2,6 +2,7 @@ import os
 import json
 import re
 from pathlib import Path
+from datetime import datetime
 
 def read_car_info(info_file_path):
     """Читает информацию об автомобиле из файла info.txt"""
@@ -212,15 +213,64 @@ def scan_cars_directory():
 def main():
     """Основная функция"""
     print("Сканирование папки images/cars...")
+    
+    # Загружаем предыдущие данные для сравнения
+    previous_cars = []
+    if os.path.exists('cars_data.json'):
+        try:
+            with open('cars_data.json', 'r', encoding='utf-8') as f:
+                previous_cars = json.load(f)
+            print(f"Загружено {len(previous_cars)} автомобилей из предыдущей версии")
+        except Exception as e:
+            print(f"Ошибка загрузки предыдущих данных: {e}")
+    
     cars_data = scan_cars_directory()
     
     if cars_data:
+        # Определяем новые автомобили
+        new_cars = []
+        if previous_cars:
+            # Создаем множество идентификаторов предыдущих автомобилей
+            previous_ids = set()
+            for car in previous_cars:
+                # Используем комбинацию бренда, названия и года как уникальный идентификатор
+                car_id = f"{car['brand']}_{car['name']}_{car['year']}"
+                previous_ids.add(car_id)
+            
+            # Находим новые автомобили
+            for car in cars_data:
+                car_id = f"{car['brand']}_{car['name']}_{car['year']}"
+                if car_id not in previous_ids:
+                    new_cars.append(car)
+        else:
+            # Если это первая генерация, все автомобили считаются новыми
+            new_cars = cars_data
+        
+        # Сохраняем информацию о новых автомобилях
+        update_info = {
+            'total_cars': len(cars_data),
+            'new_cars_count': len(new_cars),
+            'last_update': datetime.now().isoformat(),
+            'new_cars': [{'brand': car['brand'], 'name': car['name'], 'year': car['year']} for car in new_cars]
+        }
+        
         # Сохраняем в JSON файл
         with open('cars_data.json', 'w', encoding='utf-8') as f:
             json.dump(cars_data, f, ensure_ascii=False, indent=2)
         
+        # Сохраняем информацию об обновлении
+        with open('update_info.json', 'w', encoding='utf-8') as f:
+            json.dump(update_info, f, ensure_ascii=False, indent=2)
+        
         print(f"\nНайдено {len(cars_data)} автомобилей")
+        print(f"Новых автомобилей: {len(new_cars)}")
         print("Данные сохранены в файл cars_data.json")
+        print("Информация об обновлении сохранена в update_info.json")
+        
+        if new_cars:
+            print("\nНовые автомобили:")
+            for car in new_cars:
+                print(f"  {car['brand']} {car['name']}")
         
         # Выводим статистику по брендам
         brands = {}

@@ -1,37 +1,42 @@
 @echo off
 chcp 65001 >nul
+echo.
 echo ========================================
-echo    ОБНОВЛЕНИЕ КАТАЛОГА АВТОМОБИЛЕЙ
-echo    Версия 1.4.0 - 19.12.2024
+echo    Gran Turismo 7 - Каталог автомобилей
 echo ========================================
 echo.
+echo Версия: 1.9.2
+echo.
+echo Обновление данных автомобилей...
+echo.
 
-echo [1/3] Останавливаю локальный сервер...
+REM Останавливаем сервер если он запущен
 taskkill /f /im python.exe >nul 2>&1
-echo ✓ Сервер остановлен
 
-echo.
-echo [2/3] Обновляю данные автомобилей...
+REM Генерируем данные автомобилей
 python generate_cars_data.py
-if %errorlevel% equ 0 (
-    echo ✓ Данные автомобилей обновлены
-) else (
-    echo ✗ Ошибка при обновлении данных
+
+if %errorlevel% neq 0 (
+    echo.
+    echo Ошибка при генерации данных!
+    echo Убедитесь, что Python установлен и доступен в PATH
+    echo.
     pause
     exit /b 1
 )
 
 echo.
-echo [3/3] Запускаю локальный сервер...
-start "Gran Turismo 7 Catalog" python -m http.server 8000
-echo ✓ Сервер запущен на http://localhost:8000
+echo Данные успешно обновлены!
+echo.
+echo Запуск локального сервера...
+echo.
+echo Откройте браузер и перейдите по адресу:
+echo http://localhost:8000
+echo.
+echo Для остановки сервера нажмите Ctrl+C
+echo.
 
-echo.
-echo ========================================
-echo    ОБНОВЛЕНИЕ ЗАВЕРШЕНО УСПЕШНО!
-echo ========================================
-echo.
-echo Сайт доступен по адресу: http://localhost:8000
-echo.
-echo Нажмите любую клавишу для закрытия...
-pause >nul
+REM Запускаем сервер
+python -m http.server 8000
+
+pause

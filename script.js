@@ -1072,14 +1072,17 @@ function updateFooterInfo() {
     }
     
     if (addedCarsElement && carsData) {
-        // Подсчитываем количество автомобилей, добавленных сегодня
-        const today = new Date().toDateString();
-        const todayCars = carsData.filter(car => {
-            // Здесь можно добавить логику определения даты добавления
-            // Пока просто показываем общее количество
-            return true;
-        });
-        addedCarsElement.textContent = todayCars.length;
+        // Загружаем информацию о новых автомобилях
+        fetch('update_info.json')
+            .then(response => response.json())
+            .then(updateInfo => {
+                addedCarsElement.textContent = updateInfo.new_cars_count || 0;
+            })
+            .catch(error => {
+                console.log('Не удалось загрузить информацию об обновлении:', error);
+                // Если файл не найден, показываем 0
+                addedCarsElement.textContent = '0';
+            });
     }
     
     if (lastUpdateElement) {
@@ -1142,5 +1145,168 @@ function toggleSearch() {
                 setTimeout(() => searchInput.focus(), 500);
             }
         }
+    }
+}
+
+// Функция показа модального окна с марками автомобилей
+function showBrandsModal() {
+    // Воспроизводим звук открытия модального окна
+    playOpenSound();
+    
+    const brandsModal = document.getElementById('brandsModal');
+    const brandsGrid = document.getElementById('brandsGrid');
+    
+    if (brandsModal && brandsGrid) {
+        // Сначала показываем модальное окно немедленно
+        brandsModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        
+        // Проверяем, загружены ли данные
+        if (!carsData || carsData.length === 0) {
+            // Показываем сообщение о загрузке
+            brandsGrid.innerHTML = `
+                <div style="text-align: center; padding: 50px; color: rgba(255, 255, 255, 0.8);">
+                    <div style="font-size: 24px; margin-bottom: 20px;">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </div>
+                    <div style="font-size: 18px;">Загрузка марок автомобилей...</div>
+                </div>
+            `;
+            
+            // Ждем загрузки данных и обновляем содержимое
+            const checkDataInterval = setInterval(() => {
+                if (carsData && carsData.length > 0) {
+                    clearInterval(checkDataInterval);
+                    populateBrandsModal();
+                }
+            }, 100);
+            
+            // Таймаут на случай, если данные не загрузятся
+            setTimeout(() => {
+                clearInterval(checkDataInterval);
+                if (!carsData || carsData.length === 0) {
+                    brandsGrid.innerHTML = `
+                        <div style="text-align: center; padding: 50px; color: rgba(255, 255, 255, 0.8);">
+                            <div style="font-size: 24px; margin-bottom: 20px;">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div style="font-size: 18px;">Ошибка загрузки данных</div>
+                        </div>
+                    `;
+                }
+            }, 5000);
+        } else {
+            // Данные уже загружены, сразу заполняем
+            populateBrandsModal();
+        }
+        
+        // Настраиваем звуковые эффекты для новых элементов
+        setupSoundEffects();
+        
+        // Добавляем обработчик для закрытия по клику вне модального окна
+        brandsModal.addEventListener('click', function(e) {
+            if (e.target === brandsModal) {
+                closeBrandsModal();
+            }
+        });
+        
+        // Добавляем обработчик для закрытия по клавише Escape
+        const handleEscape = function(e) {
+            if (e.key === 'Escape') {
+                closeBrandsModal();
+                document.removeEventListener('keydown', handleEscape);
+            }
+        };
+        document.addEventListener('keydown', handleEscape);
+    }
+}
+
+// Функция заполнения модального окна марками
+function populateBrandsModal() {
+    const brandsGrid = document.getElementById('brandsGrid');
+    
+    if (!brandsGrid || !carsData || carsData.length === 0) {
+        return;
+    }
+    
+    // Группируем автомобили по брендам
+    const brands = {};
+    carsData.forEach(car => {
+        if (!brands[car.brand]) {
+            brands[car.brand] = {
+                logo: car.brand_logo,
+                cars: []
+            };
+        }
+        brands[car.brand].cars.push(car);
+    });
+    
+    // Сортируем бренды по алфавиту
+    const sortedBrands = Object.keys(brands).sort();
+    
+    // Создаем HTML для каждой марки
+    const brandsHTML = sortedBrands.map(brand => {
+        const brandData = brands[brand];
+        return `
+            <div class="brand-item" onclick="selectBrand('${brand}')">
+                <div class="brand-item-logo">
+                    <img src="${brandData.logo}" alt="${brand}" onerror="this.src='https://via.placeholder.com/80x60/f0f0f0/999?text=${brand.charAt(0)}'">
+                </div>
+                <div class="brand-item-name">${brand}</div>
+                <div class="brand-item-count">${brandData.cars.length} автомобилей</div>
+            </div>
+        `;
+    }).join('');
+    
+    brandsGrid.innerHTML = brandsHTML;
+    
+    // Добавляем задержку для анимации элементов
+    const brandItems = brandsGrid.querySelectorAll('.brand-item');
+    brandItems.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.05}s`;
+    });
+}
+
+// Функция закрытия модального окна с марками
+function closeBrandsModal() {
+    const brandsModal = document.getElementById('brandsModal');
+    if (brandsModal) {
+        brandsModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Функция выбора марки и прокрутки к ней
+function selectBrand(brandName) {
+    // Закрываем модальное окно
+    closeBrandsModal();
+    
+    // Находим секцию с выбранной маркой
+    const brandSections = document.querySelectorAll('.brand-section');
+    let targetSection = null;
+    
+    brandSections.forEach(section => {
+        const brandNameElement = section.querySelector('.brand-name');
+        if (brandNameElement && brandNameElement.textContent === brandName) {
+            targetSection = section;
+        }
+    });
+    
+    if (targetSection) {
+        // Прокручиваем к секции с выбранной маркой
+        targetSection.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+        });
+        
+        // Добавляем подсветку секции
+        targetSection.style.boxShadow = '0 0 30px rgba(100, 181, 246, 0.3)';
+        targetSection.style.border = '2px solid rgba(100, 181, 246, 0.5)';
+        
+        // Убираем подсветку через 3 секунды
+        setTimeout(() => {
+            targetSection.style.boxShadow = '';
+            targetSection.style.border = '';
+        }, 3000);
     }
 }
