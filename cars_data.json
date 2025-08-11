@@ -1150,5 +1150,378 @@
       "width": "1 829 мм",
       "height": "1 198 мм"
     }
+  },
+  {
+    "id": 38,
+    "brand": "Aston Martin",
+    "name": "DB11 '16",
+    "name_short": "DB11",
+    "year": "16",
+    "type": "modern",
+    "power": "608 л. с. / 6 500 об/мин",
+    "torque": "700,0 Н/м / 1 500 об/мин",
+    "weight": "1 770 кг",
+    "price": "N/A",
+    "image": "images/cars/Aston Martin/DB11 '16/car3343.png",
+    "brand_logo": "images/cars/Aston Martin/tnr4.png",
+    "screenshots": [
+      "images/cars/Aston Martin/DB11 '16/car3343_1_01-DMn_flA2.jpg",
+      "images/cars/Aston Martin/DB11 '16/car3343_2_01-DfHj7YTU.jpg",
+      "images/cars/Aston Martin/DB11 '16/car3343_2_02-BdDae2sT.jpg",
+      "images/cars/Aston Martin/DB11 '16/car3343_3_01-D54p60W6.jpg"
+    ],
+    "description": "Новое поколение Aston Martin, пришедшее на смену DB9, может похвастаться футуристическим дизайном.",
+    "category": "ТР 598.01",
+    "pp": "598.01",
+    "displacement": "5 204 см³",
+    "drivetrain": "FR",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 739 мм",
+      "width": "2 060 мм",
+      "height": "1 279 мм"
+    }
+  },
+  {
+    "id": 39,
+    "brand": "Aston Martin",
+    "name": "DB3S '53",
+    "name_short": "DB3S",
+    "year": "53",
+    "type": "modern",
+    "power": "228 л. с. / 5 500 об/мин",
+    "torque": "304,0 Н/м / 4 000 об/мин",
+    "weight": "856 кг",
+    "price": "N/A",
+    "image": "images/cars/Aston Martin/DB3S '53/car3363.png",
+    "brand_logo": "images/cars/Aston Martin/tnr4.png",
+    "screenshots": [
+      "images/cars/Aston Martin/DB3S '53/car3363_1_01-DD5CDLry.jpg",
+      "images/cars/Aston Martin/DB3S '53/car3363_2_01-jSo9jP4D.jpg",
+      "images/cars/Aston Martin/DB3S '53/car3363_2_02-8luY8rnJ.jpg",
+      "images/cars/Aston Martin/DB3S '53/car3363_3_01-B_rApiXK.jpg"
+    ],
+    "description": "Исторический гоночный автомобиль 1950-х, получивший награду Gran Turismo в Пебл-Бич.",
+    "category": "Gr.N",
+    "pp": "487.06",
+    "displacement": "2 922 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "3 905 мм",
+      "width": "1 620 мм",
+      "height": "1 054 мм"
+    }
+  },
+  {
+    "id": 40,
+    "brand": "Aston Martin",
+    "name": "DB5 '64",
+    "name_short": "DB5",
+    "year": "64",
+    "type": "modern",
+    "power": "285 л. с. / 5 500 об/мин",
+    "torque": "379,2 Н/м / 4 500 об/мин",
+    "weight": "1 468 кг",
+    "price": "N/A",
+    "image": "images/cars/Aston Martin/DB5 '64/car3445.png",
+    "brand_logo": "images/cars/Aston Martin/tnr4.png",
+    "screenshots": [
+      "images/cars/Aston Martin/DB5 '64/car3445_1_01-ByJbKS7s.jpg",
+      "images/cars/Aston Martin/DB5 '64/car3445_2_01-C1l5-VzW.jpg",
+      "images/cars/Aston Martin/DB5 '64/car3445_2_02-D0wka3vG.jpg",
+      "images/cars/Aston Martin/DB5 '64/car3445_3_01-CjH6VBPb.jpg"
+    ],
+    "description": "Этот великолепный спорткар 60-х прославился как автомобиль Джеймса Бонда.",
+    "category": "ТР 444.78",
+    "pp": "444.78",
+    "displacement": "3 995 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 570 мм",
+      "width": "1 676 мм",
+      "height": "1 320 мм"
+    }
+  },
+  {
+    "id": 41,
+    "brand": "Aston Martin",
+    "name": "DBR9 GT1 '10",
+    "name_short": "DBR9 GT1",
+    "year": "10",
+    "type": "modern",
+    "power": "608 л. с. / 6 500 об/мин",
+    "torque": "665,0 Н/м / 5 500 об/мин",
+    "weight": "1 100 кг",
+    "price": "N/A",
+    "image": "images/cars/Aston Martin/DBR9 GT1 '10/car3394.png",
+    "brand_logo": "images/cars/Aston Martin/tnr4.png",
+    "screenshots": [
+      "images/cars/Aston Martin/DBR9 GT1 '10/car3394_1_01-DXAcMkiv.jpg",
+      "images/cars/Aston Martin/DBR9 GT1 '10/car3394_2_01-Qw0YrPBU.jpg",
+      "images/cars/Aston Martin/DBR9 GT1 '10/car3394_2_02-BjPmPeeX.jpg",
+      "images/cars/Aston Martin/DBR9 GT1 '10/car3394_3_01-B_Lz6823.jpg"
+    ],
+    "description": "Гоночный автомобиль класса GT1, разработанный Aston Martin на базе DB9 для возвращения в международный автоспорт.",
+    "category": "Gr.N",
+    "pp": "720.71",
+    "displacement": "5 935 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 687 мм",
+      "width": "1 978 мм",
+      "height": "1 195 мм"
+    }
+  },
+  {
+    "id": 42,
+    "brand": "Aston Martin",
+    "name": "DP-100 VGT",
+    "name_short": "DP-100 VGT",
+    "year": "",
+    "type": "modern",
+    "power": "811 л. с. / 6 500 об/мин",
+    "torque": "1 049,9 Н/м / 2 000 об/мин",
+    "weight": "1 375 кг",
+    "price": "N/A",
+    "image": "images/cars/Aston Martin/DP-100 VGT/car2103.png",
+    "brand_logo": "images/cars/Aston Martin/tnr4.png",
+    "screenshots": [
+      "images/cars/Aston Martin/DP-100 VGT/car2103_1_01-CPjhUQt2.jpg",
+      "images/cars/Aston Martin/DP-100 VGT/car2103_2_01-DkxPzp8k.jpg",
+      "images/cars/Aston Martin/DP-100 VGT/car2103_2_02-tcM9INz2.jpg"
+    ],
+    "description": "Настоящий образец производительности высокого класса, автомобиль, который дает представление о будущих Aston Martin.",
+    "category": "Gr.N",
+    "pp": "699.31",
+    "displacement": "6 000 см³",
+    "drivetrain": "4WD",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 576 мм",
+      "width": "2 007 мм",
+      "height": "1 112 мм"
+    }
+  },
+  {
+    "id": 43,
+    "brand": "Aston Martin",
+    "name": "One-77 '11",
+    "name_short": "One-77",
+    "year": "11",
+    "type": "modern",
+    "power": "759 л. с. / 8 000 об/мин",
+    "torque": "749,9 Н/м / 5 500 об/мин",
+    "weight": "1 630 кг",
+    "price": "N/A",
+    "image": "images/cars/Aston Martin/One-77 '11/car1898.png",
+    "brand_logo": "images/cars/Aston Martin/tnr4.png",
+    "screenshots": [
+      "images/cars/Aston Martin/One-77 '11/car1898_1_01-BDxM6LHu.jpg",
+      "images/cars/Aston Martin/One-77 '11/car1898_2_01-CnJ8DTiK.jpg",
+      "images/cars/Aston Martin/One-77 '11/car1898_2_02-BOlijJHZ.jpg",
+      "images/cars/Aston Martin/One-77 '11/car1898_3_01-BvwL70CL.jpg"
+    ],
+    "description": "Модель Aston Martin, выпущенная ограниченной серией в 77 экземпляров.",
+    "category": "ТР 634.32",
+    "pp": "634.32",
+    "displacement": "7 312 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 601 мм",
+      "width": "1 999 мм",
+      "height": "1 222 мм"
+    }
+  },
+  {
+    "id": 44,
+    "brand": "Aston Martin",
+    "name": "V12 Vantage GT3 '12",
+    "name_short": "V12 Vantage GT3",
+    "year": "12",
+    "type": "modern",
+    "power": "600 л. с. / 6 500 об/мин",
+    "torque": "686,5 Н/м / 5 500 об/мин",
+    "weight": "1 250 кг",
+    "price": "N/A",
+    "image": "images/cars/Aston Martin/V12 Vantage GT3 '12/car2131.png",
+    "brand_logo": "images/cars/Aston Martin/tnr4.png",
+    "screenshots": [
+      "images/cars/Aston Martin/V12 Vantage GT3 '12/car2131_1_01-LjsTEFVa.jpg",
+      "images/cars/Aston Martin/V12 Vantage GT3 '12/car2131_2_01-DPMwwraE.jpg",
+      "images/cars/Aston Martin/V12 Vantage GT3 '12/car2131_2_02-Ww9nvzPJ.jpg",
+      "images/cars/Aston Martin/V12 Vantage GT3 '12/car2131_3_01-CFLEz93G.jpg"
+    ],
+    "description": "Этот мощный и сбалансированный автомобиль регулярно занимает призовые места на гонках.",
+    "category": "Gr.N",
+    "pp": "715.21",
+    "displacement": "5 935 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 760 мм",
+      "width": "1 979 мм",
+      "height": "1 340 мм"
+    }
+  },
+  {
+    "id": 45,
+    "brand": "Aston Martin",
+    "name": "V8 Vantage Gr.4",
+    "name_short": "V8 Vantage Gr.4",
+    "year": "",
+    "type": "modern",
+    "power": "405 л. с. / 7 000 об/мин",
+    "torque": "490,0 Н/м / 5 000 об/мин",
+    "weight": "1 350 кг",
+    "price": "N/A",
+    "image": "images/cars/Aston Martin/V8 Vantage Gr.4/car2157.png",
+    "brand_logo": "images/cars/Aston Martin/tnr4.png",
+    "screenshots": [
+      "images/cars/Aston Martin/V8 Vantage Gr.4/car2157_1_01-BnAZZtIR.jpg",
+      "images/cars/Aston Martin/V8 Vantage Gr.4/car2157_2_01-Ctnqpkkx.jpg",
+      "images/cars/Aston Martin/V8 Vantage Gr.4/car2157_2_02-bn97WFTE.jpg",
+      "images/cars/Aston Martin/V8 Vantage Gr.4/car2157_3_01-DRelFMsd.jpg"
+    ],
+    "description": "Идеально подходит как для дорог, так и для гоночных трасс.",
+    "category": "Gr.N",
+    "pp": "638.94",
+    "displacement": "- см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 459 мм",
+      "width": "1 897 мм",
+      "height": "1 241 мм"
+    }
+  },
+  {
+    "id": 46,
+    "brand": "Aston Martin",
+    "name": "V8 Vantage S '15",
+    "name_short": "V8 Vantage S",
+    "year": "15",
+    "type": "modern",
+    "power": "436 л. с. / 7 100 об/мин",
+    "torque": "490,0 Н/м / 5 000 об/мин",
+    "weight": "1 610 кг",
+    "price": "N/A",
+    "image": "images/cars/Aston Martin/V8 Vantage S '15/car2175.png",
+    "brand_logo": "images/cars/Aston Martin/tnr4.png",
+    "screenshots": [
+      "images/cars/Aston Martin/V8 Vantage S '15/car2175_1_01-DxEghECl.jpg",
+      "images/cars/Aston Martin/V8 Vantage S '15/car2175_2_01-Ct8yXcNO.jpg",
+      "images/cars/Aston Martin/V8 Vantage S '15/car2175_2_02-Cl5zeOcn.jpg",
+      "images/cars/Aston Martin/V8 Vantage S '15/car2175_3_01-Dx7MnH9J.jpg"
+    ],
+    "description": "Идеально подходит как для дорог, так и для гоночных трасс.",
+    "category": "ТР 557.39",
+    "pp": "557.39",
+    "displacement": "4 735 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 385 мм",
+      "width": "2 022 мм",
+      "height": "1 260 мм"
+    }
+  },
+  {
+    "id": 47,
+    "brand": "Aston Martin",
+    "name": "Valkyrie '21",
+    "name_short": "Valkyrie",
+    "year": "21",
+    "type": "modern",
+    "power": "1 155 л. с. / 10 500 об/мин",
+    "torque": "921,8 Н/м / 7 000 об/мин",
+    "weight": "1 270 кг",
+    "price": "N/A",
+    "image": "images/cars/Aston Martin/Valkyrie '21/car3532.png",
+    "brand_logo": "images/cars/Aston Martin/tnr4.png",
+    "screenshots": [
+      "images/cars/Aston Martin/Valkyrie '21/car3532_1_01-BrHuyLxg.jpg",
+      "images/cars/Aston Martin/Valkyrie '21/car3532_1_02-CE_tRdA8.jpg",
+      "images/cars/Aston Martin/Valkyrie '21/car3532_2_01-tc5A8hn8.jpg",
+      "images/cars/Aston Martin/Valkyrie '21/car3532_2_02-53jNw3d_.jpg",
+      "images/cars/Aston Martin/Valkyrie '21/car3532_3_01-GLV-YmIo.jpg"
+    ],
+    "description": "Гиперкар с уникальным дизайном и аэродинамикой формульного болида.",
+    "category": "ТР 875.35",
+    "pp": "875.35",
+    "displacement": "6 500 см³",
+    "drivetrain": "MR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 506 мм",
+      "width": "1 920 мм",
+      "height": "1 060 мм"
+    }
+  },
+  {
+    "id": 48,
+    "brand": "Aston Martin",
+    "name": "Vantage '18",
+    "name_short": "Vantage",
+    "year": "18",
+    "type": "modern",
+    "power": "510 л. с. / 6 000 об/мин",
+    "torque": "685,0 Н/м / 2 000 об/мин",
+    "weight": "1 530 кг",
+    "price": "N/A",
+    "image": "images/cars/Aston Martin/Vantage '18/car3447.png",
+    "brand_logo": "images/cars/Aston Martin/tnr4.png",
+    "screenshots": [
+      "images/cars/Aston Martin/Vantage '18/car3447_1_01-4b_QFlq2.jpg",
+      "images/cars/Aston Martin/Vantage '18/car3447_1_02-B4htqfcC.jpg",
+      "images/cars/Aston Martin/Vantage '18/car3447_2_01-DpnmQpw3.jpg",
+      "images/cars/Aston Martin/Vantage '18/car3447_2_02-CmESYy9g.jpg",
+      "images/cars/Aston Martin/Vantage '18/car3447_3_01-DYlokFWp.jpg"
+    ],
+    "description": "Эту легкую и маневренную машину называют лучшей в истории Aston Martin.",
+    "category": "ТР 595.91",
+    "pp": "595.91",
+    "displacement": "3 982 см³",
+    "drivetrain": "FR",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 465 мм",
+      "width": "1 942 мм",
+      "height": "1 273 мм"
+    }
+  },
+  {
+    "id": 49,
+    "brand": "Aston Martin",
+    "name": "Vulcan '16",
+    "name_short": "Vulcan",
+    "year": "16",
+    "type": "modern",
+    "power": "832 л. с. / 7 500 об/мин",
+    "torque": "799,9 Н/м / 6 500 об/мин",
+    "weight": "1 360 кг",
+    "price": "N/A",
+    "image": "images/cars/Aston Martin/Vulcan '16/car3309.png",
+    "brand_logo": "images/cars/Aston Martin/tnr4.png",
+    "screenshots": [
+      "images/cars/Aston Martin/Vulcan '16/car3309_1_01-CyvLwMLY.jpg",
+      "images/cars/Aston Martin/Vulcan '16/car3309_2_01-7GypJwmJ.jpg",
+      "images/cars/Aston Martin/Vulcan '16/car3309_2_02-BIFkbfAO.jpg",
+      "images/cars/Aston Martin/Vulcan '16/car3309_3_01-4UO2rpLC.jpg"
+    ],
+    "description": "Произведен в 24 экземплярах. Настоящий гиперкар, созданный для покорения гоночных трасс.",
+    "category": "ТР 765.28",
+    "pp": "765.28",
+    "displacement": "6 949 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 807 мм",
+      "width": "2 063 мм",
+      "height": "1 205 мм"
+    }
   }
 ]

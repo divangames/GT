@@ -13,8 +13,91 @@ let activeFilters = {
     sortBy: 'name'
 };
 
+// Звуковые эффекты
+let hoverSound = null;
+let openSound = null;
+let soundsEnabled = true;
+
+// Инициализация звуков
+function initSounds() {
+    try {
+        hoverSound = new Audio('sound/hover.mp3');
+        hoverSound.volume = 0.3;
+        hoverSound.preload = 'auto';
+        
+        openSound = new Audio('sound/open.mp3');
+        openSound.volume = 0.4;
+        openSound.preload = 'auto';
+        
+        console.log('Звуки инициализированы');
+    } catch (error) {
+        console.warn('Не удалось инициализировать звуки:', error);
+        soundsEnabled = false;
+    }
+}
+
+// Воспроизведение звука при наведении
+function playHoverSound() {
+    if (soundsEnabled && hoverSound) {
+        try {
+            hoverSound.currentTime = 0;
+            hoverSound.play().catch(error => {
+                console.warn('Не удалось воспроизвести звук наведения:', error);
+            });
+        } catch (error) {
+            console.warn('Ошибка воспроизведения звука наведения:', error);
+        }
+    }
+}
+
+// Воспроизведение звука открытия модального окна
+function playOpenSound() {
+    if (soundsEnabled && openSound) {
+        try {
+            openSound.currentTime = 0;
+            openSound.play().catch(error => {
+                console.warn('Не удалось воспроизвести звук открытия:', error);
+            });
+        } catch (error) {
+            console.warn('Ошибка воспроизведения звука открытия:', error);
+        }
+    }
+}
+
+// Настройка звуковых эффектов для элементов
+function setupSoundEffects() {
+    // Звуки наведения для карточек автомобилей
+    const carCards = document.querySelectorAll('.car-card, .brand-card');
+    carCards.forEach(card => {
+        card.addEventListener('mouseenter', playHoverSound);
+    });
+    
+    // Звуки наведения для кнопок
+    const buttons = document.querySelectorAll('button, .btn, .search-toggle-btn, .filter-menu-btn, .close-btn, .close-instructions-btn');
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', playHoverSound);
+    });
+    
+    // Звуки наведения для ссылок
+    const links = document.querySelectorAll('a, .logo-link');
+    links.forEach(link => {
+        link.addEventListener('mouseenter', playHoverSound);
+    });
+    
+    // Звуки наведения для элементов навигации
+    const navItems = document.querySelectorAll('.nav-item, .slider-dot, .slider-nav button');
+    navItems.forEach(item => {
+        item.addEventListener('mouseenter', playHoverSound);
+    });
+    
+    console.log('Звуковые эффекты настроены');
+}
+
 // Функция показа инструкции
 function showInstructions() {
+    // Воспроизводим звук открытия модального окна
+    playOpenSound();
+    
     const instructionsHTML = `
         <div class="instructions-modal">
             <div class="instructions-content">
@@ -154,6 +237,9 @@ function closeInstructions() {
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM загружен, инициализирую приложение...');
     
+    // Инициализируем звуки
+    initSounds();
+    
     // Добавляем тестовое сообщение в контейнер
     const brandsContainer = document.getElementById('brandsContainer');
     if (brandsContainer) {
@@ -179,6 +265,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Обновление информации в футере
         updateFooterInfo();
+        
+        // Настраиваем звуковые эффекты после загрузки данных
+        setTimeout(() => {
+            setupSoundEffects();
+        }, 1000);
     } catch (error) {
         console.warn('Некоторые элементы не найдены, но это не критично:', error);
     }
@@ -309,6 +400,10 @@ function renderBrandsCatalog() {
     brandsContainer.innerHTML = brandsHTML;
     console.log('Каталог отрендерен');
     console.log('HTML контент добавлен в brandsContainer');
+    
+    // Настраиваем звуковые эффекты для новых карточек автомобилей
+    setupSoundEffects();
+    
     console.log('=== КОНЕЦ РЕНДЕРИНГА КАТАЛОГА ===');
 }
 
@@ -316,6 +411,9 @@ function renderBrandsCatalog() {
 function openCarModal(carId) {
     const carIndex = carsData.findIndex(c => c.id === carId);
     if (carIndex === -1) return;
+    
+    // Воспроизводим звук открытия модального окна
+    playOpenSound();
     
     currentCarIndex = carIndex;
     currentSlideIndex = 0;
@@ -419,6 +517,9 @@ function updateSliderCounter() {
 function expandImage(slideElement) {
     const img = slideElement.querySelector('img');
     if (!img) return;
+    
+    // Воспроизводим звук открытия модального окна
+    playOpenSound();
     
     // Создаем полноэкранное изображение
     const expandedSlide = document.createElement('div');
