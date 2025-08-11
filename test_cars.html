@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест автомобилей</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .car {
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .car img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 4px;
+        }
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 18px;
+            color: #666;
+        }
+        .error {
+            color: red;
+            padding: 20px;
+            background: #ffe6e6;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Тест загрузки автомобилей</h1>
+    <div id="cars-container">
+        <div class="loading">Загрузка автомобилей...</div>
+    </div>
+
+    <script>
+        async function loadCars() {
+            try {
+                console.log('Начинаю загрузку данных...');
+                const response = await fetch('cars_data.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const carsData = await response.json();
+                console.log('Данные загружены:', carsData.length, 'автомобилей');
+                console.log('Первые 3 автомобиля:', carsData.slice(0, 3));
+                
+                if (!Array.isArray(carsData)) {
+                    throw new Error('Данные не являются массивом');
+                }
+                
+                displayCars(carsData);
+            } catch (error) {
+                console.error('Ошибка загрузки данных:', error);
+                document.getElementById('cars-container').innerHTML = `
+                    <div class="error">
+                        <h3>Ошибка загрузки данных</h3>
+                        <p>${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+        
+        function displayCars(cars) {
+            const container = document.getElementById('cars-container');
+            
+            if (cars.length === 0) {
+                container.innerHTML = '<div class="error">Автомобили не найдены</div>';
+                return;
+            }
+            
+            const carsHTML = cars.slice(0, 10).map(car => `
+                <div class="car">
+                    <h3>${car.brand} ${car.name}</h3>
+                    <img src="${car.image}" alt="${car.name}" onerror="this.style.display='none'">
+                    <p><strong>Мощность:</strong> ${car.power}</p>
+                    <p><strong>Масса:</strong> ${car.weight}</p>
+                    <p><strong>Привод:</strong> ${car.drivetrain}</p>
+                    <p><strong>Описание:</strong> ${car.description}</p>
+                </div>
+            `).join('');
+            
+            container.innerHTML = carsHTML;
+            console.log('Автомобили отображены');
+        }
+        
+        // Загружаем данные при загрузке страницы
+        document.addEventListener('DOMContentLoaded', loadCars);
+    </script>
+</body>
+</html>

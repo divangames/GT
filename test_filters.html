@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест фильтров - GT7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .filter-group {
+            margin: 15px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select, input {
+            width: 200px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .results {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .car-item {
+            background: white;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Тест фильтров Gran Turismo 7</h1>
+    
+    <div class="test-section">
+        <h2>Фильтры</h2>
+        
+        <div class="filter-group">
+            <label for="searchInput">Поиск:</label>
+            <input type="text" id="searchInput" placeholder="Поиск автомобилей...">
+        </div>
+        
+        <div class="filter-group">
+            <label for="brandFilter">Бренд:</label>
+            <select id="brandFilter">
+                <option value="">Все бренды</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label for="categoryFilter">Категория:</label>
+            <select id="categoryFilter">
+                <option value="">Все категории</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label for="drivetrainFilter">Привод:</label>
+            <select id="drivetrainFilter">
+                <option value="">Все типы</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label for="yearFilter">Год:</label>
+            <select id="yearFilter">
+                <option value="">Все годы</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label for="sortBy">Сортировка:</label>
+            <select id="sortBy">
+                <option value="name">По названию</option>
+                <option value="brand">По бренду</option>
+                <option value="year">По году</option>
+                <option value="power">По мощности</option>
+            </select>
+        </div>
+        
+        <button onclick="clearAllFilters()">Очистить фильтры</button>
+        <button onclick="testFilters()">Тест фильтров</button>
+    </div>
+    
+    <div class="test-section">
+        <h2>Результаты</h2>
+        <div id="resultsCount">0 автомобилей найдено</div>
+        <div id="resultsContainer" class="results"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Отладочная информация</h2>
+        <div id="debugInfo"></div>
+    </div>
+
+    <script>
+        // Тестовые данные
+        const testCarsData = [
+            {
+                id: 1,
+                brand: "Abarth",
+                name: "Abarth 500 '09",
+                year: "09",
+                category: "ТР 415.44",
+                drivetrain: "FF",
+                power: "135 л. с."
+            },
+            {
+                id: 2,
+                brand: "BMW",
+                name: "BMW M3 '89",
+                year: "89",
+                category: "ТР 450.00",
+                drivetrain: "FR",
+                power: "200 л. с."
+            },
+            {
+                id: 3,
+                brand: "Ferrari",
+                name: "Ferrari F40 '92",
+                year: "92",
+                category: "ТР 600.00",
+                drivetrain: "MR",
+                power: "478 л. с."
+            }
+        ];
+
+        let filteredCars = [...testCarsData];
+        let searchTerm = '';
+        let activeFilters = {
+            brand: '',
+            category: '',
+            drivetrain: '',
+            year: '',
+            sortBy: 'name'
+        };
+
+        // Инициализация
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Тестовая страница загружена');
+            populateFilters();
+            renderResults();
+            setupFilters();
+        });
+
+        // Настройка фильтров
+        function setupFilters() {
+            const searchInput = document.getElementById('searchInput');
+            const filterSelects = ['brandFilter', 'categoryFilter', 'drivetrainFilter', 'yearFilter', 'sortBy'];
+            
+            searchInput.addEventListener('input', function() {
+                searchTerm = this.value.toLowerCase();
+                applyFilters();
+            });
+            
+            filterSelects.forEach(filterId => {
+                const select = document.getElementById(filterId);
+                if (select) {
+                    select.addEventListener('change', function() {
+                        const filterKey = filterId.replace('Filter', '').replace('sort', 'sortBy');
+                        activeFilters[filterKey] = this.value;
+                        applyFilters();
+                    });
+                }
+            });
+        }
+
+        // Заполнение фильтров
+        function populateFilters() {
+            const brands = [...new Set(testCarsData.map(car => car.brand))].sort();
+            const categories = [...new Set(testCarsData.map(car => car.category))].sort();
+            const drivetrains = [...new Set(testCarsData.map(car => car.drivetrain))].sort();
+            const years = [...new Set(testCarsData.map(car => car.year))].sort((a, b) => b - a);
+            
+            populateSelect('brandFilter', brands);
+            populateSelect('categoryFilter', categories);
+            populateSelect('drivetrainFilter', drivetrains);
+            populateSelect('yearFilter', years);
+        }
+
+        function populateSelect(selectId, options) {
+            const select = document.getElementById(selectId);
+            if (!select) return;
+            
+            while (select.children.length > 1) {
+                select.removeChild(select.lastChild);
+            }
+            
+            options.forEach(option => {
+                const optionElement = document.createElement('option');
+                optionElement.value = option;
+                optionElement.textContent = option;
+                select.appendChild(optionElement);
+            });
+        }
+
+        // Применение фильтров
+        function applyFilters() {
+            filteredCars = testCarsData.filter(car => {
+                if (searchTerm && !car.name.toLowerCase().includes(searchTerm) && 
+                    !car.brand.toLowerCase().includes(searchTerm)) {
+                    return false;
+                }
+                if (activeFilters.brand && car.brand !== activeFilters.brand) {
+                    return false;
+                }
+                if (activeFilters.category && car.category !== activeFilters.category) {
+                    return false;
+                }
+                if (activeFilters.drivetrain && car.drivetrain !== activeFilters.drivetrain) {
+                    return false;
+                }
+                if (activeFilters.year && car.year !== activeFilters.year) {
+                    return false;
+                }
+                return true;
+            });
+            
+            sortCars();
+            renderResults();
+            updateDebugInfo();
+        }
+
+        // Сортировка
+        function sortCars() {
+            const sortBy = activeFilters.sortBy;
+            filteredCars.sort((a, b) => {
+                switch (sortBy) {
+                    case 'name': return a.name.localeCompare(b.name);
+                    case 'brand': return a.brand.localeCompare(b.brand);
+                    case 'year': return b.year.localeCompare(a.year);
+                    case 'power': return b.power.localeCompare(a.power);
+                    default: return 0;
+                }
+            });
+        }
+
+        // Очистка фильтров
+        function clearAllFilters() {
+            document.getElementById('searchInput').value = '';
+            searchTerm = '';
+            
+            const filterSelects = ['brandFilter', 'categoryFilter', 'drivetrainFilter', 'yearFilter'];
+            filterSelects.forEach(filterId => {
+                const select = document.getElementById(filterId);
+                if (select) {
+                    select.value = '';
+                }
+            });
+            
+            activeFilters = {
+                brand: '',
+                category: '',
+                drivetrain: '',
+                year: '',
+                sortBy: 'name'
+            };
+            
+            applyFilters();
+        }
+
+        // Тест фильтров
+        function testFilters() {
+            console.log('Тестирую фильтры...');
+            console.log('Поисковый запрос:', searchTerm);
+            console.log('Активные фильтры:', activeFilters);
+            console.log('Отфильтровано автомобилей:', filteredCars.length);
+            
+            updateDebugInfo();
+        }
+
+        // Рендеринг результатов
+        function renderResults() {
+            const container = document.getElementById('resultsContainer');
+            const count = document.getElementById('resultsCount');
+            
+            count.textContent = `${filteredCars.length} автомобилей найдено`;
+            
+            if (filteredCars.length === 0) {
+                container.innerHTML = '<p>Автомобили не найдены</p>';
+                return;
+            }
+            
+            const carsHTML = filteredCars.map(car => `
+                <div class="car-item">
+                    <strong>${car.brand} ${car.name}</strong><br>
+                    Год: ${car.year}, Категория: ${car.category}, Привод: ${car.drivetrain}, Мощность: ${car.power}
+                </div>
+            `).join('');
+            
+            container.innerHTML = carsHTML;
+        }
+
+        // Обновление отладочной информации
+        function updateDebugInfo() {
+            const debugInfo = document.getElementById('debugInfo');
+            debugInfo.innerHTML = `
+                <p><strong>Поисковый запрос:</strong> "${searchTerm}"</p>
+                <p><strong>Активные фильтры:</strong> ${JSON.stringify(activeFilters, null, 2)}</p>
+                <p><strong>Всего автомобилей:</strong> ${testCarsData.length}</p>
+                <p><strong>Отфильтровано:</strong> ${filteredCars.length}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

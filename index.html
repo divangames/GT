@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gran Turismo 7 - Каталог Автомобилей</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <img src="images/logo.svg" alt="Gran Turismo 7" class="logo-img">
+                        <div class="logo-glow"></div>
+                    </div>
+                    <span class="logo-text">GRAN TURISMO 7</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link active"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="#" class="nav-link"><i class="fas fa-car"></i> Автомобили</a></li>
+                    <li><a href="#" class="nav-link" onclick="showInstructions(); return false;"><i class="fas fa-book"></i> Инструкция</a></li>
+                    <li><a href="#" class="nav-link"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="#" class="nav-link"><i class="fas fa-envelope"></i> Контакты</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="search-toggle-btn" onclick="toggleSearch(); return false;">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главная секция -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-trophy"></i>
+                <span>Официальный каталог</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">КАТАЛОГ</span>
+                <span class="title-line highlight">АВТОМОБИЛЕЙ</span>
+            </h1>
+            <p class="hero-subtitle">Полная коллекция автомобилей Gran Turismo 7 с детальными характеристиками и изображениями</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">400+</span>
+                    <span class="stat-label">Автомобилей</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Брендов</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">Изображений</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <button class="hero-btn primary" onclick="scrollToFilters(); return false;">
+                    <i class="fas fa-search"></i>
+                    Начать поиск
+                </button>
+                <button class="hero-btn secondary" onclick="showInstructions(); return false;">
+                    <i class="fas fa-play"></i>
+                    Как использовать
+                </button>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <span>Прокрутите вниз</span>
+        </div>
+    </section>
+
+    <!-- Фильтры и поиск -->
+    <section class="filters-section" id="filters">
+        <div class="container">
+            <div class="filters-wrapper">
+                <!-- Поиск -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="searchInput" placeholder="Поиск автомобилей..." class="search-input">
+                        <button class="clear-search" id="clearSearch" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Фильтры -->
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <label for="brandFilter" class="filter-label">
+                            <i class="fas fa-tag"></i>
+                            Бренд
+                        </label>
+                        <select id="brandFilter" class="filter-select">
+                            <option value="">Все бренды</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="categoryFilter" class="filter-label">
+                            <i class="fas fa-layer-group"></i>
+                            Категория
+                        </label>
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="">Все категории</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="drivetrainFilter" class="filter-label">
+                            <i class="fas fa-cog"></i>
+                            Привод
+                        </label>
+                        <select id="drivetrainFilter" class="filter-select">
+                            <option value="">Все типы</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="yearFilter" class="filter-label">
+                            <i class="fas fa-calendar"></i>
+                            Год
+                        </label>
+                        <select id="yearFilter" class="filter-select">
+                            <option value="">Все годы</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sortBy" class="filter-label">
+                            <i class="fas fa-sort"></i>
+                            Сортировка
+                        </label>
+                        <select id="sortBy" class="filter-select">
+                            <option value="name">По названию</option>
+                            <option value="brand">По бренду</option>
+                            <option value="year">По году</option>
+                            <option value="power">По мощности</option>
+                        </select>
+                    </div>
+
+                    <button class="clear-filters-btn" id="clearFilters">
+                        <i class="fas fa-times"></i>
+                        Очистить фильтры
+                    </button>
+                </div>
+
+                <!-- Результаты поиска -->
+                <div class="search-results" id="searchResults">
+                    <div class="results-info">
+                        <span id="resultsCount">0</span> автомобилей найдено
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Каталог автомобилей по брендам -->
+    <section id="cars" class="cars-section">
+        <div class="container">
+            <div id="brandsContainer">
+                <!-- Бренды будут загружены через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GRAN TURISMO 7</h3>
+                    <p>Официальный каталог автомобилей</p>
+                </div>
+                <div class="footer-section">
+                    <p>&copy; 2024 Sony Interactive Entertainment. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для деталей автомобиля -->
+    <div id="carModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-btn" onclick="closeModal()">
+                    <span>✕</span>
+                    <span>Закрыть</span>
+                </button>
+                <div class="modal-title">
+                    <span id="modalBrand"></span>
+                    <span id="modalModel"></span>
+                </div>
+                <div class="modal-nav">
+                    <img id="modalBrandLogo" src="" alt="" class="modal-brand-logo">
+                    <button class="nav-btn prev-btn" onclick="navigateCar(-1)">
+                        <span>‹</span>
+                        <span>Назад</span>
+                    </button>
+                    <button class="nav-btn next-btn" onclick="navigateCar(1)">
+                        <span>Далее</span>
+                        <span>›</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <!-- Слайдер скриншотов -->
+                <div class="car-screenshots" id="carScreenshots">
+                    <div class="screenshots-slider">
+                        <button class="slider-arrow prev" onclick="prevSlide()">‹</button>
+                        <button class="slider-arrow next" onclick="nextSlide()">›</button>
+                        <div class="screenshots-container" id="screenshotsContainer">
+                            <!-- Скриншоты будут загружены через JavaScript -->
+                        </div>
+                        <div class="slider-counter" id="sliderCounter">
+                            <!-- Счетчик будет загружен через JavaScript -->
+                        </div>
+                        <div class="slider-nav" id="sliderNav">
+                            <!-- Точки навигации будут загружены через JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="car-details">
+                    <div class="car-description">
+                        <h2 id="modalDescription"></h2>
+                        <p id="modalFullDescription"></p>
+                    </div>
+                    <div class="car-specifications">
+                        <div class="spec-header" id="modalSpecHeader"></div>
+                        <div class="spec-grid">
+                            <div class="spec-column">
+                                <div class="spec-item">
+                                    <span class="spec-label">Объем двигателя</span>
+                                    <span class="spec-value" id="modalDisplacement"></span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Макс. мощность</span>
+                                    <span class="spec-value" id="modalPower"></span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Масса</span>
+                                    <span class="spec-value" id="modalWeight"></span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Длина</span>
+                                    <span class="spec-value" id="modalLength"></span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Высота</span>
+                                    <span class="spec-value" id="modalHeight"></span>
+                                </div>
+                            </div>
+                            <div class="spec-column">
+                                <div class="spec-item">
+                                    <span class="spec-label">Привод</span>
+                                    <span class="spec-value" id="modalDrivetrain"></span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Макс. крутящий момент</span>
+                                    <span class="spec-value" id="modalTorque"></span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Наддув</span>
+                                    <span class="spec-value" id="modalAspiration"></span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Ширина</span>
+                                    <span class="spec-value" id="modalWidth"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопка "Наверх" -->
+    <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-background">
+            <div class="footer-gradient"></div>
+            <div class="footer-pattern"></div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="images/logo-gt.svg" alt="Gran Turismo" class="footer-logo-img">
+                        <div class="footer-logo-glow"></div>
+                    </div>
+                    <div class="footer-stats">
+                        <div class="footer-stat">
+                            <span class="footer-stat-number" id="totalCars">0</span>
+                            <span class="footer-stat-label">Автомобилей</span>
+                        </div>
+                        <div class="footer-stat">
+                            <span class="footer-stat-number" id="addedCars">0</span>
+                            <span class="footer-stat-label">Добавлено</span>
+                        </div>
+                        <div class="footer-stat">
+                            <span class="footer-stat-label">Обновлено</span>
+                            <span class="footer-stat-date" id="lastUpdate">-</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-description">
+                    <h3>Gran Turismo 7 Каталог</h3>
+                    <p>Полная коллекция автомобилей с детальными характеристиками и изображениями. Все данные загружаются из локальных папок.</p>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Gran Turismo 7 Каталог. Все права защищены.</p>
+                </div>
+                <div class="footer-logos">
+                    <div class="developer-logos">
+                        <div class="logo-item">
+                            <img src="images/logo_gt7.svg" alt="Gran Turismo 7" class="dev-logo">
+                        </div>
+                        <div class="logo-item">
+                            <img src="images/logo_ps_studio.png" alt="PlayStation Studios" class="dev-logo">
+                        </div>
+                        <div class="logo-item">
+                            <img src="images/logo_sie.png" alt="Sony Interactive Entertainment" class="dev-logo">
+                        </div>
+                        <div class="logo-item">
+                            <img src="images/logo-ps.svg" alt="PlayStation" class="dev-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
