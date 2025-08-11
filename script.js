@@ -16,6 +16,7 @@ let activeFilters = {
 // Звуковые эффекты
 let hoverSound = null;
 let openSound = null;
+let startSound = null;
 let soundsEnabled = true;
 
 // Инициализация звуков
@@ -29,11 +30,47 @@ function initSounds() {
         openSound.volume = 0.4;
         openSound.preload = 'auto';
         
+        startSound = new Audio('sound/start.mp3');
+        startSound.volume = 0.5;
+        startSound.preload = 'auto';
+        
         console.log('Звуки инициализированы');
     } catch (error) {
         console.warn('Не удалось инициализировать звуки:', error);
         soundsEnabled = false;
     }
+}
+
+// Функция для воспроизведения стартового звука
+function playStartSound() {
+    if (soundsEnabled && startSound) {
+        try {
+            startSound.currentTime = 0;
+            startSound.play().catch(error => {
+                console.warn('Не удалось воспроизвести стартовый звук:', error);
+            });
+        } catch (error) {
+            console.warn('Ошибка воспроизведения стартового звука:', error);
+        }
+    }
+}
+
+// Функция для управления прелоадером
+function initPreloader() {
+    const preloader = document.getElementById('preloader');
+    
+    // Воспроизводим стартовый звук
+    playStartSound();
+    
+    // Скрываем прелоадер через 15 секунд
+    setTimeout(() => {
+        preloader.classList.add('hidden');
+        
+        // Удаляем прелоадер из DOM после анимации
+        setTimeout(() => {
+            preloader.remove();
+        }, 800);
+    }, 15000);
 }
 
 // Воспроизведение звука при наведении
@@ -239,6 +276,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Инициализируем звуки
     initSounds();
+    
+    // Инициализируем прелоадер
+    initPreloader();
     
     // Добавляем тестовое сообщение в контейнер
     const brandsContainer = document.getElementById('brandsContainer');
