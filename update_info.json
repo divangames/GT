@@ -1,27 +1,6 @@
 {
   "total_cars": 97,
-  "new_cars_count": 4,
-  "last_update": "2025-08-11T23:09:46.396734",
-  "new_cars": [
-    {
-      "brand": "Chevrolet",
-      "name": "Camaro SS '16",
-      "year": "16"
-    },
-    {
-      "brand": "Chevrolet",
-      "name": "Camaro Z28 '69",
-      "year": "69"
-    },
-    {
-      "brand": "Chevrolet",
-      "name": "Camaro ZL1 1LE Package '18",
-      "year": "18"
-    },
-    {
-      "brand": "Chevrolet",
-      "name": "Chevelle SS 454 '70",
-      "year": "70"
-    }
-  ]
+  "new_cars_count": 0,
+  "last_update": "2025-08-12T00:44:02.432940",
+  "new_cars": []
 }

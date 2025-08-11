@@ -42,7 +42,7 @@ html {
 }
 
 .logo-animation {
-    width: 120px;
+    width: 220px;
     height: auto;
     animation: logoPulse 2s ease-in-out infinite;
     filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
