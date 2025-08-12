@@ -3867,5 +3867,470 @@
       "width": "2 002 мм",
       "height": "1 459 мм"
     }
+  },
+  {
+    "id": 125,
+    "brand": "Dodge",
+    "name": "Charger RT 426 Hemi '68",
+    "name_short": "Charger RT 426 Hemi",
+    "year": "68",
+    "type": "modern",
+    "power": "431 л. с. / 5 000 об/мин",
+    "torque": "664,4 Н/м / 4 000 об/мин",
+    "weight": "1 805 кг",
+    "price": "N/A",
+    "image": "images/cars/Dodge/Charger RT 426 Hemi '68/car3538.png",
+    "brand_logo": "images/cars/Dodge/tnr11.png",
+    "screenshots": [
+      "images/cars/Dodge/Charger RT 426 Hemi '68/car3538_1_01-0f-E-7Rr.jpg",
+      "images/cars/Dodge/Charger RT 426 Hemi '68/car3538_2_01-CBaOzEyi.jpg",
+      "images/cars/Dodge/Charger RT 426 Hemi '68/car3538_2_02-CL_nSHzg.jpg",
+      "images/cars/Dodge/Charger RT 426 Hemi '68/car3538_3_01-BMT8G5Sd.jpg"
+    ],
+    "description": "Шедевр американской классики 1960-х и предмет зависти коллекционеров.",
+    "category": "ТР 488.45",
+    "pp": "488.45",
+    "displacement": "6 974 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "5 283 мм",
+      "width": "1 946 мм",
+      "height": "1 346 мм"
+    }
+  },
+  {
+    "id": 126,
+    "brand": "Dodge",
+    "name": "Charger SRT Hellcat '15",
+    "name_short": "Charger SRT Hellcat",
+    "year": "15",
+    "type": "modern",
+    "power": "717 л. с. / 6 000 об/мин",
+    "torque": "881,0 Н/м / 5 000 об/мин",
+    "weight": "1 980 кг",
+    "price": "N/A",
+    "image": "images/cars/Dodge/Charger SRT Hellcat '15/car2152.png",
+    "brand_logo": "images/cars/Dodge/tnr11.png",
+    "screenshots": [
+      "images/cars/Dodge/Charger SRT Hellcat '15/car2152_1_01-BT23hWKu.jpg",
+      "images/cars/Dodge/Charger SRT Hellcat '15/car2152_2_01-Cs8CqrDO.jpg",
+      "images/cars/Dodge/Charger SRT Hellcat '15/car2152_2_02-D3CR0GL0.jpg",
+      "images/cars/Dodge/Charger SRT Hellcat '15/car2152_3_01-CLniAegI.jpg"
+    ],
+    "description": "Сверхмощный Charger, поставивший мировой рекорд скорости.",
+    "category": "ТР 595.81",
+    "pp": "595.81",
+    "displacement": "6 161 см³",
+    "drivetrain": "FR",
+    "aspiration": "НГ (нагнетатель)",
+    "dimensions": {
+      "length": "5 088 мм",
+      "width": "1 885 мм",
+      "height": "1 478 мм"
+    }
+  },
+  {
+    "id": 127,
+    "brand": "Dodge",
+    "name": "Charger SRT Hellcat Safety Car",
+    "name_short": "Charger SRT Hellcat Safety Car",
+    "year": "",
+    "type": "modern",
+    "power": "717 л. с. / 6 000 об/мин",
+    "torque": "881,0 Н/м / 5 000 об/мин",
+    "weight": "1 980 кг",
+    "price": "N/A",
+    "image": "images/cars/Dodge/Charger SRT Hellcat Safety Car/car3406.png",
+    "brand_logo": "images/cars/Dodge/tnr11.png",
+    "screenshots": [
+      "images/cars/Dodge/Charger SRT Hellcat Safety Car/car3406_1_01-DVLn3Uu-.jpg",
+      "images/cars/Dodge/Charger SRT Hellcat Safety Car/car3406_2_01-BA8q8enU.jpg",
+      "images/cars/Dodge/Charger SRT Hellcat Safety Car/car3406_2_02-DhOoT7-m.jpg",
+      "images/cars/Dodge/Charger SRT Hellcat Safety Car/car3406_3_01-h7DMGMub.jpg"
+    ],
+    "description": "Сверхмощный Charger, поставивший мировой рекорд скорости.",
+    "category": "Gr.N",
+    "pp": "591.71",
+    "displacement": "6 161 см³",
+    "drivetrain": "FR",
+    "aspiration": "НГ (нагнетатель)",
+    "dimensions": {
+      "length": "5 088 мм",
+      "width": "1 885 мм",
+      "height": "1 478 мм"
+    }
+  },
+  {
+    "id": 128,
+    "brand": "Dodge",
+    "name": "SRT Tomahawk GTS-R VGT",
+    "name_short": "SRT Tomahawk GTS-R VGT",
+    "year": "",
+    "type": "modern",
+    "power": "1 470 л. с. / 9 200 об/мин",
+    "torque": "974,8 Н/м / 7 400 об/мин",
+    "weight": "663 кг",
+    "price": "N/A",
+    "image": "images/cars/Dodge/SRT Tomahawk GTS-R VGT/car2110.png",
+    "brand_logo": "images/cars/Dodge/tnr11.png",
+    "screenshots": [
+      "images/cars/Dodge/SRT Tomahawk GTS-R VGT/car2110_1_01-Ct9WwhiM.jpg",
+      "images/cars/Dodge/SRT Tomahawk GTS-R VGT/car2110_2_01-CgJ3gPBi.jpg",
+      "images/cars/Dodge/SRT Tomahawk GTS-R VGT/car2110_2_02-B81mCxVk.jpg",
+      "images/cars/Dodge/SRT Tomahawk GTS-R VGT/car2110_3_01-D2LJh3e_.jpg"
+    ],
+    "description": "Легкий гоночный вариант футуристического одноместного концепт-кара.",
+    "category": "Gr.N",
+    "pp": "1196.75",
+    "displacement": "7 000 см³",
+    "drivetrain": "4WD",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "5 039 мм",
+      "width": "2 250 мм",
+      "height": "950 мм"
+    }
+  },
+  {
+    "id": 129,
+    "brand": "Dodge",
+    "name": "SRT Tomahawk S VGT",
+    "name_short": "SRT Tomahawk S VGT",
+    "year": "",
+    "type": "modern",
+    "power": "1 021 л. с. / 9 200 об/мин",
+    "torque": "678,8 Н/м / 7 400 об/мин",
+    "weight": "921 кг",
+    "price": "N/A",
+    "image": "images/cars/Dodge/SRT Tomahawk S VGT/car2111.png",
+    "brand_logo": "images/cars/Dodge/tnr11.png",
+    "screenshots": [
+      "images/cars/Dodge/SRT Tomahawk S VGT/car2111_1_01-CKaVzwXN.jpg",
+      "images/cars/Dodge/SRT Tomahawk S VGT/car2111_2_01-BlT2x_91.jpg",
+      "images/cars/Dodge/SRT Tomahawk S VGT/car2111_2_02-1xPZ0nPp.jpg",
+      "images/cars/Dodge/SRT Tomahawk S VGT/car2111_3_01-CIZ96Vej.jpg"
+    ],
+    "description": "Воплощение технологий ближайшего будущего с 1 000-сильным V10 двигателем и пневматическим аккумулятором энергии.",
+    "category": "Gr.N",
+    "pp": "977.55",
+    "displacement": "7 000 см³",
+    "drivetrain": "4WD",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "5 039 мм",
+      "width": "2 250 мм",
+      "height": "950 мм"
+    }
+  },
+  {
+    "id": 130,
+    "brand": "Dodge",
+    "name": "SRT Tomahawk VGT (Gr.1)",
+    "name_short": "SRT Tomahawk VGT (Gr.1)",
+    "year": "",
+    "type": "modern",
+    "power": "703 л. с. / 9 200 об/мин",
+    "torque": "595,4 Н/м / 7 500 об/мин",
+    "weight": "950 кг",
+    "price": "N/A",
+    "image": "images/cars/Dodge/SRT Tomahawk VGT (Gr.1)/car3188.png",
+    "brand_logo": "images/cars/Dodge/tnr11.png",
+    "screenshots": [
+      "images/cars/Dodge/SRT Tomahawk VGT (Gr.1)/car3188_1_01-CezkxJAM.jpg",
+      "images/cars/Dodge/SRT Tomahawk VGT (Gr.1)/car3188_2_01-DgRPRwrE.jpg",
+      "images/cars/Dodge/SRT Tomahawk VGT (Gr.1)/car3188_2_02-DaFOMrpg.jpg",
+      "images/cars/Dodge/SRT Tomahawk VGT (Gr.1)/car3188_3_01-DVwW3wkA.jpg"
+    ],
+    "description": "Среднемоторный заднеприводной вариант Tomahawk для гонок в классе \"Гр. 1\".",
+    "category": "Gr.N",
+    "pp": "887.62",
+    "displacement": "- см³",
+    "drivetrain": "MR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "5 141 мм",
+      "width": "2 244 мм",
+      "height": "974 мм"
+    }
+  },
+  {
+    "id": 131,
+    "brand": "Dodge",
+    "name": "SRT Tomahawk X VGT",
+    "name_short": "SRT Tomahawk X VGT",
+    "year": "",
+    "type": "modern",
+    "power": "2 623 л. с. / 13 800 об/мин",
+    "torque": "1 217,4 Н/м / 11 300 об/мин",
+    "weight": "749 кг",
+    "price": "N/A",
+    "image": "images/cars/Dodge/SRT Tomahawk X VGT/car2108.png",
+    "brand_logo": "images/cars/Dodge/tnr11.png",
+    "screenshots": [
+      "images/cars/Dodge/SRT Tomahawk X VGT/car2108_1_01-WqWmh2ig.jpg",
+      "images/cars/Dodge/SRT Tomahawk X VGT/car2108_2_01-CSWrrPIU.jpg",
+      "images/cars/Dodge/SRT Tomahawk X VGT/car2108_2_02-Bvxg57G0.jpg",
+      "images/cars/Dodge/SRT Tomahawk X VGT/car2108_3_01-3lhnMHZN.jpg"
+    ],
+    "description": "Мощность более 2 500 л. с. и маневренность истребителя. Экстремальная машина для избранных.",
+    "category": "Gr.N",
+    "pp": "1381.58",
+    "displacement": "7 000 см³",
+    "drivetrain": "4WD",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "5 039 мм",
+      "width": "2 250 мм",
+      "height": "950 мм"
+    }
+  },
+  {
+    "id": 132,
+    "brand": "Dodge",
+    "name": "Super Bee '70",
+    "name_short": "Super Bee",
+    "year": "70",
+    "type": "modern",
+    "power": "340 л. с. / 4 800 об/мин",
+    "torque": "576,2 Н/м / 3 500 об/мин",
+    "weight": "1 533 кг",
+    "price": "N/A",
+    "image": "images/cars/Dodge/Super Bee '70/car3377.png",
+    "brand_logo": "images/cars/Dodge/tnr11.png",
+    "screenshots": [
+      "images/cars/Dodge/Super Bee '70/car3377_1_01-B181Dqgr.jpg",
+      "images/cars/Dodge/Super Bee '70/car3377_2_01-CJlc6klO.jpg",
+      "images/cars/Dodge/Super Bee '70/car3377_2_02-DN46Enlh.jpg",
+      "images/cars/Dodge/Super Bee '70/car3377_3_01-C850HdxK.jpg"
+    ],
+    "description": "Модель Coronet с 7-литровым V8 двигателем Hemi, вошедшая в историю классических американских суперкаров.",
+    "category": "ТР 452.63",
+    "pp": "452.63",
+    "displacement": "6 277 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "5 334 мм",
+      "width": "1 948 мм",
+      "height": "1 346 мм"
+    }
+  },
+  {
+    "id": 133,
+    "brand": "Dodge",
+    "name": "Viper Gr.4",
+    "name_short": "Viper Gr.4",
+    "year": "",
+    "type": "modern",
+    "power": "435 л. с. / 6 400 об/мин",
+    "torque": "546,1 Н/м / 5 000 об/мин",
+    "weight": "1 400 кг",
+    "price": "N/A",
+    "image": "images/cars/Dodge/Viper Gr.4/car3249.png",
+    "brand_logo": "images/cars/Dodge/tnr11.png",
+    "screenshots": [
+      "images/cars/Dodge/Viper Gr.4/car3249_1_01-B_BVt7Rz.jpg",
+      "images/cars/Dodge/Viper Gr.4/car3249_2_01-BwRUUMuj.jpg",
+      "images/cars/Dodge/Viper Gr.4/car3249_2_02-DBUIPw_L.jpg",
+      "images/cars/Dodge/Viper Gr.4/car3249_3_01-CkPBpISg.jpg"
+    ],
+    "description": "Модель Viper третьего поколения с превосходными характеристиками, достойными марки SRT.",
+    "category": "Gr.N",
+    "pp": "644.69",
+    "displacement": "- см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 622 мм",
+      "width": "1 934 мм",
+      "height": "1 214 мм"
+    }
+  },
+  {
+    "id": 134,
+    "brand": "Dodge",
+    "name": "Viper GTS '02",
+    "name_short": "Viper GTS",
+    "year": "02",
+    "type": "modern",
+    "power": "455 л. с. / 5 000 об/мин",
+    "torque": "663,4 Н/м / 4 000 об/мин",
+    "weight": "1 569 кг",
+    "price": "N/A",
+    "image": "images/cars/Dodge/Viper GTS '02/car1373.png",
+    "brand_logo": "images/cars/Dodge/tnr11.png",
+    "screenshots": [
+      "images/cars/Dodge/Viper GTS '02/car1373_1_01-DYEsnCxM.jpg",
+      "images/cars/Dodge/Viper GTS '02/car1373_2_01-CfxUrRcs.jpg",
+      "images/cars/Dodge/Viper GTS '02/car1373_2_02-DqncGl8d.jpg",
+      "images/cars/Dodge/Viper GTS '02/car1373_3_01-BN5WM3pt.jpg"
+    ],
+    "description": "С появлением этой модели спортивная линейка Viper вышла на арену суперкаров.",
+    "category": "ТР 561.26",
+    "pp": "561.26",
+    "displacement": "7 997 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 488 мм",
+      "width": "1 923 мм",
+      "height": "1 219 мм"
+    }
+  },
+  {
+    "id": 135,
+    "brand": "Dodge",
+    "name": "Viper GTS '13",
+    "name_short": "Viper GTS",
+    "year": "13",
+    "type": "modern",
+    "power": "649 л. с. / 6 400 об/мин",
+    "torque": "813,9 Н/м / 5 000 об/мин",
+    "weight": "1 556 кг",
+    "price": "N/A",
+    "image": "images/cars/Dodge/Viper GTS '13/car1956.png",
+    "brand_logo": "images/cars/Dodge/tnr11.png",
+    "screenshots": [
+      "images/cars/Dodge/Viper GTS '13/car1956_1_01-D664_dvD.jpg",
+      "images/cars/Dodge/Viper GTS '13/car1956_2_01-DFYf32nI.jpg",
+      "images/cars/Dodge/Viper GTS '13/car1956_2_02-DGXt27Ky.jpg",
+      "images/cars/Dodge/Viper GTS '13/car1956_3_01-DT0TcWYj.jpg"
+    ],
+    "description": "Модель Viper третьего поколения с превосходными характеристиками, достойными марки SRT.",
+    "category": "ТР 605.33",
+    "pp": "605.33",
+    "displacement": "- см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 463 мм",
+      "width": "1 941 мм",
+      "height": "1 246 мм"
+    }
+  },
+  {
+    "id": 136,
+    "brand": "Dodge",
+    "name": "Viper SRT GT3-R '15",
+    "name_short": "Viper SRT GT3-R",
+    "year": "15",
+    "type": "modern",
+    "power": "688 л. с. / 6 000 об/мин",
+    "torque": "868,2 Н/м / 5 000 об/мин",
+    "weight": "1 290 кг",
+    "price": "N/A",
+    "image": "images/cars/Dodge/Viper SRT GT3-R '15/car3223.png",
+    "brand_logo": "images/cars/Dodge/tnr11.png",
+    "screenshots": [
+      "images/cars/Dodge/Viper SRT GT3-R '15/car3223_1_01-Cu_cl-uY.jpg",
+      "images/cars/Dodge/Viper SRT GT3-R '15/car3223_2_01-2wF-pjEr.jpg",
+      "images/cars/Dodge/Viper SRT GT3-R '15/car3223_2_02-DvkAOGhV.jpg",
+      "images/cars/Dodge/Viper SRT GT3-R '15/car3223_3_01-CUtv30Xu.jpg"
+    ],
+    "description": "Машина для частных команд, продолжающая традиции GTS-R.",
+    "category": "Gr.N",
+    "pp": "742.54",
+    "displacement": "8 383 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 540 мм",
+      "width": "2 068 мм",
+      "height": "1 160 мм"
+    }
+  },
+  {
+    "id": 137,
+    "brand": "Dodge",
+    "name": "Viper SRT10 Coupe '06",
+    "name_short": "Viper SRT10 Coupe",
+    "year": "06",
+    "type": "modern",
+    "power": "516 л. с. / 5 500 об/мин",
+    "torque": "724,7 Н/м / 4 000 об/мин",
+    "weight": "1 565 кг",
+    "price": "N/A",
+    "image": "images/cars/Dodge/Viper SRT10 Coupe '06/car1402.png",
+    "brand_logo": "images/cars/Dodge/tnr11.png",
+    "screenshots": [
+      "images/cars/Dodge/Viper SRT10 Coupe '06/car1402_1_01-BB8WdLg-.jpg",
+      "images/cars/Dodge/Viper SRT10 Coupe '06/car1402_2_01-DgS_9SD_.jpg",
+      "images/cars/Dodge/Viper SRT10 Coupe '06/car1402_2_02-BP8ovIZQ.jpg",
+      "images/cars/Dodge/Viper SRT10 Coupe '06/car1402_3_01-9DOisOFS.jpg"
+    ],
+    "description": "Долгожданная модель с закрытым кузовом, обладающая улучшенной аэродинамикой и меньшим весом.",
+    "category": "ТР 582.46",
+    "pp": "582.46",
+    "displacement": "8 285 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 459 мм",
+      "width": "1 911 мм",
+      "height": "1 210 мм"
+    }
+  },
+  {
+    "id": 138,
+    "brand": "DS AUTOMOBILES",
+    "name": "DS 3 Racing '11",
+    "name_short": "DS 3 Racing",
+    "year": "11",
+    "type": "modern",
+    "power": "206 л. с. / 6 000 об/мин",
+    "torque": "274,4 Н/м / 2 000 об/мин",
+    "weight": "1 165 кг",
+    "price": "N/A",
+    "image": "images/cars/DS AUTOMOBILES/DS 3 Racing '11/car2172.png",
+    "brand_logo": "images/cars/DS AUTOMOBILES/tnr154.png",
+    "screenshots": [
+      "images/cars/DS AUTOMOBILES/DS 3 Racing '11/car2172_1_01-DFhGt1jf.jpg",
+      "images/cars/DS AUTOMOBILES/DS 3 Racing '11/car2172_2_01-ClPjekdV.jpg",
+      "images/cars/DS AUTOMOBILES/DS 3 Racing '11/car2172_2_02-BpLDnAkT.jpg",
+      "images/cars/DS AUTOMOBILES/DS 3 Racing '11/car2172_3_01-COUhpI4T.jpg"
+    ],
+    "description": "ксклюзивная модель, любимая многими не только за технические характеристики, но и за оригинальность и качество.",
+    "category": "ТР 463.86",
+    "pp": "463.86",
+    "displacement": "1 598 см³",
+    "drivetrain": "FF",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "3 948 мм",
+      "width": "1 717 мм",
+      "height": "1 502 мм"
+    }
+  },
+  {
+    "id": 139,
+    "brand": "Eckert's Rod & Custom",
+    "name": "Mach Forty",
+    "name_short": "Mach Forty",
+    "year": "",
+    "type": "modern",
+    "power": "799 л. с. / 6 500 об/мин",
+    "torque": "1 057,2 Н/м / 4 000 об/мин",
+    "weight": "1 588 кг",
+    "price": "N/A",
+    "image": "images/cars/Eckert's Rod & Custom/Mach Forty/car3346.png",
+    "brand_logo": "images/cars/Eckert's Rod & Custom/tnr148.png",
+    "screenshots": [
+      "images/cars/Eckert's Rod & Custom/Mach Forty/car3346_1_01-CI46uyCq.jpg",
+      "images/cars/Eckert's Rod & Custom/Mach Forty/car3346_2_01-DMfF4gYT.jpg",
+      "images/cars/Eckert's Rod & Custom/Mach Forty/car3346_2_02-CPZB5Aew.jpg",
+      "images/cars/Eckert's Rod & Custom/Mach Forty/car3346_3_01-Cy2r6wuY.jpg"
+    ],
+    "description": "Этот внушительный Mustang с мотором от Ford GT удостоился награды GT Award 2012 г.",
+    "category": "ТР 639.22",
+    "pp": "639.22",
+    "displacement": "5 409 см³",
+    "drivetrain": "MR",
+    "aspiration": "НГ (нагнетатель)",
+    "dimensions": {
+      "length": "4 561 мм",
+      "width": "1 983 мм",
+      "height": "1 196 мм"
+    }
   }
 ]

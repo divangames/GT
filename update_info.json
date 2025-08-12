@@ -1,6 +1,82 @@
 {
-  "total_cars": 124,
-  "new_cars_count": 0,
-  "last_update": "2025-08-12T21:19:49.083008",
-  "new_cars": []
+  "total_cars": 139,
+  "new_cars_count": 15,
+  "last_update": "2025-08-12T21:55:46.294310",
+  "new_cars": [
+    {
+      "brand": "Dodge",
+      "name": "Charger RT 426 Hemi '68",
+      "year": "68"
+    },
+    {
+      "brand": "Dodge",
+      "name": "Charger SRT Hellcat '15",
+      "year": "15"
+    },
+    {
+      "brand": "Dodge",
+      "name": "Charger SRT Hellcat Safety Car",
+      "year": ""
+    },
+    {
+      "brand": "Dodge",
+      "name": "SRT Tomahawk GTS-R VGT",
+      "year": ""
+    },
+    {
+      "brand": "Dodge",
+      "name": "SRT Tomahawk S VGT",
+      "year": ""
+    },
+    {
+      "brand": "Dodge",
+      "name": "SRT Tomahawk VGT (Gr.1)",
+      "year": ""
+    },
+    {
+      "brand": "Dodge",
+      "name": "SRT Tomahawk X VGT",
+      "year": ""
+    },
+    {
+      "brand": "Dodge",
+      "name": "Super Bee '70",
+      "year": "70"
+    },
+    {
+      "brand": "Dodge",
+      "name": "Viper Gr.4",
+      "year": ""
+    },
+    {
+      "brand": "Dodge",
+      "name": "Viper GTS '02",
+      "year": "02"
+    },
+    {
+      "brand": "Dodge",
+      "name": "Viper GTS '13",
+      "year": "13"
+    },
+    {
+      "brand": "Dodge",
+      "name": "Viper SRT GT3-R '15",
+      "year": "15"
+    },
+    {
+      "brand": "Dodge",
+      "name": "Viper SRT10 Coupe '06",
+      "year": "06"
+    },
+    {
+      "brand": "DS AUTOMOBILES",
+      "name": "DS 3 Racing '11",
+      "year": "11"
+    },
+    {
+      "brand": "Eckert's Rod & Custom",
+      "name": "Mach Forty",
+      "year": ""
+    }
+  ]
 }

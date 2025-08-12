@@ -13,6 +13,10 @@ let activeFilters = {
     sortBy: 'name'
 };
 
+// Переменные для сравнения
+let compareMode = false;
+let firstCarForCompare = null;
+
 // Звуковые эффекты
 let hoverSound = null;
 let openSound = null;
@@ -415,7 +419,7 @@ function renderBrandsCatalog() {
     const brandsHTML = sortedBrands.map(brand => {
         const brandData = brands[brand];
         const carsHTML = brandData.cars.map(car => `
-            <div class="car-card" onclick="openCarModal(${car.id})">
+            <div class="car-card" onclick="handleCarCardClick(${car.id})">
                 <div class="car-image">
                     <img src="${car.image}" alt="${car.name}" onerror="this.src='https://via.placeholder.com/200x140/f0f0f0/999?text=Нет+изображения'">
                 </div>
@@ -506,8 +510,7 @@ function updateModalContent() {
 function updateScreenshotsSlider() {
     const car = carsData[currentCarIndex];
     const container = document.getElementById('screenshotsContainer');
-    const nav = document.getElementById('sliderNav');
-    const counter = document.getElementById('sliderCounter');
+    const progressContainer = document.getElementById('sliderProgress');
     
     if (!car || !car.screenshots || car.screenshots.length === 0) {
         // Если нет скриншотов, показываем превью автомобиля
@@ -516,8 +519,7 @@ function updateScreenshotsSlider() {
                 <img src="${car.image}" alt="${car.name}" onerror="this.src='https://via.placeholder.com/800x450/f0f0f0/999?text=Нет+изображения'">
             </div>
         `;
-        nav.innerHTML = '';
-        counter.innerHTML = '';
+        progressContainer.innerHTML = '';
         return;
     }
     
@@ -528,33 +530,36 @@ function updateScreenshotsSlider() {
         </div>
     `).join('');
     
-    // Создаем точки навигации
-    const dotsHTML = car.screenshots.map((_, index) => `
-        <div class="slider-dot ${index === currentSlideIndex ? 'active' : ''}" 
-             onclick="goToSlide(${index})"></div>
+    // Создаем круги прогресса
+    const progressHTML = car.screenshots.map((_, index) => `
+        <div class="progress-circle" onclick="goToSlide(${index})" data-slide="${index}"></div>
     `).join('');
     
     container.innerHTML = slidesHTML;
-    nav.innerHTML = dotsHTML;
-    
-    // Обновляем счетчик
-    updateSliderCounter();
+    progressContainer.innerHTML = progressHTML;
     
     // Обновляем позицию слайдера
     updateSliderPosition();
 }
 
-// Обновление счетчика слайдера
-function updateSliderCounter() {
+// Обновление прогресс-бара слайдера
+function updateSliderProgress() {
     const car = carsData[currentCarIndex];
-    const counter = document.getElementById('sliderCounter');
+    const progressCircles = document.querySelectorAll('.progress-circle');
     
-    if (!car || !car.screenshots || car.screenshots.length === 0) {
-        counter.innerHTML = '';
-        return;
-    }
+    if (!car || !car.screenshots || car.screenshots.length === 0) return;
     
-    counter.innerHTML = `${currentSlideIndex + 1} / ${car.screenshots.length}`;
+    progressCircles.forEach((circle, index) => {
+        circle.classList.remove('active', 'completed');
+        
+        if (index < currentSlideIndex) {
+            // Завершенные слайды
+            circle.classList.add('completed');
+        } else if (index === currentSlideIndex) {
+            // Текущий слайд
+            circle.classList.add('active');
+        }
+    });
 }
 
 // Увеличение изображения при клике
@@ -596,19 +601,13 @@ function expandImage(slideElement) {
 // Обновление позиции слайдера
 function updateSliderPosition() {
     const container = document.getElementById('screenshotsContainer');
-    const dots = document.querySelectorAll('.slider-dot');
     
     if (container) {
         container.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
     }
     
-    // Обновляем активную точку
-    dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentSlideIndex);
-    });
-    
-    // Обновляем счетчик
-    updateSliderCounter();
+    // Обновляем прогресс-бар
+    updateSliderProgress();
 }
 
 // Переход к конкретному слайду
@@ -618,7 +617,6 @@ function goToSlide(index) {
     
     currentSlideIndex = index;
     updateSliderPosition();
-    updateSliderCounter();
     
     // Перезапускаем интервал
     restartSlideInterval();
@@ -631,7 +629,6 @@ function prevSlide() {
     
     currentSlideIndex = currentSlideIndex === 0 ? car.screenshots.length - 1 : currentSlideIndex - 1;
     updateSliderPosition();
-    updateSliderCounter();
     restartSlideInterval();
 }
 
@@ -642,16 +639,18 @@ function nextSlide() {
     
     currentSlideIndex = (currentSlideIndex + 1) % car.screenshots.length;
     updateSliderPosition();
-    updateSliderCounter();
 }
 
 // Запуск автоматического переключения
 function startSlideInterval() {
     stopSlideInterval(); // Останавливаем предыдущий интервал
     
+    const car = carsData[currentCarIndex];
+    if (!car || !car.screenshots || car.screenshots.length === 0) return;
+    
     slideInterval = setInterval(() => {
         nextSlide();
-    }, 5000); // 5 секунд
+    }, 5000); // 5 секунд на слайд
 }
 
 // Остановка автоматического переключения
@@ -1365,5 +1364,227 @@ function closeContacts() {
     if (contactsModal) {
         contactsModal.style.display = 'none';
         document.body.style.overflow = 'auto';
+    }
+}
+
+// Функции сравнения автомобилей
+
+// Начать процесс сравнения
+function startCompare() {
+    if (compareMode) {
+        // Если уже в режиме сравнения, показываем модальное окно
+        showCompareModal();
+        return;
+    }
+    
+    const currentCar = carsData[currentCarIndex];
+    if (!currentCar) return;
+    
+    // Сохраняем первый автомобиль
+    firstCarForCompare = currentCar;
+    compareMode = true;
+    
+    // Закрываем текущее модальное окно
+    closeModal();
+    
+    // Показываем уведомление
+    showNotification('Выберите второй автомобиль для сравнения', 'info');
+    
+    // Добавляем класс для выделения карточек
+    document.body.classList.add('compare-mode');
+}
+
+// Показать модальное окно сравнения
+function showCompareModal() {
+    if (!firstCarForCompare) return;
+    
+    const compareModal = document.getElementById('compareModal');
+    if (!compareModal) return;
+    
+    // Загружаем данные первого автомобиля
+    loadCompareCarData(firstCarForCompare, 1);
+    
+    // Загружаем данные второго автомобиля (текущий)
+    const currentCar = carsData[currentCarIndex];
+    if (currentCar) {
+        loadCompareCarData(currentCar, 2);
+    }
+    
+    // Показываем модальное окно
+    compareModal.style.display = 'block';
+    
+    // Воспроизводим звук
+    playOpenSound();
+}
+
+// Закрыть модальное окно сравнения
+function closeCompareModal() {
+    const compareModal = document.getElementById('compareModal');
+    if (compareModal) {
+        compareModal.style.display = 'none';
+    }
+    
+    // Сбрасываем режим сравнения
+    compareMode = false;
+    firstCarForCompare = null;
+    document.body.classList.remove('compare-mode');
+}
+
+// Загрузить данные автомобиля для сравнения
+function loadCompareCarData(car, carNumber) {
+    // Загружаем изображение
+    const imageElement = document.getElementById(`compareCar${carNumber}Image`);
+    if (imageElement) {
+        imageElement.src = car.image;
+        imageElement.alt = car.name;
+    }
+    
+    // Загружаем название
+    const nameElement = document.getElementById(`compareCar${carNumber}Name`);
+    if (nameElement) {
+        nameElement.textContent = car.name;
+    }
+    
+    // Загружаем бренд
+    const brandElement = document.getElementById(`compareCar${carNumber}Brand`);
+    if (brandElement) {
+        brandElement.textContent = car.brand;
+    }
+    
+    // Загружаем характеристики
+    const specsElement = document.getElementById(`compareCar${carNumber}Specs`);
+    if (specsElement) {
+        specsElement.innerHTML = generateCompareSpecsHTML(car, carNumber);
+    }
+}
+
+// Генерировать HTML для характеристик сравнения
+function generateCompareSpecsHTML(car, carNumber) {
+    const specs = [
+        { label: 'Объем двигателя', value: car.displacement || 'N/A', unit: 'cc' },
+        { label: 'Макс. мощность', value: car.power || 'N/A', unit: 'hp' },
+        { label: 'Макс. крутящий момент', value: car.torque || 'N/A', unit: 'Nm' },
+        { label: 'Масса', value: car.weight || 'N/A', unit: 'kg' },
+        { label: 'Длина', value: car.length || 'N/A', unit: 'mm' },
+        { label: 'Ширина', value: car.width || 'N/A', unit: 'mm' },
+        { label: 'Высота', value: car.height || 'N/A', unit: 'mm' },
+        { label: 'Привод', value: car.drivetrain || 'N/A', unit: '' },
+        { label: 'Наддув', value: car.aspiration || 'N/A', unit: '' }
+    ];
+    
+    return specs.map(spec => {
+        const displayValue = spec.unit ? `${spec.value} ${spec.unit}` : spec.value;
+        return `
+            <div class="compare-spec-item">
+                <span class="spec-label">${spec.label}</span>
+                <div class="spec-value">
+                    <span>${displayValue}</span>
+                    ${carNumber === 2 ? generateDifferenceBadge(spec, car) : ''}
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+// Генерировать значок разницы
+function generateDifferenceBadge(spec, currentCar) {
+    if (!firstCarForCompare) return '';
+    
+    const firstValue = parseNumericValue(firstCarForCompare[spec.label.toLowerCase().replace(/[^a-z]/g, '')] || firstCarForCompare[getSpecKey(spec.label)]);
+    const secondValue = parseNumericValue(currentCar[spec.label.toLowerCase().replace(/[^a-z]/g, '')] || currentCar[getSpecKey(spec.label)]);
+    
+    if (firstValue === null || secondValue === null) return '';
+    
+    const difference = secondValue - firstValue;
+    const percentage = firstValue !== 0 ? ((difference / firstValue) * 100) : 0;
+    
+    if (difference === 0) {
+        return '<span class="spec-difference equal">=</span>';
+    } else if (difference > 0) {
+        return `<span class="spec-difference better">+${Math.abs(difference).toFixed(1)}</span>`;
+    } else {
+        return `<span class="spec-difference worse">-${Math.abs(difference).toFixed(1)}</span>`;
+    }
+}
+
+// Получить ключ характеристики
+function getSpecKey(label) {
+    const keyMap = {
+        'Объем двигателя': 'displacement',
+        'Макс. мощность': 'power',
+        'Макс. крутящий момент': 'torque',
+        'Масса': 'weight',
+        'Длина': 'length',
+        'Ширина': 'width',
+        'Высота': 'height',
+        'Привод': 'drivetrain',
+        'Наддув': 'aspiration'
+    };
+    return keyMap[label] || label.toLowerCase();
+}
+
+// Парсить числовое значение
+function parseNumericValue(value) {
+    if (!value || value === 'N/A') return null;
+    
+    // Извлекаем число из строки
+    const numericMatch = value.toString().match(/[\d.,]+/);
+    if (!numericMatch) return null;
+    
+    const numericValue = parseFloat(numericMatch[0].replace(',', '.'));
+    return isNaN(numericValue) ? null : numericValue;
+}
+
+// Показать уведомление
+function showNotification(message, type = 'info') {
+    // Создаем элемент уведомления
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+        <div class="notification-content">
+            <span>${message}</span>
+            <button onclick="this.parentElement.parentElement.remove()">✕</button>
+        </div>
+    `;
+    
+    // Добавляем стили
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, rgba(35, 35, 35, 0.95) 0%, rgba(45, 45, 45, 0.95) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 15px 20px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 14px;
+        z-index: 10000;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        animation: slideInRight 0.3s ease-out;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Удаляем через 5 секунд
+    setTimeout(() => {
+        if (notification.parentElement) {
+            notification.remove();
+        }
+    }, 5000);
+}
+
+// Обработчик клика по карточке в режиме сравнения
+function handleCarCardClick(carId) {
+    const carIndex = carsData.findIndex(c => c.id === carId);
+    if (carIndex === -1) return;
+    
+    if (compareMode && firstCarForCompare) {
+        // Если в режиме сравнения, открываем модальное окно сравнения
+        currentCarIndex = carIndex;
+        showCompareModal();
+    } else {
+        // Обычный режим - открываем модальное окно автомобиля
+        openCarModal(carId);
     }
 }

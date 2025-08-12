@@ -180,8 +180,84 @@
                         <span>Далее</span>
                         <span>›</span>
                     </button>
+                    <button class="compare-btn" onclick="startCompare()">
+                        <span>⚖️</span>
+                        <span>Сравнить</span>
+                    </button>
                 </div>
             </div>
+            <div class="modal-body">
+                <div class="car-content">
+                    <!-- Слайдер скриншотов -->
+                    <div class="car-screenshots" id="carScreenshots">
+                        <div class="screenshots-slider">
+                            <button class="slider-arrow prev" onclick="prevSlide()">‹</button>
+                            <button class="slider-arrow next" onclick="nextSlide()">›</button>
+                            <div class="screenshots-container" id="screenshotsContainer">
+                                <!-- Скриншоты будут загружены через JavaScript -->
+                            </div>
+                            <div class="slider-progress" id="sliderProgress">
+                                <!-- Круги прогресса будут созданы через JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Информация об автомобиле -->
+                    <div class="car-info-section">
+                        <div class="car-description">
+                            <h2 id="modalDescription"></h2>
+                            <p id="modalFullDescription"></p>
+                        </div>
+                        <div class="car-specifications">
+                            <div class="spec-header" id="modalSpecHeader"></div>
+                            <div class="spec-grid">
+                                <div class="spec-column">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Объем двигателя</span>
+                                        <span class="spec-value" id="modalDisplacement"></span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Макс. мощность</span>
+                                        <span class="spec-value" id="modalPower"></span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Масса</span>
+                                        <span class="spec-value" id="modalWeight"></span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Длина</span>
+                                        <span class="spec-value" id="modalLength"></span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Высота</span>
+                                        <span class="spec-value" id="modalHeight"></span>
+                                    </div>
+                                </div>
+                                <div class="spec-column">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Привод</span>
+                                        <span class="spec-value" id="modalDrivetrain"></span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Макс. крутящий момент</span>
+                                        <span class="spec-value" id="modalTorque"></span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Наддув</span>
+                                        <span class="spec-value" id="modalAspiration"></span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Ширина</span>
+                                        <span class="spec-value" id="modalWidth"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Модальное окно с марками автомобилей -->
     <div id="brandsModal" class="modal brands-modal">
@@ -199,78 +275,6 @@
             <div class="modal-body">
                 <div class="brands-grid" id="brandsGrid">
                     <!-- Марки будут загружены через JavaScript -->
-                </div>
-            </div>
-        </div>
-    </div>
-            <div class="modal-body">
-                <!-- Слайдер скриншотов -->
-                <div class="car-screenshots" id="carScreenshots">
-                    <div class="screenshots-slider">
-                        <button class="slider-arrow prev" onclick="prevSlide()">‹</button>
-                        <button class="slider-arrow next" onclick="nextSlide()">›</button>
-                        <div class="screenshots-container" id="screenshotsContainer">
-                            <!-- Скриншоты будут загружены через JavaScript -->
-                        </div>
-                        <div class="slider-counter" id="sliderCounter">
-                            <!-- Счетчик будет загружен через JavaScript -->
-                        </div>
-                        <div class="slider-nav" id="sliderNav">
-                            <!-- Точки навигации будут загружены через JavaScript -->
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="car-details">
-                    <div class="car-description">
-                        <h2 id="modalDescription"></h2>
-                        <p id="modalFullDescription"></p>
-                    </div>
-                    <div class="car-specifications">
-                        <div class="spec-header" id="modalSpecHeader"></div>
-                        <div class="spec-grid">
-                            <div class="spec-column">
-                                <div class="spec-item">
-                                    <span class="spec-label">Объем двигателя</span>
-                                    <span class="spec-value" id="modalDisplacement"></span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Макс. мощность</span>
-                                    <span class="spec-value" id="modalPower"></span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Масса</span>
-                                    <span class="spec-value" id="modalWeight"></span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Длина</span>
-                                    <span class="spec-value" id="modalLength"></span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Высота</span>
-                                    <span class="spec-value" id="modalHeight"></span>
-                                </div>
-                            </div>
-                            <div class="spec-column">
-                                <div class="spec-item">
-                                    <span class="spec-label">Привод</span>
-                                    <span class="spec-value" id="modalDrivetrain"></span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Макс. крутящий момент</span>
-                                    <span class="spec-value" id="modalTorque"></span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Наддув</span>
-                                    <span class="spec-value" id="modalAspiration"></span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Ширина</span>
-                                    <span class="spec-value" id="modalWidth"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -344,7 +348,7 @@
             <div class="footer-divider"></div>
             <div class="footer-bottom">
                 <div class="footer-copyright">
-                    <p>&copy; 2025 Gran Turismo 7 Каталог. Все права защищены.</p>
+                    <p>&copy; 2025 RIO Digital x Gran Turismo 7. Все права защищены.</p>
                 </div>
                 <div class="footer-logos">
                     <div class="developer-logos">
@@ -365,6 +369,55 @@
             </div>
         </div>
     </footer>
+
+    <!-- Модальное окно сравнения автомобилей -->
+    <div id="compareModal" class="modal compare-modal">
+        <div class="modal-content compare-modal-content">
+            <div class="modal-header">
+                <button class="close-btn" onclick="closeCompareModal()">
+                    <span>✕</span>
+                    <span>Закрыть</span>
+                </button>
+                <div class="modal-title">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Сравнение автомобилей</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="compare-content">
+                    <div class="compare-cars">
+                        <!-- Первый автомобиль -->
+                        <div class="compare-car left-car">
+                            <div class="car-header">
+                                <img id="compareCar1Image" src="" alt="" class="car-thumbnail">
+                                <div class="car-info">
+                                    <h3 id="compareCar1Name"></h3>
+                                    <p id="compareCar1Brand"></p>
+                                </div>
+                            </div>
+                            <div class="car-specs" id="compareCar1Specs">
+                                <!-- Характеристики будут загружены через JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <!-- Второй автомобиль -->
+                        <div class="compare-car right-car">
+                            <div class="car-header">
+                                <img id="compareCar2Image" src="" alt="" class="car-thumbnail">
+                                <div class="car-info">
+                                    <h3 id="compareCar2Name"></h3>
+                                    <p id="compareCar2Brand"></p>
+                                </div>
+                            </div>
+                            <div class="car-specs" id="compareCar2Specs">
+                                <!-- Характеристики будут загружены через JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Модальное окно контактов -->
     <div id="contactsModal" class="modal contacts-modal">
