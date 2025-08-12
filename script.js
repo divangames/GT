@@ -23,15 +23,15 @@ let soundsEnabled = true;
 function initSounds() {
     try {
         hoverSound = new Audio('sound/hover.mp3');
-        hoverSound.volume = 0.3;
+        hoverSound.volume = 1.0;
         hoverSound.preload = 'auto';
         
         openSound = new Audio('sound/open.mp3');
-        openSound.volume = 0.4;
+        openSound.volume = 1.0;
         openSound.preload = 'auto';
         
         startSound = new Audio('sound/start.mp3');
-        startSound.volume = 0.5;
+        startSound.volume = 1.0;
         startSound.preload = 'auto';
         
         console.log('Звуки инициализированы');
@@ -62,7 +62,11 @@ function initPreloader() {
     // Воспроизводим стартовый звук
     playStartSound();
     
-    // Скрываем прелоадер через 15 секунд
+    // ИЗМЕНИТЬ ВРЕМЯ ПРЕЛОАДЕРА ЗДЕСЬ (в миллисекундах)
+    // 5000 = 5 секунд, 10000 = 10 секунд, 15000 = 15 секунд
+    const preloaderDuration = 5000;
+    
+    // Скрываем прелоадер через указанное время
     setTimeout(() => {
         preloader.classList.add('hidden');
         
@@ -70,7 +74,7 @@ function initPreloader() {
         setTimeout(() => {
             preloader.remove();
         }, 800);
-    }, 15000);
+    }, preloaderDuration);
 }
 
 // Воспроизведение звука при наведении

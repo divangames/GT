@@ -1,6 +1,12 @@
 {
-  "total_cars": 97,
-  "new_cars_count": 0,
-  "last_update": "2025-08-12T00:44:02.432940",
-  "new_cars": []
+  "total_cars": 124,
+  "new_cars_count": 1,
+  "last_update": "2025-08-12T20:11:41.874457",
+  "new_cars": [
+    {
+      "brand": "Dodge",
+      "name": "Challenger SRT Demon '18",
+      "year": "18"
+    }
+  ]
 }
