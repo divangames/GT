@@ -1474,12 +1474,13 @@ function generateCompareSpecsHTML(car, carNumber) {
     
     return specs.map(spec => {
         const displayValue = spec.unit ? `${spec.value} ${spec.unit}` : spec.value;
+        const differenceBadge = carNumber === 2 ? generateDifferenceBadge(spec, car) : '';
         return `
             <div class="compare-spec-item">
                 <span class="spec-label">${spec.label}</span>
                 <div class="spec-value">
                     <span>${displayValue}</span>
-                    ${carNumber === 2 ? generateDifferenceBadge(spec, car) : ''}
+                    ${differenceBadge}
                 </div>
             </div>
         `;
