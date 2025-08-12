@@ -64,7 +64,7 @@ function initPreloader() {
     
     // ИЗМЕНИТЬ ВРЕМЯ ПРЕЛОАДЕРА ЗДЕСЬ (в миллисекундах)
     // 5000 = 5 секунд, 10000 = 10 секунд, 15000 = 15 секунд
-    const preloaderDuration = 5000;
+    const preloaderDuration = 2500;
     
     // Скрываем прелоадер через указанное время
     setTimeout(() => {
@@ -1108,25 +1108,10 @@ function toggleScrollToTopButton() {
 // Функция обновления информации в футере
 function updateFooterInfo() {
     const totalCarsElement = document.getElementById('totalCars');
-    const addedCarsElement = document.getElementById('addedCars');
     const lastUpdateElement = document.getElementById('lastUpdate');
     
     if (totalCarsElement && carsData) {
         totalCarsElement.textContent = carsData.length;
-    }
-    
-    if (addedCarsElement && carsData) {
-        // Загружаем информацию о новых автомобилях
-        fetch('update_info.json')
-            .then(response => response.json())
-            .then(updateInfo => {
-                addedCarsElement.textContent = updateInfo.new_cars_count || 0;
-            })
-            .catch(error => {
-                console.log('Не удалось загрузить информацию об обновлении:', error);
-                // Если файл не найден, показываем 0
-                addedCarsElement.textContent = '0';
-            });
     }
     
     if (lastUpdateElement) {
@@ -1134,9 +1119,7 @@ function updateFooterInfo() {
         const options = { 
             year: 'numeric', 
             month: 'long', 
-            day: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit'
+            day: 'numeric'
         };
         lastUpdateElement.textContent = now.toLocaleDateString('ru-RU', options);
     }
