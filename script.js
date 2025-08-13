@@ -1,3 +1,21 @@
+// Функция для правильного склонения слова "автомобиль"
+function getCarWordForm(count) {
+    const lastDigit = count % 10;
+    const lastTwoDigits = count % 100;
+    
+    if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
+        return 'автомобилей';
+    }
+    
+    if (lastDigit === 1) {
+        return 'автомобиль';
+    } else if (lastDigit >= 2 && lastDigit <= 4) {
+        return 'автомобиля';
+    } else {
+        return 'автомобилей';
+    }
+}
+
 // Глобальные переменные
 let carsData = [];
 let currentCarIndex = 0;
@@ -412,8 +430,8 @@ function renderBrandsCatalog() {
     
     console.log('Сгруппировано брендов:', Object.keys(brands).length);
     
-    // Сортируем бренды по алфавиту
-    const sortedBrands = Object.keys(brands).sort();
+    // Сортируем бренды по алфавиту (игнорируя регистр)
+    const sortedBrands = Object.keys(brands).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase(), 'ru'));
     
     // Создаем HTML для каждого бренда
     const brandsHTML = sortedBrands.map(brand => {
@@ -435,7 +453,7 @@ function renderBrandsCatalog() {
                     </div>
                     <div class="brand-info">
                         <div class="brand-name">${brand}</div>
-                        <div class="brand-count">${brandData.cars.length} автомобилей</div>
+                        <div class="brand-count">${brandData.cars.length} ${getCarWordForm(brandData.cars.length)}</div>
                     </div>
                 </div>
                 <div class="cars-grid">
@@ -745,12 +763,42 @@ function setupMobileMenu() {
 
 // Настройка событий модального окна
 function setupModalEvents() {
-    const modal = document.getElementById('carModal');
-    
-    if (modal) {
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
+    // Основное модальное окно автомобиля
+    const carModal = document.getElementById('carModal');
+    if (carModal) {
+        carModal.addEventListener('click', function(e) {
+            if (e.target === carModal) {
                 closeModal();
+            }
+        });
+    }
+    
+    // Модальное окно марок автомобилей
+    const brandsModal = document.getElementById('brandsModal');
+    if (brandsModal) {
+        brandsModal.addEventListener('click', function(e) {
+            if (e.target === brandsModal) {
+                closeBrandsModal();
+            }
+        });
+    }
+    
+    // Модальное окно сравнения
+    const compareModal = document.getElementById('compareModal');
+    if (compareModal) {
+        compareModal.addEventListener('click', function(e) {
+            if (e.target === compareModal) {
+                closeCompareModal();
+            }
+        });
+    }
+    
+    // Модальное окно контактов
+    const contactsModal = document.getElementById('contactsModal');
+    if (contactsModal) {
+        contactsModal.addEventListener('click', function(e) {
+            if (e.target === contactsModal) {
+                closeContacts();
             }
         });
     }
@@ -758,11 +806,20 @@ function setupModalEvents() {
     // Закрытие по Escape
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
-            closeModal();
+            // Закрываем активное модальное окно
+            if (carModal && carModal.style.display === 'block') {
+                closeModal();
+            } else if (brandsModal && brandsModal.style.display === 'block') {
+                closeBrandsModal();
+            } else if (compareModal && compareModal.style.display === 'block') {
+                closeCompareModal();
+            } else if (contactsModal && contactsModal.style.display === 'flex') {
+                closeContacts();
+            }
         }
         
-        // Навигация стрелками
-        if (document.getElementById('carModal').style.display === 'block') {
+        // Навигация стрелками только для основного модального окна
+        if (carModal && carModal.style.display === 'block') {
             if (e.key === 'ArrowLeft') {
                 navigateCar(-1);
             } else if (e.key === 'ArrowRight') {
@@ -863,9 +920,9 @@ function populateFilters() {
         return;
     }
     
-    const brands = [...new Set(carsData.map(car => car.brand).filter(Boolean))].sort();
-    const categories = [...new Set(carsData.map(car => car.category).filter(Boolean))].sort();
-    const drivetrains = [...new Set(carsData.map(car => car.drivetrain).filter(Boolean))].sort();
+    const brands = [...new Set(carsData.map(car => car.brand).filter(Boolean))].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase(), 'ru'));
+    const categories = [...new Set(carsData.map(car => car.category).filter(Boolean))].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase(), 'ru'));
+    const drivetrains = [...new Set(carsData.map(car => car.drivetrain).filter(Boolean))].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase(), 'ru'));
     const years = [...new Set(carsData.map(car => car.year).filter(Boolean))].sort((a, b) => b - a);
     
     console.log('Найдены бренды:', brands);
@@ -968,9 +1025,9 @@ function sortCars() {
     filteredCars.sort((a, b) => {
         switch (sortBy) {
             case 'name':
-                return a.name.localeCompare(b.name);
+                return a.name.toLowerCase().localeCompare(b.name.toLowerCase(), 'ru');
             case 'brand':
-                return a.brand.localeCompare(b.brand);
+                return a.brand.toLowerCase().localeCompare(b.brand.toLowerCase(), 'ru');
             case 'year':
                 return (b.year || 0) - (a.year || 0);
             case 'power':
@@ -986,8 +1043,12 @@ function sortCars() {
 // Обновление счетчика результатов
 function updateResultsCount() {
     const resultsCount = document.getElementById('resultsCount');
+    const resultsWord = document.getElementById('resultsWord');
     if (resultsCount) {
         resultsCount.textContent = filteredCars.length;
+    }
+    if (resultsWord) {
+        resultsWord.textContent = getCarWordForm(filteredCars.length);
     }
 }
 
@@ -1107,10 +1168,15 @@ function toggleScrollToTopButton() {
 // Функция обновления информации в футере
 function updateFooterInfo() {
     const totalCarsElement = document.getElementById('totalCars');
+    const totalCarsWordElement = document.getElementById('totalCarsWord');
     const lastUpdateElement = document.getElementById('lastUpdate');
     
     if (totalCarsElement && carsData) {
         totalCarsElement.textContent = carsData.length;
+    }
+    
+    if (totalCarsWordElement && carsData) {
+        totalCarsWordElement.textContent = getCarWordForm(carsData.length);
     }
     
     if (lastUpdateElement) {
@@ -1183,7 +1249,7 @@ function showBrandsModal() {
     const brandsGrid = document.getElementById('brandsGrid');
     
     if (brandsModal && brandsGrid) {
-        // Сначала показываем модальное окно немедленно
+        // Показываем модальное окно
         brandsModal.style.display = 'block';
         document.body.style.overflow = 'hidden';
         
@@ -1228,22 +1294,6 @@ function showBrandsModal() {
         
         // Настраиваем звуковые эффекты для новых элементов
         setupSoundEffects();
-        
-        // Добавляем обработчик для закрытия по клику вне модального окна
-        brandsModal.addEventListener('click', function(e) {
-            if (e.target === brandsModal) {
-                closeBrandsModal();
-            }
-        });
-        
-        // Добавляем обработчик для закрытия по клавише Escape
-        const handleEscape = function(e) {
-            if (e.key === 'Escape') {
-                closeBrandsModal();
-                document.removeEventListener('keydown', handleEscape);
-            }
-        };
-        document.addEventListener('keydown', handleEscape);
     }
 }
 
@@ -1267,8 +1317,8 @@ function populateBrandsModal() {
         brands[car.brand].cars.push(car);
     });
     
-    // Сортируем бренды по алфавиту
-    const sortedBrands = Object.keys(brands).sort();
+    // Сортируем бренды по алфавиту (игнорируя регистр)
+    const sortedBrands = Object.keys(brands).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase(), 'ru'));
     
     // Создаем HTML для каждой марки
     const brandsHTML = sortedBrands.map(brand => {
@@ -1279,7 +1329,7 @@ function populateBrandsModal() {
                     <img src="${brandData.logo}" alt="${brand}" onerror="this.src='https://via.placeholder.com/80x60/f0f0f0/999?text=${brand.charAt(0)}'">
                 </div>
                 <div class="brand-item-name">${brand}</div>
-                <div class="brand-item-count">${brandData.cars.length} автомобилей</div>
+                <div class="brand-item-count">${brandData.cars.length} ${getCarWordForm(brandData.cars.length)}</div>
             </div>
         `;
     }).join('');
@@ -1346,15 +1396,6 @@ function showContacts() {
     if (contactsModal) {
         contactsModal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
-        
-        // Добавляем обработчик клавиши Escape
-        const handleEscape = function(e) {
-            if (e.key === 'Escape') {
-                closeContacts();
-                document.removeEventListener('keydown', handleEscape);
-            }
-        };
-        document.addEventListener('keydown', handleEscape);
     }
 }
 
@@ -1412,6 +1453,7 @@ function showCompareModal() {
     
     // Показываем модальное окно
     compareModal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
     
     // Воспроизводим звук
     playOpenSound();
@@ -1422,6 +1464,7 @@ function closeCompareModal() {
     const compareModal = document.getElementById('compareModal');
     if (compareModal) {
         compareModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
     }
     
     // Сбрасываем режим сравнения

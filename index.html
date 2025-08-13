@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gran Turismo 7 - Каталог Автомобилей</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -39,7 +40,7 @@
                     <span class="logo-text">GRAN TURISMO 7</span>
                 </a>
                 <ul class="nav-menu">
-                    <li><a href="#" class="nav-link" onclick="showBrandsModal(); return false;"><i class="fas fa-car"></i> Автомобили</a></li>
+                    <li><a href="#" class="nav-link" onclick="showBrandsModal(); return false;"><i class="fas fa-car"></i> Марки автомобилей</a></li>
                     <li><a href="#" class="nav-link" onclick="showInstructions(); return false;"><i class="fas fa-book"></i> Инструкция</a></li>
                     <li><a href="#" class="nav-link"><i class="fas fa-info-circle"></i> О проекте</a></li>
                     <li><a href="#contacts" class="nav-link"><i class="fas fa-envelope"></i> Контакты</a></li>
@@ -139,7 +140,7 @@
                 <!-- Результаты поиска -->
                 <div class="search-results" id="searchResults">
                     <div class="results-info">
-                        <span id="resultsCount">0</span> автомобилей найдено
+                        <span id="resultsCount">0</span> <span id="resultsWord">автомобилей</span> найдено
                     </div>
                 </div>
             </div>
@@ -309,7 +310,7 @@
                     <div class="footer-stats">
                         <div class="footer-stat">
                             <span class="footer-stat-number" id="totalCars">0</span>
-                            <span class="footer-stat-label">Автомобилей</span>
+                            <span class="footer-stat-label" id="totalCarsWord">Автомобилей</span>
                         </div>
                         <div class="footer-stat">
                             <span class="footer-stat-label">Обновлено</span>
