@@ -1,0 +1,458 @@
+/* Стили для админских функций */
+
+/* Модальные окна */
+.admin-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    backdrop-filter: blur(10px);
+}
+
+.admin-modal-content {
+    background: linear-gradient(135deg, rgba(33, 33, 33, 0.95), rgba(50, 50, 50, 0.95));
+    border: 1px solid rgba(100, 181, 246, 0.3);
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.admin-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(100, 181, 246, 0.2);
+}
+
+.admin-modal-title {
+    color: #64B5F6;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.admin-modal-close {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-modal-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #64B5F6;
+}
+
+/* Список пользователей */
+.user-list-container {
+    display: grid;
+    gap: 15px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.user-card {
+    background: linear-gradient(135deg, rgba(100, 181, 246, 0.1), rgba(100, 181, 246, 0.05));
+    border: 1px solid rgba(100, 181, 246, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.user-card:hover {
+    background: linear-gradient(135deg, rgba(100, 181, 246, 0.15), rgba(100, 181, 246, 0.1));
+    border-color: rgba(100, 181, 246, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(100, 181, 246, 0.2);
+}
+
+.user-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.user-card-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #64B5F6, #42A5F5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    border: 2px solid rgba(100, 181, 246, 0.4);
+    overflow: hidden;
+}
+
+.user-card-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-card-info h4 {
+    color: #64B5F6;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.user-card-info p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin: 0 0 8px 0;
+}
+
+.user-role {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.user-role.admin {
+    background: linear-gradient(135deg, #FF5722, #F44336);
+    color: white;
+}
+
+.user-role.user {
+    background: linear-gradient(135deg, #4CAF50, #45A049);
+    color: white;
+}
+
+.user-card-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-toggle-admin,
+.btn-delete-user {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 120px;
+}
+
+.btn-toggle-admin {
+    background: linear-gradient(135deg, #FF9800, #FF5722);
+    color: white;
+}
+
+.btn-toggle-admin:hover:not(:disabled) {
+    background: linear-gradient(135deg, #FF5722, #F44336);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3);
+}
+
+.btn-toggle-admin:disabled {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
+}
+
+.btn-delete-user {
+    background: linear-gradient(135deg, #F44336, #D32F2F);
+    color: white;
+}
+
+.btn-delete-user:hover:not(:disabled) {
+    background: linear-gradient(135deg, #D32F2F, #B71C1C);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+}
+
+.btn-delete-user:disabled {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
+}
+
+/* Форма редактирования профиля */
+.profile-edit-form {
+    display: grid;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #64B5F6;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input {
+    padding: 12px 16px;
+    border: 1px solid rgba(100, 181, 246, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #64B5F6;
+    background: rgba(100, 181, 246, 0.1);
+    box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.1);
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.avatar-upload-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(100, 181, 246, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(100, 181, 246, 0.2);
+}
+
+.avatar-preview {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #64B5F6, #42A5F5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+    border: 2px solid rgba(100, 181, 246, 0.4);
+    overflow: hidden;
+}
+
+.avatar-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-preview.has-image {
+    background: none;
+}
+
+.avatar-preview.has-image #editAvatarInitial {
+    display: none !important;
+}
+
+.avatar-upload-info {
+    flex: 1;
+}
+
+.avatar-upload-info h4 {
+    color: #64B5F6;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+}
+
+.avatar-upload-info p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    margin: 0 0 12px 0;
+}
+
+.file-input-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.file-input-wrapper input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.file-input-btn {
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #64B5F6, #42A5F5);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-input-btn:hover {
+    background: linear-gradient(135deg, #42A5F5, #2196F3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(100, 181, 246, 0.3);
+}
+
+.password-section {
+    background: rgba(255, 152, 0, 0.05);
+    border: 1px solid rgba(255, 152, 0, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.password-section h4 {
+    color: #FF9800;
+    font-size: 16px;
+    margin: 0 0 15px 0;
+}
+
+.password-section p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    margin: 0 0 15px 0;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(100, 181, 246, 0.2);
+}
+
+.btn-save,
+.btn-cancel {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 100px;
+}
+
+.btn-save {
+    background: linear-gradient(135deg, #4CAF50, #45A049);
+    color: white;
+}
+
+.btn-save:hover {
+    background: linear-gradient(135deg, #45A049, #388E3C);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.btn-cancel {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-cancel:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .admin-modal-content {
+        width: 95%;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .user-card-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .user-card-actions {
+        flex-direction: column;
+    }
+
+    .avatar-upload-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+}
+
+/* Скроллбар для модальных окон */
+.admin-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.admin-modal-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.admin-modal-content::-webkit-scrollbar-thumb {
+    background: rgba(100, 181, 246, 0.5);
+    border-radius: 4px;
+}
+
+.admin-modal-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 181, 246, 0.7);
+}
+
+.user-list-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.user-list-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.user-list-container::-webkit-scrollbar-thumb {
+    background: rgba(100, 181, 246, 0.3);
+    border-radius: 3px;
+}
+
+.user-list-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 181, 246, 0.5);
+}

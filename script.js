@@ -803,6 +803,34 @@ function setupModalEvents() {
         });
     }
     
+    // Модальные окна авторизации
+    const loginModal = document.getElementById('loginModal');
+    if (loginModal) {
+        loginModal.addEventListener('click', function(e) {
+            if (e.target === loginModal) {
+                authSystem.closeLoginModal();
+            }
+        });
+    }
+    
+    const registerModal = document.getElementById('registerModal');
+    if (registerModal) {
+        registerModal.addEventListener('click', function(e) {
+            if (e.target === registerModal) {
+                authSystem.closeRegisterModal();
+            }
+        });
+    }
+    
+    const addCarModal = document.getElementById('addCarModal');
+    if (addCarModal) {
+        addCarModal.addEventListener('click', function(e) {
+            if (e.target === addCarModal) {
+                closeAddCarModal();
+            }
+        });
+    }
+    
     // Закрытие по Escape
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
@@ -815,6 +843,12 @@ function setupModalEvents() {
                 closeCompareModal();
             } else if (contactsModal && contactsModal.style.display === 'flex') {
                 closeContacts();
+            } else if (loginModal && loginModal.style.display === 'block') {
+                authSystem.closeLoginModal();
+            } else if (registerModal && registerModal.style.display === 'block') {
+                authSystem.closeRegisterModal();
+            } else if (addCarModal && addCarModal.style.display === 'block') {
+                closeAddCarModal();
             }
         }
         
@@ -1630,5 +1664,221 @@ function handleCarCardClick(carId) {
     } else {
         // Обычный режим - открываем модальное окно автомобиля
         openCarModal(carId);
+    }
+}
+
+// Функции для работы с добавлением автомобилей (админ-панель)
+
+// Показать модальное окно добавления автомобиля
+function showAddCarModal() {
+    if (!authSystem || !authSystem.isAdmin()) {
+        showNotification('Доступ запрещен. Требуются права администратора.', 'error');
+        return;
+    }
+    
+    const modal = document.getElementById('addCarModal');
+    if (modal) {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        playOpenSound();
+    }
+}
+
+// Закрыть модальное окно добавления автомобиля
+function closeAddCarModal() {
+    const modal = document.getElementById('addCarModal');
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        // Очищаем форму
+        document.getElementById('addCarForm').reset();
+    }
+}
+
+// Обработка формы добавления автомобиля
+function setupAddCarForm() {
+    const form = document.getElementById('addCarForm');
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            await handleAddCar();
+        });
+    }
+}
+
+// Обработка добавления автомобиля
+async function handleAddCar() {
+    if (!authSystem || !authSystem.isAdmin()) {
+        showNotification('Доступ запрещен. Требуются права администратора.', 'error');
+        return;
+    }
+
+    const formData = {
+        brand: document.getElementById('addCarBrand').value,
+        name: document.getElementById('addCarName').value,
+        year: parseInt(document.getElementById('addCarYear').value),
+        category: document.getElementById('addCarCategory').value,
+        description: document.getElementById('addCarDescription').value,
+        power: document.getElementById('addCarPower').value ? parseInt(document.getElementById('addCarPower').value) : null,
+        weight: document.getElementById('addCarWeight').value ? parseInt(document.getElementById('addCarWeight').value) : null,
+        drivetrain: document.getElementById('addCarDrivetrain').value,
+        image: document.getElementById('addCarImage').files[0]
+    };
+
+    // Валидация
+    if (!formData.brand || !formData.name || !formData.year || !formData.category || !formData.description) {
+        showNotification('Заполните все обязательные поля', 'error');
+        return;
+    }
+
+    try {
+        // В реальном проекте здесь была бы отправка данных на сервер
+        // Для демонстрации создаем временный объект автомобиля
+        const newCar = {
+            id: `car_${Date.now()}`,
+            brand: formData.brand,
+            name: formData.name,
+            full_name: `${formData.brand} ${formData.name}`,
+            year: formData.year,
+            category: formData.category,
+            description: formData.description,
+            power: formData.power ? `${formData.power} л.с.` : null,
+            weight: formData.weight ? `${formData.weight} кг` : null,
+            drivetrain: formData.drivetrain,
+            image: formData.image ? URL.createObjectURL(formData.image) : 'https://via.placeholder.com/200x140/f0f0f0/999?text=Нет+изображения',
+            brand_logo: `https://via.placeholder.com/45x45/f0f0f0/999?text=${formData.brand.charAt(0)}`,
+            screenshots: [],
+            displacement: null,
+            torque: null,
+            aspiration: null,
+            dimensions: {
+                length: null,
+                width: null,
+                height: null
+            },
+            pp: null,
+            added_by: authSystem.getCurrentUser().username,
+            added_at: new Date().toISOString()
+        };
+
+        // Добавляем автомобиль в массив данных
+        carsData.push(newCar);
+        
+        // Обновляем отображение
+        applyFilters();
+        
+        showNotification('Автомобиль успешно добавлен!', 'success');
+        closeAddCarModal();
+        
+        console.log('Автомобиль добавлен:', newCar);
+    } catch (error) {
+        console.error('Ошибка добавления автомобиля:', error);
+        showNotification('Ошибка при добавлении автомобиля', 'error');
+    }
+}
+
+// Настройка обработчиков для админ-панели
+function setupAdminPanel() {
+    setupAddCarForm();
+    
+    // Обработчик для модального окна добавления автомобиля
+    const addCarModal = document.getElementById('addCarModal');
+    if (addCarModal) {
+        addCarModal.addEventListener('click', function(e) {
+            if (e.target === addCarModal) {
+                closeAddCarModal();
+            }
+        });
+    }
+}
+
+// Инициализация админ-панели при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+    setupAdminPanel();
+    
+    // Инициализируем систему авторизации
+    if (typeof initAuthSystem === 'function') {
+        initAuthSystem();
+    } else {
+        console.log('Функция initAuthSystem не найдена, создаем систему напрямую');
+        if (typeof AuthSystem !== 'undefined') {
+            window.authSystem = new AuthSystem();
+        }
+    }
+    
+    // Настройка выпадающего меню пользователя
+    setupUserDropdown();
+});
+
+// Функции для работы с выпадающим меню пользователя
+function setupUserDropdown() {
+    // Закрытие меню при клике вне его
+    document.addEventListener('click', function(e) {
+        const dropdown = document.getElementById('userDropdown');
+        const userProfile = document.querySelector('.user-profile');
+        
+        if (dropdown && !dropdown.contains(e.target) && !userProfile.contains(e.target)) {
+            dropdown.classList.remove('show');
+        }
+    });
+}
+
+function toggleUserDropdown() {
+    const dropdown = document.getElementById('userDropdown');
+    if (dropdown) {
+        dropdown.classList.toggle('show');
+    }
+}
+
+function showProfileEdit() {
+    // Закрываем выпадающее меню
+    const dropdown = document.getElementById('userDropdown');
+    if (dropdown) {
+        dropdown.classList.remove('show');
+    }
+    
+    // Показываем модальное окно редактирования профиля
+    if (window.adminSystem) {
+        adminSystem.showProfileEdit();
+    } else {
+        if (typeof showNotification === 'function') {
+            showNotification('Система администратора не загружена', 'error');
+        } else {
+            alert('Система администратора не загружена');
+        }
+    }
+}
+
+function showMyGarage() {
+    // Закрываем выпадающее меню
+    const dropdown = document.getElementById('userDropdown');
+    if (dropdown) {
+        dropdown.classList.remove('show');
+    }
+    
+    // Показываем уведомление (в будущем можно создать страницу гаража)
+    if (typeof showNotification === 'function') {
+        showNotification('Функция "Мой гараж" будет добавлена в следующем обновлении', 'info');
+    } else {
+        alert('Функция "Мой гараж" будет добавлена в следующем обновлении');
+    }
+}
+
+function showUserList() {
+    // Закрываем выпадающее меню
+    const dropdown = document.getElementById('userDropdown');
+    if (dropdown) {
+        dropdown.classList.remove('show');
+    }
+    
+    // Показываем список пользователей
+    if (window.adminSystem) {
+        adminSystem.showUserList();
+    } else {
+        if (typeof showNotification === 'function') {
+            showNotification('Система администратора не загружена', 'error');
+        } else {
+            alert('Система администратора не загружена');
+        }
     }
 }

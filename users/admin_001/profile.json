@@ -1,0 +1,25 @@
+{
+  "id": "admin_001",
+  "username": "Deliane",
+  "phone": "+7 (999) 445-90-69",
+  "role": "admin",
+  "created_at": "2025-01-27T00:00:00.000Z",
+  "last_login": null,
+  "preferences": {
+    "theme": "dark",
+    "language": "ru",
+    "notifications": true
+  },
+  "statistics": {
+    "cars_added": 0,
+    "users_managed": 0,
+    "login_count": 0
+  },
+  "permissions": {
+    "add_cars": true,
+    "manage_users": true,
+    "edit_profiles": true,
+    "delete_users": true,
+    "assign_admins": true
+  }
+}

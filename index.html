@@ -7,6 +7,8 @@
     <title>Gran Turismo 7 - Каталог Автомобилей</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/admin.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -46,6 +48,50 @@
                     <li><a href="#contacts" class="nav-link"><i class="fas fa-envelope"></i> Контакты</a></li>
                 </ul>
                 <div class="nav-actions">
+                    <!-- Секция авторизации -->
+                    <div id="authSection" class="auth-section">
+                        <div class="auth-buttons">
+                            <button id="loginBtn" class="auth-btn" onclick="if(window.authSystem) authSystem.showLoginModal()">Войти</button>
+                            <button id="registerBtn" class="auth-btn primary" onclick="if(window.authSystem) authSystem.showRegisterModal()">Регистрация</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Секция пользователя -->
+                    <div id="userSection" class="user-section" style="display: none;">
+                        <div class="user-profile" onclick="toggleUserDropdown()">
+                            <div class="user-avatar" id="userAvatar">
+                                <span id="userInitial">D</span>
+                            </div>
+                            <span class="user-username" id="userDisplayName">Пользователь</span>
+                        </div>
+                        
+                        <!-- Выпадающее меню пользователя -->
+                        <div class="user-dropdown" id="userDropdown">
+                            <button class="dropdown-item" onclick="showProfileEdit()">
+                                <i class="fas fa-user-edit"></i>
+                                Редактировать профиль
+                            </button>
+                            <button class="dropdown-item" onclick="showMyGarage()">
+                                <i class="fas fa-car"></i>
+                                Мой гараж
+                            </button>
+                            <button class="dropdown-item admin" id="adminAddCar" onclick="showAddCarModal()" style="display: none;">
+                                <i class="fas fa-plus"></i>
+                                Добавить автомобиль
+                            </button>
+                            <button class="dropdown-item admin" id="adminUserList" onclick="showUserList()" style="display: none;">
+                                <i class="fas fa-users"></i>
+                                Список пользователей
+                            </button>
+                            <button class="dropdown-item logout" onclick="if(window.authSystem) authSystem.logout()">
+                                <i class="fas fa-sign-out-alt"></i>
+                                Выйти
+                            </button>
+                        </div>
+                    </div>
+                    
+
+                    
                     <button class="search-toggle-btn" onclick="toggleSearch(); return false;">
                         <i class="fas fa-search"></i>
                     </button>
@@ -508,6 +554,221 @@
         </div>
     </div>
 
+    <!-- Модальное окно входа -->
+    <div id="loginModal" class="auth-modal">
+        <div class="auth-modal-content">
+            <span class="auth-close" onclick="if(window.authSystem) authSystem.closeLoginModal()">&times;</span>
+            <div class="auth-modal-header">
+                <h2 class="auth-modal-title">Вход в систему</h2>
+                <p class="auth-modal-subtitle">Введите свои данные для входа</p>
+            </div>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="loginUsername" class="form-label">Логин или телефон</label>
+                    <input type="text" id="loginUsername" class="form-input" placeholder="Введите логин или телефон" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword" class="form-label">Пароль</label>
+                    <input type="password" id="loginPassword" class="form-input" placeholder="Введите пароль" required>
+                </div>
+                <button type="submit" class="auth-form-btn">Войти</button>
+            </form>
+            <div class="auth-links">
+                <a href="#" class="auth-link" onclick="if(window.authSystem) { authSystem.showRegisterModal(); authSystem.closeLoginModal(); }">Нет аккаунта? Зарегистрироваться</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно регистрации -->
+    <div id="registerModal" class="auth-modal">
+        <div class="auth-modal-content">
+            <span class="auth-close" onclick="if(window.authSystem) authSystem.closeRegisterModal()">&times;</span>
+            <div class="auth-modal-header">
+                <h2 class="auth-modal-title">Регистрация</h2>
+                <p class="auth-modal-subtitle">Создайте новый аккаунт</p>
+            </div>
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="registerUsername" class="form-label">Логин</label>
+                    <input type="text" id="registerUsername" class="form-input" placeholder="Введите логин" required>
+                </div>
+                <div class="form-group">
+                                            <label for="registerEmail" class="form-label">Email</label>
+                        <input type="email" id="registerEmail" class="form-input" placeholder="user@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword" class="form-label">Пароль</label>
+                    <input type="password" id="registerPassword" class="form-input" placeholder="Минимум 6 символов" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirmPassword" class="form-label">Подтвердите пароль</label>
+                    <input type="password" id="registerConfirmPassword" class="form-input" placeholder="Повторите пароль" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Аватар (необязательно)</label>
+                    <div class="avatar-upload">
+                        <img id="avatarPreview" class="avatar-preview" style="display: none;" alt="Превью аватара">
+                        <div class="avatar-input">
+                            <div class="file-input-wrapper">
+                                <input type="file" id="registerAvatar" class="file-input" accept="image/*">
+                                <label for="registerAvatar" class="file-input-label">Выбрать файл</label>
+                            </div>
+                            <small class="avatar-help">Аватар сохраняется в браузере и будет доступен при следующих посещениях сайта</small>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="auth-form-btn">Зарегистрироваться</button>
+            </form>
+            <div class="auth-links">
+                <a href="#" class="auth-link" onclick="if(window.authSystem) { authSystem.showLoginModal(); authSystem.closeRegisterModal(); }">Уже есть аккаунт? Войти</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно добавления автомобиля (для администратора) -->
+    <div id="addCarModal" class="auth-modal">
+        <div class="auth-modal-content" style="max-width: 600px;">
+            <span class="auth-close" onclick="closeAddCarModal()">&times;</span>
+            <div class="auth-modal-header">
+                <h2 class="auth-modal-title">Добавить автомобиль</h2>
+                <p class="auth-modal-subtitle">Заполните информацию об автомобиле</p>
+            </div>
+            <form id="addCarForm" class="auth-form">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label for="addCarBrand" class="form-label">Бренд</label>
+                        <input type="text" id="addCarBrand" class="form-input" placeholder="Например: BMW" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="addCarName" class="form-label">Модель</label>
+                        <input type="text" id="addCarName" class="form-input" placeholder="Например: M3" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="addCarYear" class="form-label">Год</label>
+                        <input type="number" id="addCarYear" class="form-input" placeholder="2020" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="addCarCategory" class="form-label">Категория</label>
+                        <select id="addCarCategory" class="form-input" required>
+                            <option value="">Выберите категорию</option>
+                            <option value="Gr.N">Gr.N</option>
+                            <option value="Gr.4">Gr.4</option>
+                            <option value="Gr.3">Gr.3</option>
+                            <option value="Gr.2">Gr.2</option>
+                            <option value="Gr.1">Gr.1</option>
+                            <option value="Gr.B">Gr.B</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="addCarDescription" class="form-label">Описание</label>
+                    <textarea id="addCarDescription" class="form-input" rows="3" placeholder="Краткое описание автомобиля" required></textarea>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label for="addCarPower" class="form-label">Мощность (л.с.)</label>
+                        <input type="number" id="addCarPower" class="form-input" placeholder="300">
+                    </div>
+                    <div class="form-group">
+                        <label for="addCarWeight" class="form-label">Масса (кг)</label>
+                        <input type="number" id="addCarWeight" class="form-input" placeholder="1500">
+                    </div>
+                    <div class="form-group">
+                        <label for="addCarDrivetrain" class="form-label">Привод</label>
+                        <select id="addCarDrivetrain" class="form-input">
+                            <option value="">Выберите привод</option>
+                            <option value="FR">Задний</option>
+                            <option value="FF">Передний</option>
+                            <option value="4WD">Полный</option>
+                            <option value="MR">Среднемоторный</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="addCarImage" class="form-label">Изображение</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="addCarImage" class="file-input" accept="image/*">
+                            <label for="addCarImage" class="file-input-label">Выбрать изображение</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="auth-form-btn">Добавить автомобиль</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно списка пользователей (для администратора) -->
+    <div id="userListModal" class="admin-modal">
+        <div class="admin-modal-content">
+            <div class="admin-modal-header">
+                <h2 class="admin-modal-title">Список пользователей</h2>
+                <button class="admin-modal-close" onclick="adminSystem.closeUserListModal()">&times;</button>
+            </div>
+            <div id="userListContainer" class="user-list-container">
+                <!-- Список пользователей будет загружен динамически -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно редактирования профиля -->
+    <div id="profileEditModal" class="admin-modal">
+        <div class="admin-modal-content">
+            <div class="admin-modal-header">
+                <h2 class="admin-modal-title">Редактировать профиль</h2>
+                <button class="admin-modal-close" onclick="adminSystem.closeProfileEditModal()">&times;</button>
+            </div>
+            <form class="profile-edit-form" onsubmit="adminSystem.saveProfileChanges(); return false;">
+                <div class="form-group">
+                    <label for="editUsername">Логин</label>
+                    <input type="text" id="editUsername" placeholder="Введите новый логин" required>
+                </div>
+                <div class="form-group">
+                                            <label for="editEmail">Email</label>
+                        <input type="email" id="editEmail" placeholder="user@example.com" required>
+                </div>
+                
+                <div class="avatar-upload-section">
+                    <div class="avatar-preview" id="editAvatarPreview">
+                        <span id="editAvatarInitial">D</span>
+                    </div>
+                    <div class="avatar-upload-info">
+                        <h4>Аватар</h4>
+                        <p>Загрузите новое изображение для аватара. Максимальный размер: 1MB</p>
+                        <small class="avatar-help">Аватар сохраняется в браузере и будет доступен при следующих посещениях сайта</small>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="editAvatar" accept="image/*">
+                            <button type="button" class="file-input-btn">Выбрать файл</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="password-section">
+                    <h4>Изменить пароль</h4>
+                    <p>Оставьте поля пустыми, если не хотите менять пароль</p>
+                    <div class="form-group">
+                        <label for="editCurrentPassword">Текущий пароль</label>
+                        <input type="password" id="editCurrentPassword" placeholder="Введите текущий пароль">
+                    </div>
+                    <div class="form-group">
+                        <label for="editNewPassword">Новый пароль</label>
+                        <input type="password" id="editNewPassword" placeholder="Введите новый пароль">
+                    </div>
+                    <div class="form-group">
+                        <label for="editConfirmPassword">Подтвердите новый пароль</label>
+                        <input type="password" id="editConfirmPassword" placeholder="Повторите новый пароль">
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="adminSystem.closeProfileEditModal()">Отмена</button>
+                    <button type="submit" class="btn-save">Сохранить изменения</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="js/auth.js"></script>
+    <script src="js/admin.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

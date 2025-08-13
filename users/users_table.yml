@@ -1,0 +1,90 @@
+# Таблица пользователей GT7
+# Формат: YML
+# Последнее обновление: 2025-01-27
+
+users_table:
+  metadata:
+    total_users: 1
+    active_users: 1
+    admins: 1
+    regular_users: 0
+    last_updated: "2025-01-27T00:00:00.000Z"
+    version: "1.0"
+    description: "Таблица пользователей для системы GT7"
+
+  settings:
+    max_avatar_size: 1048576  # 1MB в байтах
+    allowed_avatar_types:
+      - "jpg"
+      - "jpeg"
+      - "png"
+      - "gif"
+    session_timeout: 3600000  # 1 час в миллисекундах
+    registration_enabled: true
+    email_verification_required: false
+
+  users:
+    - id: "admin_001"
+      username: "Deliane"
+      email: "deliane@admin.com"
+      password_hash: "airsugar666"  # В реальном проекте должен быть хеш
+      avatar: null
+      role: "admin"
+      status: "active"
+      created_at: "2025-01-27T00:00:00.000Z"
+      last_login: null
+      preferences:
+        theme: "dark"
+        language: "ru"
+        notifications: true
+        newsletter: true
+        marketing: false
+      permissions:
+        add_cars: true
+        manage_users: true
+        edit_profiles: true
+        delete_users: true
+        assign_admins: true
+        view_statistics: true
+      statistics:
+        cars_added: 0
+        users_managed: 0
+        login_count: 0
+        last_activity: null
+
+  statistics:
+    registration:
+      today: 0
+      this_week: 0
+      this_month: 1
+      total: 1
+    activity:
+      active_today: 0
+      active_this_week: 0
+      active_this_month: 1
+      total_logins: 0
+    system:
+      total_storage_used: 0
+      average_session_duration: 0
+      most_active_hours: []
+      popular_features: []
+
+  mailing_list:
+    enabled: true
+    subscribers: 1
+    categories:
+      - name: "newsletter"
+        subscribers: 1
+        description: "Основная рассылка новостей"
+      - name: "notifications"
+        subscribers: 1
+        description: "Уведомления о новых автомобилях"
+      - name: "marketing"
+        subscribers: 0
+        description: "Маркетинговые материалы"
+
+  backup:
+    last_backup: null
+    backup_frequency: "daily"
+    retention_days: 30
+    auto_backup: true

@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": "admin_001",
+      "username": "Deliane",
+      "email": "deliane@admin.com",
+      "password": "airsugar666",
+      "avatar": null,
+      "role": "admin",
+      "created_at": "2025-01-27T00:00:00.000Z",
+      "last_login": null
+    }
+  ],
+  "settings": {
+    "max_file_size": 1048576,
+    "allowed_avatar_types": ["jpg", "jpeg", "png", "gif"],
+    "session_timeout": 3600000
+  }
+}
