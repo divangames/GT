@@ -1110,37 +1110,36 @@ body {
 
 /* Фильтры и поиск */
 .filters-section {
-    padding: 24px 0;
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(45, 45, 45, 0.95) 50%, rgba(26, 26, 26, 0.95) 100%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: sticky;
-    top: 66px;
-    z-index: 100;
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1500;
     display: none;
     opacity: 0;
-    transform: translateY(-20px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-10px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-.filters-section.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+.filters-section.show { opacity: 1; transform: translateY(0); }
 
 .filters-wrapper {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(960px, 92%);
+    background: linear-gradient(135deg, rgba(26, 26, 30, 0.98) 0%, rgba(40, 40, 48, 0.98) 100%);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.45);
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 14px;
 }
 
 /* Поиск */
-.search-container {
-    display: flex;
-    justify-content: center;
-}
+.search-container { display: flex; justify-content: center; }
 
 .search-box {
     position: relative;
@@ -1215,68 +1214,25 @@ body {
 
 /* Фильтры */
 .filters-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.filter-group {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(160px, 1fr));
     gap: 10px;
-    min-width: 180px;
 }
 
-.filter-label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.9);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 5px;
-}
+.filter-group { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+
+.filter-label { display: flex; align-items: center; gap: 6px; font-weight: 600; font-size: 12px; color: rgba(255,255,255,0.85); text-transform: uppercase; letter-spacing: 0.4px; }
 
 .filter-label i {
     font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
 }
 
-.filter-select {
-    padding: 15px 20px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
-    background: rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.9);
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 2px 8px rgba(255, 255, 255, 0.05);
-    font-weight: 500;
-    min-height: 50px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
+.filter-select { padding: 10px 12px; border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; font-size: 13px; background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.92); cursor: pointer; transition: all 0.2s ease; font-weight: 500; min-height: 40px; }
 
-.filter-select:focus {
-    outline: none;
-    border-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 2px 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.15);
-}
+.filter-select:focus { outline: none; border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.1); box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
 
-.filter-select:hover {
-    border-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-1px);
-    background: rgba(255, 255, 255, 0.12);
-}
+.filter-select:hover { border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.09); }
 
 /* Стили для опций в select */
 .filter-select option {
@@ -1286,52 +1242,20 @@ body {
     padding: 10px;
 }
 
-.clear-filters-btn {
-    background: linear-gradient(135deg, rgba(231, 76, 60, 0.8) 0%, rgba(192, 57, 43, 0.8) 100%);
-    color: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 15px 25px;
-    border-radius: 15px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 2px 8px rgba(255, 255, 255, 0.05);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    min-height: 50px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
+.clear-filters-btn { background: linear-gradient(135deg, rgba(231,76,60,0.9), rgba(192,57,43,0.9)); color: #fff; border: 1px solid rgba(255,255,255,0.15); padding: 10px 14px; border-radius: 10px; font-weight: 600; font-size: 12px; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 0.4px; min-height: 40px; }
 
-.clear-filters-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 2px 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(231, 76, 60, 0.3);
-    background: linear-gradient(135deg, rgba(231, 76, 60, 1) 0%, rgba(192, 57, 43, 1) 100%);
-}
+.clear-filters-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+
+.filters-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.apply-filters-btn { background: linear-gradient(135deg, #64B5F6, #42A5F5); color: #fff; border: 1px solid rgba(255,255,255,0.15); padding: 10px 16px; border-radius: 10px; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; cursor: pointer; transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; }
+.apply-filters-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(66,165,245,0.35); }
 
 .clear-filters-btn:active {
     transform: translateY(0);
 }
 
 /* Результаты поиска */
-.search-results {
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 2px 8px rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    margin-top: 10px;
-    border: 1px solid #bdc3c7;
-}
+.search-results { text-align: center; padding: 10px 14px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.25); margin-top: 8px; }
 
 .results-info {
     font-family: 'Montserrat', sans-serif;
@@ -1346,16 +1270,7 @@ body {
     font-size: 18px;
 }
 
-/* Состояние с результатами */
-.filters-section.has-results {
-    background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(46, 204, 113, 0.1) 100%);
-    border-bottom-color: rgba(39, 174, 96, 0.3);
-}
-
-.filters-section.has-results .search-results {
-    background: linear-gradient(135deg, rgba(39, 174, 96, 0.15) 0%, rgba(46, 204, 113, 0.15) 100%);
-    border-color: rgba(39, 174, 96, 0.3);
-}
+/* Убрал смену дизайна фильтров при активном поиске/фильтрах */
 
 /* Сообщение "нет результатов" */
 .no-results {
@@ -1864,55 +1779,9 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .modal-content {
-        width: 98%;
-        margin: 1% auto;
-        max-height: 98vh;
-    }
-    
-    .modal-header {
-        padding: 20px 25px;
-    }
-    
-    .modal-title span:last-child {
-        font-size: 24px;
-    }
-    
-    .modal-brand-logo {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .car-screenshots {
-        padding: 15px;
-    }
-    
-    .car-info-section {
-        padding: 15px;
-    }
-    
-    .screenshots-container {
-        height: 300px;
-    }
-    
-    .spec-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .spec-item {
-        padding: 12px 15px;
-    }
-    
-    .spec-label {
-        font-size: 14px;
-    }
-    
-    .spec-value {
-        font-size: 16px;
-    }
-}
+@media (max-width: 1024px) { .filters-container { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px) { .filters-wrapper { top: 70px; width: 94%; padding: 12px; gap: 12px; } .filters-container { grid-template-columns: repeat(2, 1fr); gap: 8px; } .filter-select { min-height: 38px; font-size: 12px; } .clear-filters-btn, .apply-filters-btn { min-height: 38px; font-size: 11px; } }
+@media (max-width: 480px) { .filters-wrapper { top: 60px; width: 94%; border-radius: 12px; } .filters-container { grid-template-columns: 1fr; } }
 
 
 

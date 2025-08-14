@@ -919,6 +919,15 @@ function setupFilters() {
             clearFiltersBtn.addEventListener('click', clearAllFilters);
             console.log('Кнопка очистки фильтров настроена');
         }
+
+    // Применить фильтры
+    const applyFiltersBtn = document.getElementById('applyFilters');
+    if (applyFiltersBtn) {
+        applyFiltersBtn.addEventListener('click', () => {
+            applyFilters();
+            closeFiltersOverlay();
+        });
+    }
         
         // Обработчик клавиши Escape для закрытия фильтров
         document.addEventListener('keydown', function(e) {
@@ -1088,16 +1097,7 @@ function updateResultsCount() {
 
 // Обновление стилей секции фильтров
 function updateFiltersSection() {
-    const filtersSection = document.querySelector('.filters-section');
-    if (filtersSection) {
-        const hasActiveFilters = searchTerm || 
-            activeFilters.brand || 
-            activeFilters.category || 
-            activeFilters.drivetrain || 
-            activeFilters.year;
-        
-        filtersSection.classList.toggle('has-results', hasActiveFilters);
-    }
+    // Ранее меняли оформление по классу has-results — больше не требуется
 }
 
 // Очистка всех фильтров
@@ -1134,15 +1134,26 @@ function clearAllFilters() {
 function setupToggleFilters() {
     const filtersSection = document.querySelector('.filters-section');
     const filterMenuBtn = document.querySelector('.filter-menu-btn');
-    
-    if (filtersSection) {
-        console.log('Переключение фильтров настроено');
-        
-        // Инициализируем состояние кнопки фильтров
-        if (filterMenuBtn) {
-            // По умолчанию фильтры скрыты, поэтому кнопка должна показывать "Фильтры"
-            filterMenuBtn.innerHTML = '<i class="fas fa-filter"></i> Фильтры';
+    if (!filtersSection) return;
+
+    // Закрытие по клику на фон
+    filtersSection.addEventListener('click', (e) => {
+        if (e.target === filtersSection) {
+            closeFiltersOverlay();
         }
+    });
+
+    // Закрытие по ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && filtersSection.classList.contains('show')) {
+            closeFiltersOverlay();
+        }
+    });
+
+    // Кнопка меню фильтров
+    if (filterMenuBtn) {
+        filterMenuBtn.innerHTML = '<i class="fas fa-filter"></i> Фильтры';
+        filterMenuBtn.addEventListener('click', toggleFiltersFromMenu);
     }
 }
 
@@ -1155,28 +1166,32 @@ function toggleFiltersFromMenu() {
         const isVisible = filtersSection.classList.contains('show');
         
         if (isVisible) {
-            // Скрываем секцию фильтров с анимацией
-            filtersSection.classList.remove('show');
-            filterMenuBtn.innerHTML = '<i class="fas fa-filter"></i> Фильтры';
-            setTimeout(() => {
-                filtersSection.style.display = 'none';
-            }, 300);
+            closeFiltersOverlay();
         } else {
-            // Показываем секцию фильтров с анимацией
-            filtersSection.style.display = 'block';
-            filterMenuBtn.innerHTML = '<i class="fas fa-times"></i> Скрыть';
-            setTimeout(() => {
-                filtersSection.classList.add('show');
-            }, 10);
-            // Прокручиваем к фильтрам
-            filtersSection.scrollIntoView({ behavior: 'smooth' });
-            // Фокусируемся на поле поиска
-            const searchInput = document.getElementById('searchInput');
-            if (searchInput) {
-                setTimeout(() => searchInput.focus(), 500);
-            }
+            openFiltersOverlay();
         }
     }
+}
+
+function openFiltersOverlay() {
+    const filtersSection = document.querySelector('.filters-section');
+    const filterMenuBtn = document.querySelector('.filter-menu-btn');
+    if (!filtersSection) return;
+    filtersSection.style.display = 'block';
+    requestAnimationFrame(() => filtersSection.classList.add('show'));
+    if (filterMenuBtn) filterMenuBtn.innerHTML = '<i class="fas fa-times"></i> Скрыть';
+    // Фокус на поиск
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) setTimeout(() => searchInput.focus(), 250);
+}
+
+function closeFiltersOverlay() {
+    const filtersSection = document.querySelector('.filters-section');
+    const filterMenuBtn = document.querySelector('.filter-menu-btn');
+    if (!filtersSection) return;
+    filtersSection.classList.remove('show');
+    if (filterMenuBtn) filterMenuBtn.innerHTML = '<i class="fas fa-filter"></i> Фильтры';
+    setTimeout(() => { filtersSection.style.display = 'none'; }, 250);
 }
 
 // Функция прокрутки наверх
