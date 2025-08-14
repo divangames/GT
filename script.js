@@ -39,7 +39,13 @@ let firstCarForCompare = null;
 let hoverSound = null;
 let openSound = null;
 let startSound = null;
+let selectSound = null;
 let soundsEnabled = true;
+
+// Переменные для управления плеером
+let currentBrandSound = null;
+let currentBrandName = null;
+let progressInterval = null;
 
 // Инициализация звуков
 function initSounds() {
@@ -55,6 +61,10 @@ function initSounds() {
         startSound = new Audio('sound/start.mp3');
         startSound.volume = 1.0;
         startSound.preload = 'auto';
+        
+        selectSound = new Audio('sound/select.mp3');
+        selectSound.volume = 1.0;
+        selectSound.preload = 'auto';
         
         console.log('Звуки инициализированы');
     } catch (error) {
@@ -123,6 +133,289 @@ function playOpenSound() {
             });
         } catch (error) {
             console.warn('Ошибка воспроизведения звука открытия:', error);
+        }
+    }
+}
+
+// Воспроизведение звука автомобиля
+function playCarSound(brand) {
+    if (!soundsEnabled) return;
+    
+    // Пытаемся загрузить звук для конкретной марки
+    const carSound = new Audio(`sound/cars/${brand.toLowerCase()}.mp3`);
+    
+    carSound.addEventListener('canplaythrough', () => {
+        carSound.currentTime = 0;
+        carSound.play().catch(error => {
+            console.warn(`Ошибка воспроизведения звука для ${brand}:`, error);
+            // Если звук марки не найден, воспроизводим стандартный звук
+            playDefaultCarSound();
+        });
+    });
+    
+    carSound.addEventListener('error', () => {
+        console.log(`Звук для марки ${brand} не найден, используем стандартный`);
+        playDefaultCarSound();
+    });
+}
+
+// Воспроизведение звука марки автомобиля
+function playBrandSound(brand) {
+    console.log('Попытка воспроизвести звук для марки:', brand);
+    
+    if (!soundsEnabled) {
+        console.log('Звуки отключены');
+        return;
+    }
+    
+    // Проверяем, что бренд передан корректно
+    if (!brand || typeof brand !== 'string') {
+        console.error('Некорректный бренд:', brand);
+        return;
+    }
+    
+    // Останавливаем предыдущий звук, если он играет
+    if (currentBrandSound && currentBrandName) {
+        stopBrandSound(currentBrandName);
+    }
+    
+    // Пытаемся загрузить звук из папки марки
+    const soundPath = `images/cars/${brand}/info.mp3`;
+    console.log('Путь к звуковому файлу:', soundPath);
+    
+    const brandSound = new Audio(soundPath);
+    brandSound.volume = 1.0;
+    brandSound.preload = 'auto';
+    
+    // Флаг для отслеживания, был ли звук уже воспроизведен
+    let soundPlayed = false;
+    
+    brandSound.addEventListener('canplaythrough', () => {
+        console.log(`Звук для марки ${brand} загружен, воспроизводим`);
+        if (!soundPlayed) {
+            soundPlayed = true;
+            brandSound.currentTime = 0;
+            brandSound.play().then(() => {
+                console.log(`✅ Звук ${brand} успешно воспроизведен`);
+                // Показываем плеер и начинаем обновление прогресса
+                showBrandPlayer(brand, brandSound);
+                startProgressUpdate(brand, brandSound);
+            }).catch(error => {
+                console.warn(`❌ Ошибка воспроизведения звука для ${brand}:`, error);
+                playDefaultCarSound();
+            });
+        }
+    });
+    
+    brandSound.addEventListener('error', (e) => {
+        console.log(`❌ Звук для марки ${brand} не найден, используем стандартный. Ошибка:`, e);
+        if (!soundPlayed) {
+            soundPlayed = true;
+            playDefaultCarSound();
+        }
+    });
+    
+    // Попытка воспроизвести сразу, если звук уже загружен
+    brandSound.play().then(() => {
+        console.log(`✅ Немедленное воспроизведение ${brand} успешно`);
+        soundPlayed = true;
+        // Показываем плеер и начинаем обновление прогресса
+        showBrandPlayer(brand, brandSound);
+        startProgressUpdate(brand, brandSound);
+    }).catch(error => {
+        console.log(`⏳ Немедленное воспроизведение не удалось для ${brand}, ждем загрузки:`, error);
+        // Не вызываем playDefaultCarSound здесь, ждем события canplaythrough или error
+    });
+}
+
+// Делаем функцию глобально доступной
+window.playBrandSound = playBrandSound;
+
+// Показать плеер для марки
+function showBrandPlayer(brand, audio) {
+    const playerElement = document.getElementById(`player-${brand}`);
+    if (playerElement) {
+        playerElement.style.display = 'block';
+        // Обновляем время
+        updateProgressTime(brand, 0, audio.duration || 0);
+    }
+}
+
+// Скрыть плеер для марки
+function hideBrandPlayer(brand) {
+    const playerElement = document.getElementById(`player-${brand}`);
+    if (playerElement) {
+        playerElement.style.display = 'none';
+    }
+}
+
+// Обновление прогресса воспроизведения
+function startProgressUpdate(brand, audio) {
+    // Сохраняем текущий звук
+    currentBrandSound = audio;
+    currentBrandName = brand;
+    
+    // Останавливаем предыдущий интервал
+    if (progressInterval) {
+        clearInterval(progressInterval);
+    }
+    
+    // Запускаем обновление прогресса
+    progressInterval = setInterval(() => {
+        if (audio && !audio.paused && !audio.ended) {
+            const progress = (audio.currentTime / audio.duration) * 100;
+            const progressElement = document.getElementById(`progress-${brand}`);
+            if (progressElement) {
+                progressElement.style.width = `${progress}%`;
+            }
+            updateProgressTime(brand, audio.currentTime, audio.duration);
+        } else if (audio && (audio.paused || audio.ended)) {
+            // Звук закончился или остановлен
+            clearInterval(progressInterval);
+            hideBrandPlayer(brand);
+            currentBrandSound = null;
+            currentBrandName = null;
+        }
+    }, 100);
+    
+    // Добавляем обработчик окончания звука
+    audio.addEventListener('ended', () => {
+        clearInterval(progressInterval);
+        hideBrandPlayer(brand);
+        currentBrandSound = null;
+        currentBrandName = null;
+    });
+}
+
+// Обновление времени в плеере
+function updateProgressTime(brand, currentTime, duration) {
+    const timeElement = document.getElementById(`time-${brand}`);
+    if (timeElement) {
+        const currentFormatted = formatTime(currentTime);
+        const durationFormatted = formatTime(duration);
+        timeElement.textContent = `${currentFormatted} / ${durationFormatted}`;
+    }
+}
+
+// Форматирование времени
+function formatTime(seconds) {
+    if (isNaN(seconds) || seconds === 0) return '0:00';
+    
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+}
+
+// Остановка звука марки
+function stopBrandSound(brand) {
+    console.log(`Останавливаем звук для марки: ${brand}`);
+    
+    if (currentBrandSound && currentBrandName === brand) {
+        currentBrandSound.pause();
+        currentBrandSound.currentTime = 0;
+        currentBrandSound = null;
+        currentBrandName = null;
+    }
+    
+    if (progressInterval) {
+        clearInterval(progressInterval);
+        progressInterval = null;
+    }
+    
+    hideBrandPlayer(brand);
+    
+    // Сбрасываем прогресс
+    const progressElement = document.getElementById(`progress-${brand}`);
+    if (progressElement) {
+        progressElement.style.width = '0%';
+    }
+    
+    updateProgressTime(brand, 0, 0);
+}
+
+// Делаем функцию остановки глобально доступной
+window.stopBrandSound = stopBrandSound;
+
+// Тестовая функция для проверки звуков
+function testBrandSound() {
+    console.log('=== ТЕСТ ЗВУКОВ ===');
+    console.log('soundsEnabled:', soundsEnabled);
+    console.log('hoverSound:', hoverSound);
+    console.log('openSound:', openSound);
+    console.log('selectSound:', selectSound);
+    
+    // Тестируем звук Abarth
+    playBrandSound('Abarth');
+}
+
+// Делаем тестовую функцию глобально доступной
+window.testBrandSound = testBrandSound;
+
+// Простая функция для тестирования в консоли
+window.testSound = function(brand = 'Abarth') {
+    console.log('=== ТЕСТ ЗВУКА ===');
+    console.log('Бренд:', brand);
+    console.log('soundsEnabled:', soundsEnabled);
+    console.log('openSound:', openSound);
+    console.log('hoverSound:', hoverSound);
+    
+    if (!soundsEnabled) {
+        console.log('❌ Звуки отключены');
+        return;
+    }
+    
+    if (!openSound) {
+        console.log('❌ openSound не инициализирован');
+        return;
+    }
+    
+    console.log('✅ Пытаемся воспроизвести звук...');
+    playBrandSound(brand);
+};
+
+// Функция для тестирования hover звука
+window.testHover = function() {
+    console.log('=== ТЕСТ HOVER ЗВУКА ===');
+    if (soundsEnabled && hoverSound) {
+        hoverSound.currentTime = 0;
+        hoverSound.play().then(() => {
+            console.log('✅ Hover звук воспроизведен');
+        }).catch(error => {
+            console.log('❌ Ошибка hover звука:', error);
+        });
+    } else {
+        console.log('❌ Hover звук недоступен');
+    }
+};
+
+console.log('🔊 Функции звуков загружены. Используйте testSound("Abarth") для тестирования.');
+console.log('🎵 Плеер добавлен! При клике на логотип марки появится плеер с прогресс-баром.');
+
+// Воспроизведение звука марки в модальном окне
+function playModalBrandSound() {
+    console.log('Попытка воспроизвести звук марки в модальном окне');
+    const car = carsData[currentCarIndex];
+    if (car && car.brand) {
+        console.log('Найден автомобиль:', car.brand);
+        playBrandSound(car.brand);
+    } else {
+        console.log('Автомобиль не найден или бренд отсутствует');
+    }
+}
+
+// Делаем функцию глобально доступной
+window.playModalBrandSound = playModalBrandSound;
+
+// Воспроизведение стандартного звука автомобиля (open.mp3)
+function playDefaultCarSound() {
+    if (soundsEnabled && openSound) {
+        try {
+            openSound.currentTime = 0;
+            openSound.play().catch(error => {
+                console.warn('Ошибка воспроизведения стандартного звука автомобиля (open.mp3):', error);
+            });
+        } catch (error) {
+            console.warn('Ошибка воспроизведение стандартного звука автомобиля (open.mp3):', error);
         }
     }
 }
@@ -448,12 +741,25 @@ function renderBrandsCatalog() {
         return `
             <div class="brand-section">
                 <div class="brand-header">
-                    <div class="brand-logo">
+                    <div class="brand-logo" onclick="console.log('Клик по логотипу ${brand}'); playBrandSound('${brand}'); event.stopPropagation();" onmouseenter="playHoverSound()" style="cursor: pointer;">
                         <img src="${brandData.logo}" alt="${brand}" onerror="this.src='https://via.placeholder.com/45x45/f0f0f0/999?text=${brand.charAt(0)}'">
                     </div>
                     <div class="brand-info">
                         <div class="brand-name">${brand}</div>
                         <div class="brand-count">${brandData.cars.length} ${getCarWordForm(brandData.cars.length)}</div>
+                        <div class="brand-player" id="player-${brand}" style="display: none;">
+                            <div class="player-controls">
+                                <button class="player-stop" onclick="stopBrandSound('${brand}')" title="Остановить">
+                                    <span>⏹</span>
+                                </button>
+                                <div class="player-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" id="progress-${brand}"></div>
+                                    </div>
+                                    <div class="progress-time" id="time-${brand}">0:00 / 0:00</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="cars-grid">
@@ -1685,6 +1991,11 @@ function showNotification(message, type = 'info', duration = 5000) {
 function handleCarCardClick(carId) {
     const carIndex = carsData.findIndex(c => c.id === carId);
     if (carIndex === -1) return;
+    
+    const car = carsData[carIndex];
+    
+    // Воспроизводим звук автомобиля при клике
+    playCarSound(car.brand);
     
     if (compareMode && firstCarForCompare) {
         // Если в режиме сравнения, открываем модальное окно сравнения

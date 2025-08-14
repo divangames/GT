@@ -1346,12 +1346,20 @@ body {
     justify-content: center;
     box-shadow: none;
     flex-shrink: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.brand-logo:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1) contrast(1.05);
 }
 
 .brand-logo img {
     width: 126px;
     height: 95.5px;
     object-fit: contain;
+    transition: all 0.3s ease;
 }
 
 .brand-info {
@@ -1370,6 +1378,110 @@ body {
     font-size: 16px;
     color: #7f8c8d;
     font-weight: 500;
+}
+
+/* Стили для плеера марки */
+.brand-player {
+    margin-top: 8px;
+    padding: 8px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.player-stop {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #ff4757 0%, #ff3742 100%);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 71, 87, 0.3);
+}
+
+.player-stop:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(255, 71, 87, 0.4);
+}
+
+.player-progress {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.1s ease;
+    position: relative;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.progress-time {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Адаптивность для плеера */
+@media (max-width: 768px) {
+    .brand-player {
+        margin-top: 6px;
+        padding: 6px;
+    }
+    
+    .player-controls {
+        gap: 8px;
+    }
+    
+    .player-stop {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+    
+    .progress-time {
+        font-size: 10px;
+    }
 }
 
 .cars-grid {
@@ -1591,6 +1703,15 @@ body {
     -webkit-backdrop-filter: blur(10px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     filter: brightness(1.1) contrast(1.05);
+    cursor: pointer;
+}
+
+.modal-brand-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 
+        0 12px 35px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    filter: brightness(1.2) contrast(1.1);
 }
 
 .modal-brand-logo:hover {

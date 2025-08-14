@@ -1,17 +1,6 @@
 {
   "total_cars": 167,
-  "new_cars_count": 2,
-  "last_update": "2025-08-14T18:50:38.420804",
-  "new_cars": [
-    {
-      "brand": "Ford",
-      "name": "Escort RS Cosworth '92",
-      "year": "92"
-    },
-    {
-      "brand": "Ford",
-      "name": "F-150 SVT Raptor '11",
-      "year": "11"
-    }
-  ]
+  "new_cars_count": 0,
+  "last_update": "2025-08-14T23:32:28.143933",
+  "new_cars": []
 }
