@@ -5205,5 +5205,626 @@
       "width": "2 192 мм",
       "height": "1 994 мм"
     }
+  },
+  {
+    "id": 168,
+    "brand": "Ford",
+    "name": "Focus Gr.B Rally Car",
+    "name_short": "Focus Gr.B Rally Car",
+    "year": "",
+    "type": "modern",
+    "power": "546 л. с. / 7 500 об/мин",
+    "torque": "579,1 Н/м / 4 500 об/мин",
+    "weight": "1 260 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Focus Gr.B Rally Car/car3264.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Focus Gr.B Rally Car/car3264_1_01-CSXIANr-.jpg",
+      "images/cars/Ford/Focus Gr.B Rally Car/car3264_2_01-Cb-pI470.jpg",
+      "images/cars/Ford/Focus Gr.B Rally Car/car3264_2_02-BVzQahYW.jpg",
+      "images/cars/Ford/Focus Gr.B Rally Car/car3264_3_01-DcJM2Gph.jpg"
+    ],
+    "description": "Эта раллийная машина использует все преимущества шасси позднего третьего поколения.",
+    "category": "Gr.N",
+    "pp": "660.04",
+    "displacement": "1 999 см³",
+    "drivetrain": "4WD",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 416 мм",
+      "width": "2 000 мм",
+      "height": "1 569 мм"
+    }
+  },
+  {
+    "id": 169,
+    "brand": "Ford",
+    "name": "Focus RS '18",
+    "name_short": "Focus RS",
+    "year": "18",
+    "type": "modern",
+    "power": "355 л. с. / 6 000 об/мин",
+    "torque": "478,2 Н/м / 3 000 об/мин",
+    "weight": "1 557 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Focus RS '18/car3420.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Focus RS '18/car3420_1_01-B10M0nAR.jpg",
+      "images/cars/Ford/Focus RS '18/car3420_2_01-BKmzw_8m.jpg",
+      "images/cars/Ford/Focus RS '18/car3420_2_02-ChjA4i_2.jpg",
+      "images/cars/Ford/Focus RS '18/car3420_3_01-yUlFceDf.jpg"
+    ],
+    "description": "Модель RS третьего поколения Focus, впервые оснащенная полным приводом. Это позволило заметно улучшить ее спортивные качества.",
+    "category": "ТР 523.61",
+    "pp": "523.61",
+    "displacement": "2 261 см³",
+    "drivetrain": "4WD",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 389 мм",
+      "width": "1 821 мм",
+      "height": "1 473 мм"
+    }
+  },
+  {
+    "id": 170,
+    "brand": "Ford",
+    "name": "Focus ST '15",
+    "name_short": "Focus ST",
+    "year": "15",
+    "type": "modern",
+    "power": "254 л. с. / 5 500 об/мин",
+    "torque": "365,4 Н/м / 2 500 об/мин",
+    "weight": "1 462 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Focus ST '15/car2145.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Focus ST '15/car2145_1_01-COpopCah.jpg",
+      "images/cars/Ford/Focus ST '15/car2145_2_01-qUeW5bYQ.jpg",
+      "images/cars/Ford/Focus ST '15/car2145_2_02-C9GdVez9.jpg"
+    ],
+    "description": "Компактный спорткар, воплотивший в себе спортивные технологии Ford.",
+    "category": "ТР 495.12",
+    "pp": "495.12",
+    "displacement": "1 999 см³",
+    "drivetrain": "FF",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 361 мм",
+      "width": "1 821 мм",
+      "height": "1 483 мм"
+    }
+  },
+  {
+    "id": 171,
+    "brand": "Ford",
+    "name": "Ford GT '06",
+    "name_short": "Ford GT",
+    "year": "06",
+    "type": "modern",
+    "power": "558 л. с. / 6 500 об/мин",
+    "torque": "678,1 Н/м / 4 000 об/мин",
+    "weight": "1 451 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Ford GT '06/car1426.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Ford GT '06/car1426_1_01-B9R6Gemd.jpg",
+      "images/cars/Ford/Ford GT '06/car1426_2_01-D0rZ7I81.jpg",
+      "images/cars/Ford/Ford GT '06/car1426_2_02-DbSPsLMT.jpg",
+      "images/cars/Ford/Ford GT '06/car1426_3_01-CQt6u6qC.jpg"
+    ],
+    "description": "Улучшенный вариант модели, выпущенной к 100-летнему юбилею.",
+    "category": "ТР 601.47",
+    "pp": "601.47",
+    "displacement": "5 409 см³",
+    "drivetrain": "MR",
+    "aspiration": "НГ (нагнетатель)",
+    "dimensions": {
+      "length": "4 643 мм",
+      "width": "1 953 мм",
+      "height": "1 125 мм"
+    }
+  },
+  {
+    "id": 172,
+    "brand": "Ford",
+    "name": "Ford GT '17",
+    "name_short": "Ford GT",
+    "year": "17",
+    "type": "modern",
+    "power": "656 л. с. / 6 500 об/мин",
+    "torque": "744,8 Н/м / 6 000 об/мин",
+    "weight": "1 385 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Ford GT '17/car3402.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Ford GT '17/car3402_1_01-Dy38g3_s.jpg",
+      "images/cars/Ford/Ford GT '17/car3402_2_01-cLKT5iRV.jpg",
+      "images/cars/Ford/Ford GT '17/car3402_2_02-Csr70r-_.jpg",
+      "images/cars/Ford/Ford GT '17/car3402_3_01-BeIYPbKN.jpg"
+    ],
+    "description": "Модель Ford GT второго поколения с переработанной аэродинамикой.",
+    "category": "ТР 630.61",
+    "pp": "630.61",
+    "displacement": "3 497 см³",
+    "drivetrain": "MR",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 763 мм",
+      "width": "2 004 мм",
+      "height": "1 110 мм"
+    }
+  },
+  {
+    "id": 173,
+    "brand": "Ford",
+    "name": "Ford GT LM Race Car Spec II",
+    "name_short": "Ford GT LM Race Car Spec II",
+    "year": "",
+    "type": "modern",
+    "power": "615 л. с. / 6 500 об/мин",
+    "torque": "713,4 Н/м / 4 000 об/мин",
+    "weight": "1 130 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Ford GT LM Race Car Spec II/car1040.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Ford GT LM Race Car Spec II/car1040_1_01-CkoATasB.jpg",
+      "images/cars/Ford/Ford GT LM Race Car Spec II/car1040_2_01-Crcau3Rf.jpg",
+      "images/cars/Ford/Ford GT LM Race Car Spec II/car1040_2_02-0tgIZ3YU.jpg",
+      "images/cars/Ford/Ford GT LM Race Car Spec II/car1040_3_01-DZV6LtFl.jpg"
+    ],
+    "description": "Автомобиль мечты, созданный Gran Turismo в честь возвращения легенды Ле-Мана.",
+    "category": "Gr.N",
+    "pp": "735.62",
+    "displacement": "5 400 см³",
+    "drivetrain": "MR",
+    "aspiration": "НГ (нагнетатель)",
+    "dimensions": {
+      "length": "4 613 мм",
+      "width": "1 950 мм",
+      "height": "1 106 мм"
+    }
+  },
+  {
+    "id": 174,
+    "brand": "Ford",
+    "name": "Ford GT LM Spec II Test Car",
+    "name_short": "Ford GT LM Spec II Test Car",
+    "year": "",
+    "type": "modern",
+    "power": "599 л. с. / 6 500 об/мин",
+    "torque": "723,2 Н/м / 4 000 об/мин",
+    "weight": "1 165 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Ford GT LM Spec II Test Car/car1425.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Ford GT LM Spec II Test Car/car1425_1_01-BnTOpVMO.jpg",
+      "images/cars/Ford/Ford GT LM Spec II Test Car/car1425_2_01-DNCdqK27.jpg",
+      "images/cars/Ford/Ford GT LM Spec II Test Car/car1425_2_02-BzzrQGLI.jpg",
+      "images/cars/Ford/Ford GT LM Spec II Test Car/car1425_3_01-CzGoAdb6.jpg"
+    ],
+    "description": "Автомобиль мечты, созданный Gran Turismo в честь возвращения легенды Ле-Мана.",
+    "category": "Gr.N",
+    "pp": "729.22",
+    "displacement": "5 409 см³",
+    "drivetrain": "MR",
+    "aspiration": "НГ (нагнетатель)",
+    "dimensions": {
+      "length": "4 643 мм",
+      "width": "1 953 мм",
+      "height": "1 125 мм"
+    }
+  },
+  {
+    "id": 175,
+    "brand": "Ford",
+    "name": "Ford GT Race Car '18",
+    "name_short": "Ford GT Race Car",
+    "year": "18",
+    "type": "modern",
+    "power": "535 л. с. / 6 500 об/мин",
+    "torque": "611,5 Н/м / 4 000 об/мин",
+    "weight": "1 200 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Ford GT Race Car '18/car3436.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Ford GT Race Car '18/car3436_1_01-DMQRn_yw.jpg",
+      "images/cars/Ford/Ford GT Race Car '18/car3436_2_01-CkWFmKpB.jpg",
+      "images/cars/Ford/Ford GT Race Car '18/car3436_2_02-CECEMcxG.jpg",
+      "images/cars/Ford/Ford GT Race Car '18/car3436_3_01-BnphAaFe.jpg"
+    ],
+    "description": "На этой машине заводская команда Ford выиграла Чемпионат мира по авторалли.",
+    "category": "Gr.N",
+    "pp": "723.02",
+    "displacement": "3 500 см³",
+    "drivetrain": "MR",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 763 мм",
+      "width": "2 045 мм",
+      "height": "1 030 мм"
+    }
+  },
+  {
+    "id": 176,
+    "brand": "Ford",
+    "name": "Ford Roadster",
+    "name_short": "Ford Roadster",
+    "year": "",
+    "type": "modern",
+    "power": "182 л. с. / 3 800 об/мин",
+    "torque": "417,6 Н/м / 3 000 об/мин",
+    "weight": "1 115 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Ford Roadster/car3444.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Ford Roadster/car3444_1_01-Cw8jdx1F.jpg",
+      "images/cars/Ford/Ford Roadster/car3444_1_02-Ct41tO-B.jpg",
+      "images/cars/Ford/Ford Roadster/car3444_2_01-CIsS6phF.jpg",
+      "images/cars/Ford/Ford Roadster/car3444_2_02-8ZIjg6HD.jpg",
+      "images/cars/Ford/Ford Roadster/car3444_3_01-BoOW9kw1.jpg"
+    ],
+    "description": "Старинный хотрод, выставленный в музее Генри Форда.",
+    "category": "ТР 412.51",
+    "pp": "412.51",
+    "displacement": "5 424 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "3 734 мм",
+      "width": "1 664 мм",
+      "height": "1 422 мм"
+    }
+  },
+  {
+    "id": 177,
+    "brand": "Ford",
+    "name": "GT40 Mark I '66",
+    "name_short": "GT40 Mark I",
+    "year": "66",
+    "type": "modern",
+    "power": "359 л. с. / 6 500 об/мин",
+    "torque": "455,9 Н/м / 5 500 об/мин",
+    "weight": "1 080 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/GT40 Mark I '66/car1935.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/GT40 Mark I '66/car1935_1_01-B0ond5oz.jpg",
+      "images/cars/Ford/GT40 Mark I '66/car1935_2_01-Bz4mnqKm.jpg",
+      "images/cars/Ford/GT40 Mark I '66/car1935_2_02-CD7UFoqt.jpg",
+      "images/cars/Ford/GT40 Mark I '66/car1935_3_01-Cp-7KvAa.jpg"
+    ],
+    "description": "Историческая машина, занявшая все 3 призовых места в Ле-Мане и ставшая началом легенды.",
+    "category": "ТР 554.43",
+    "pp": "554.43",
+    "displacement": "4 727 см³",
+    "drivetrain": "MR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 191 мм",
+      "width": "1 778 мм",
+      "height": "1 029 мм"
+    }
+  },
+  {
+    "id": 178,
+    "brand": "Ford",
+    "name": "Mark IV Race Car '67",
+    "name_short": "Mark IV Race Car",
+    "year": "67",
+    "type": "modern",
+    "power": "511 л. с. / 6 000 об/мин",
+    "torque": "637,0 Н/м / 5 000 об/мин",
+    "weight": "1 000 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Mark IV Race Car '67/car1565.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Mark IV Race Car '67/car1565_1_01-DTicllLU.jpg",
+      "images/cars/Ford/Mark IV Race Car '67/car1565_2_01-C4Q3S2kZ.jpg",
+      "images/cars/Ford/Mark IV Race Car '67/car1565_2_02-Bl7sl2G_.jpg",
+      "images/cars/Ford/Mark IV Race Car '67/car1565_3_01-D9WkNucs.jpg"
+    ],
+    "description": "Последний автомобиль, представлявший Ford в Ле-Мане.",
+    "category": "Gr.N",
+    "pp": "674.71",
+    "displacement": "6 997 см³",
+    "drivetrain": "MR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 343 мм",
+      "width": "1 791 мм",
+      "height": "978 мм"
+    }
+  },
+  {
+    "id": 179,
+    "brand": "Ford",
+    "name": "Mustang Boss 429 '69",
+    "name_short": "Mustang Boss 429",
+    "year": "69",
+    "type": "modern",
+    "power": "380 л. с. / 5 000 об/мин",
+    "torque": "610,5 Н/м / 3 500 об/мин",
+    "weight": "1 614 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Mustang Boss 429 '69/car3487.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Mustang Boss 429 '69/car3487_1_01-CTXHPadl.jpg",
+      "images/cars/Ford/Mustang Boss 429 '69/car3487_2_01-BUfPK4B1.jpg",
+      "images/cars/Ford/Mustang Boss 429 '69/car3487_2_02-D75z4iYX.jpg",
+      "images/cars/Ford/Mustang Boss 429 '69/car3487_3_01-baaRF4ye.jpg"
+    ],
+    "description": "Этот вариант Mustang, разработанный для омологации в NASCAR, выпускался всего 2 года.",
+    "category": "ТР 500.42",
+    "pp": "500.42",
+    "displacement": "7 030 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 760 мм",
+      "width": "1 824 мм",
+      "height": "1 280 мм"
+    }
+  },
+  {
+    "id": 180,
+    "brand": "Ford",
+    "name": "Mustang Gr.3",
+    "name_short": "Mustang Gr.3",
+    "year": "",
+    "type": "modern",
+    "power": "576 л. с. / 7 000 об/мин",
+    "torque": "599,7 Н/м / 6 000 об/мин",
+    "weight": "1 300 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Mustang Gr.3/car2159.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Mustang Gr.3/car2159_1_01-Bpbfo0pG.jpg",
+      "images/cars/Ford/Mustang Gr.3/car2159_2_01-B5Uyiy-6.jpg",
+      "images/cars/Ford/Mustang Gr.3/car2159_2_02-CF72xNt0.jpg",
+      "images/cars/Ford/Mustang Gr.3/car2159_3_01-Dl6h-KE3.jpg"
+    ],
+    "description": "Шестое поколение Ford Mustang, выпущенное к 50-летию модели. Эта машина продавалась в 120 странах мира.",
+    "category": "Gr.N",
+    "pp": "716.44",
+    "displacement": "- см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 923 мм",
+      "width": "2 000 мм",
+      "height": "1 280 мм"
+    }
+  },
+  {
+    "id": 181,
+    "brand": "Ford",
+    "name": "Mustang Gr.3 Road Car",
+    "name_short": "Mustang Gr.3 Road Car",
+    "year": "",
+    "type": "modern",
+    "power": "510 л. с. / 7 000 об/мин",
+    "torque": "522,4 Н/м / 6 000 об/мин",
+    "weight": "1 500 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Mustang Gr.3 Road Car/car3300.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Mustang Gr.3 Road Car/car3300_1_01-Dv7sPU5r.jpg",
+      "images/cars/Ford/Mustang Gr.3 Road Car/car3300_2_01-ljKPY9-x.jpg",
+      "images/cars/Ford/Mustang Gr.3 Road Car/car3300_2_02-D2CoAal2.jpg",
+      "images/cars/Ford/Mustang Gr.3 Road Car/car3300_3_01-DD7tcFTU.jpg"
+    ],
+    "description": "Шестое поколение Ford Mustang, выпущенное к 50-летию модели. Эта машина продавалась в 120 странах мира.",
+    "category": "ТР 572.51",
+    "pp": "572.51",
+    "displacement": "- см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 845 мм",
+      "width": "2 000 мм",
+      "height": "1 280 мм"
+    }
+  },
+  {
+    "id": 182,
+    "brand": "Ford",
+    "name": "Mustang Gr.4",
+    "name_short": "Mustang Gr.4",
+    "year": "",
+    "type": "modern",
+    "power": "401 л. с. / 6 500 об/мин",
+    "torque": "501,6 Н/м / 4 500 об/мин",
+    "weight": "1 400 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Mustang Gr.4/car2164.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Mustang Gr.4/car2164_1_01-GiaYYfW-.jpg",
+      "images/cars/Ford/Mustang Gr.4/car2164_2_01-BXxxIszB.jpg",
+      "images/cars/Ford/Mustang Gr.4/car2164_2_02-FuyhSA_j.jpg",
+      "images/cars/Ford/Mustang Gr.4/car2164_3_01-BjCkSeJ0.jpg"
+    ],
+    "description": "Шестое поколение Ford Mustang, выпущенное к 50-летию модели. Эта машина продавалась в 120 странах мира.",
+    "category": "Gr.N",
+    "pp": "632.77",
+    "displacement": "- см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 834 мм",
+      "width": "1 915 мм",
+      "height": "1 320 мм"
+    }
+  },
+  {
+    "id": 183,
+    "brand": "Ford",
+    "name": "Mustang Gr.B Rally Car",
+    "name_short": "Mustang Gr.B Rally Car",
+    "year": "",
+    "type": "modern",
+    "power": "557 л. с. / 7 000 об/мин",
+    "torque": "570,3 Н/м / 6 000 об/мин",
+    "weight": "1 380 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Mustang Gr.B Rally Car/car3229.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Mustang Gr.B Rally Car/car3229_1_01-Bt9-bTkq.jpg",
+      "images/cars/Ford/Mustang Gr.B Rally Car/car3229_2_01-BimZ2MMC.jpg",
+      "images/cars/Ford/Mustang Gr.B Rally Car/car3229_2_02-DsxEK51x.jpg",
+      "images/cars/Ford/Mustang Gr.B Rally Car/car3229_3_01-BO9-XoPx.jpg"
+    ],
+    "description": "Шестое поколение Ford Mustang, выпущенное к 50-летию модели. Эта машина продавалась в 120 странах мира.",
+    "category": "Gr.N",
+    "pp": "653.90",
+    "displacement": "- см³",
+    "drivetrain": "4WD",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 869 мм",
+      "width": "2 000 мм",
+      "height": "1 420 мм"
+    }
+  },
+  {
+    "id": 184,
+    "brand": "Ford",
+    "name": "Mustang GT '15",
+    "name_short": "Mustang GT",
+    "year": "15",
+    "type": "modern",
+    "power": "441 л. с. / 6 500 об/мин",
+    "torque": "541,9 Н/м / 4 500 об/мин",
+    "weight": "1 681 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Mustang GT '15/car2138.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Mustang GT '15/car2138_1_01-BDh901sf.jpg",
+      "images/cars/Ford/Mustang GT '15/car2138_2_01-BCEiVQuG.jpg",
+      "images/cars/Ford/Mustang GT '15/car2138_2_02-CpIvagrt.jpg",
+      "images/cars/Ford/Mustang GT '15/car2138_3_01-dcvHu7Gf.jpg"
+    ],
+    "description": "Шестое поколение Ford Mustang, выпущенное к 50-летию модели. Эта машина продавалась в 120 странах мира.",
+    "category": "ТР 548.25",
+    "pp": "548.25",
+    "displacement": "4 951 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 783 мм",
+      "width": "1 915 мм",
+      "height": "1 365 мм"
+    }
+  },
+  {
+    "id": 185,
+    "brand": "Ford",
+    "name": "Mustang Mach 1 '71",
+    "name_short": "Mustang Mach 1",
+    "year": "71",
+    "type": "modern",
+    "power": "307 л. с. / 5 500 об/мин",
+    "torque": "501,7 Н/м / 3 500 об/мин",
+    "weight": "1 615 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Mustang Mach 1 '71/car1729.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Mustang Mach 1 '71/car1729_1_01-vi6D0JSK.jpg",
+      "images/cars/Ford/Mustang Mach 1 '71/car1729_2_01-BQl_kLFr.jpg",
+      "images/cars/Ford/Mustang Mach 1 '71/car1729_2_02-CMS6eoTM.jpg",
+      "images/cars/Ford/Mustang Mach 1 '71/car1729_3_01-CrQw-kev.jpg"
+    ],
+    "description": "Агрессивный стиль этой модели оказал влияние на развитие спорткаров по всему миру.",
+    "category": "ТР 446.26",
+    "pp": "446.26",
+    "displacement": "5 752 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 813 мм",
+      "width": "1 882 мм",
+      "height": "1 273 мм"
+    }
+  },
+  {
+    "id": 186,
+    "brand": "Ford",
+    "name": "Shelby GT350R '16",
+    "name_short": "Shelby GT350R",
+    "year": "16",
+    "type": "modern",
+    "power": "533 л. с. / 7 500 об/мин",
+    "torque": "582,1 Н/м / 4 500 об/мин",
+    "weight": "1 658 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Shelby GT350R '16/car3391.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Shelby GT350R '16/car3391_1_01-BqryAFtg.jpg",
+      "images/cars/Ford/Shelby GT350R '16/car3391_2_01-CatKN-s3.jpg",
+      "images/cars/Ford/Shelby GT350R '16/car3391_2_02-9ag-LOeM.jpg",
+      "images/cars/Ford/Shelby GT350R '16/car3391_3_01-Bn6-6C9U.jpg"
+    ],
+    "description": "Спортивная модель 7-го поколения Mustang, унаследовавшая имя легенды.",
+    "category": "ТР 575.47",
+    "pp": "575.47",
+    "displacement": "5 163 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 818 мм",
+      "width": "1 928 мм",
+      "height": "1 361 мм"
+    }
+  },
+  {
+    "id": 187,
+    "brand": "Ford",
+    "name": "Sierra RS 500 Cosworth '87",
+    "name_short": "Sierra RS 500 Cosworth",
+    "year": "87",
+    "type": "modern",
+    "power": "227 л. с. / 6 000 об/мин",
+    "torque": "280,2 Н/м / 4 500 об/мин",
+    "weight": "1 207 кг",
+    "price": "N/A",
+    "image": "images/cars/Ford/Sierra RS 500 Cosworth '87/car3466.png",
+    "brand_logo": "images/cars/Ford/tnr13.png",
+    "screenshots": [
+      "images/cars/Ford/Sierra RS 500 Cosworth '87/car3466_1_01-BMHtjCKN.jpg",
+      "images/cars/Ford/Sierra RS 500 Cosworth '87/car3466_1_02-BI_HWpez.jpg",
+      "images/cars/Ford/Sierra RS 500 Cosworth '87/car3466_2_01-D80oxViL.jpg",
+      "images/cars/Ford/Sierra RS 500 Cosworth '87/car3466_2_02-CPXWHD73.jpg",
+      "images/cars/Ford/Sierra RS 500 Cosworth '87/car3466_3_01-COwWkgU9.jpg"
+    ],
+    "description": "Шедевр тюнинга от Cosworth, побеждавший в кузовных гонках.",
+    "category": "ТР 471.34",
+    "pp": "471.34",
+    "displacement": "1 993 см³",
+    "drivetrain": "FR",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 459 мм",
+      "width": "1 728 мм",
+      "height": "1 376 мм"
+    }
   }
 ]
