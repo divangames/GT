@@ -1614,42 +1614,56 @@ function parseNumericValue(value) {
 }
 
 // Показать уведомление
-function showNotification(message, type = 'info') {
-    // Создаем элемент уведомления
+function showNotification(message, type = 'info', duration = 5000) {
+    // Контейнер для стека уведомлений
+    let container = document.querySelector('.notification-container');
+    if (!container) {
+        container = document.createElement('div');
+        container.className = 'notification-container';
+        document.body.appendChild(container);
+    }
+
+    // Подбор иконки по типу
+    let iconHtml = '<i class="fas fa-circle-info"></i>';
+    if (type === 'success') iconHtml = '<i class="fas fa-check"></i>';
+    if (type === 'error') iconHtml = '<i class="fas fa-exclamation"></i>';
+
+    // Элемент уведомления
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
+    notification.style.setProperty('--duration', `${duration}ms`);
     notification.innerHTML = `
         <div class="notification-content">
-            <span>${message}</span>
-            <button onclick="this.parentElement.parentElement.remove()">✕</button>
+            <div class="notification-icon">${iconHtml}</div>
+            <div class="notification-message">${message}</div>
+            <button class="notification-close" aria-label="Закрыть">&times;</button>
+            <div class="notification-progress"></div>
         </div>
     `;
-    
-    // Добавляем стили
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: linear-gradient(135deg, rgba(35, 35, 35, 0.95) 0%, rgba(45, 45, 45, 0.95) 100%);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
-        padding: 15px 20px;
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 14px;
-        z-index: 10000;
-        backdrop-filter: blur(20px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        animation: slideInRight 0.3s ease-out;
-    `;
-    
-    document.body.appendChild(notification);
-    
-    // Удаляем через 5 секунд
-    setTimeout(() => {
-        if (notification.parentElement) {
-            notification.remove();
-        }
-    }, 5000);
+
+    // Закрытие по кнопке
+    notification.querySelector('.notification-close').addEventListener('click', () => closeNotification(notification));
+
+    // Пауза прогресса при наведении
+    notification.addEventListener('mouseenter', () => notification.classList.add('paused'));
+    notification.addEventListener('mouseleave', () => notification.classList.remove('paused'));
+
+    // Автозакрытие
+    const autoCloseTimer = setTimeout(() => closeNotification(notification), duration);
+
+    // Удаляем таймер при ручном закрытии
+    notification.addEventListener('notification:close', () => clearTimeout(autoCloseTimer));
+
+    container.appendChild(notification);
+
+    function closeNotification(el) {
+        if (!el) return;
+        el.dispatchEvent(new CustomEvent('notification:close'));
+        el.style.animation = 'notifyOut 0.35s ease forwards';
+        el.addEventListener('animationend', () => {
+            if (el.parentElement) el.parentElement.removeChild(el);
+        }, { once: true });
+    }
 }
 
 // Обработчик клика по карточке в режиме сравнения

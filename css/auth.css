@@ -9,21 +9,21 @@
 
 .auth-buttons {
     display: flex;
-    gap: 8px;
+    gap: 6px;
 }
 
 .auth-btn {
     background: linear-gradient(135deg, rgba(100, 181, 246, 0.1), rgba(100, 181, 246, 0.2));
     border: 1px solid rgba(100, 181, 246, 0.3);
     color: #64B5F6;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 16px;
+    font-size: 12px;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     backdrop-filter: blur(10px);
-    min-width: 60px;
+    min-width: 56px;
 }
 
 .auth-btn:hover {
@@ -54,13 +54,13 @@
 .user-profile {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     cursor: pointer;
-    padding: 6px 12px;
-    border-radius: 20px;
+    padding: 5px 10px;
+    border-radius: 16px;
     background: linear-gradient(135deg, rgba(100, 181, 246, 0.1), rgba(100, 181, 246, 0.05));
     border: 1px solid rgba(100, 181, 246, 0.2);
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     backdrop-filter: blur(10px);
 }
 
@@ -72,8 +72,8 @@
 }
 
 .user-avatar {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid rgba(100, 181, 246, 0.4);
@@ -82,7 +82,7 @@
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 11px;
     color: white;
     text-transform: uppercase;
 }
@@ -98,7 +98,7 @@
 .user-username {
     color: #64B5F6;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 12px;
     white-space: nowrap;
 }
 
