@@ -53,7 +53,27 @@ class AdminSystem {
                 window.authSystem.users = this.users;
                 window.authSystem.settings = data.settings;
                 // Сохраняем также через authSystem для синхронизации
-                await window.authSystem.saveUsers();
+                if (typeof window.authSystem.saveUsers === 'function') {
+                    await window.authSystem.saveUsers();
+                } else {
+                    // Фолбэк: вручную перезаписываем localStorage
+                    try {
+                        localStorage.setItem('gt7_users', JSON.stringify({ users: this.users, settings: window.authSystem.settings || data.settings }));
+                    } catch (e) {
+                        console.warn('Фолбэк сохранения пользователей не удался:', e);
+                    }
+                }
+
+                // Если изменили роль текущего пользователя, обновляем UI
+                const current = window.authSystem.getCurrentUser?.();
+                if (current) {
+                    const refreshed = this.users.find(u => u.id === current.id);
+                    if (refreshed) {
+                        window.authSystem.currentUser = refreshed;
+                        window.authSystem.saveSession?.();
+                        window.authSystem.updateUI?.();
+                    }
+                }
             }
             
             console.log('Пользователи сохранены в adminSystem:', this.users.length);
@@ -87,7 +107,12 @@ class AdminSystem {
 
         userListContainer.innerHTML = '';
 
-        this.users.forEach(user => {
+		this.users.forEach(user => {
+			const currentUserId = window.authSystem?.getCurrentUser()?.id;
+			const isSelf = user.id === currentUserId;
+			const adminsCount = this.users.filter(u => u.role === 'admin').length;
+			const isOnlyAdmin = user.role === 'admin' && adminsCount <= 1;
+			const disableToggle = isSelf || isOnlyAdmin;
             const userCard = document.createElement('div');
             userCard.className = 'user-card';
             userCard.innerHTML = `
@@ -105,8 +130,8 @@ class AdminSystem {
                     </div>
                 </div>
                 <div class="user-card-actions">
-                    <button class="btn-toggle-admin" onclick="adminSystem.toggleUserRole('${user.id}')" 
-                            ${user.role === 'admin' ? 'disabled' : ''}>
+					<button class="btn-toggle-admin" onclick="adminSystem.toggleUserRole('${user.id}')" 
+							${disableToggle ? 'disabled' : ''} title="${isSelf ? 'Нельзя изменять собственную роль' : (isOnlyAdmin ? 'Должен остаться хотя бы один администратор' : '')}">
                         ${user.role === 'admin' ? 'Убрать права админа' : 'Назначить админом'}
                     </button>
                     <button class="btn-delete-user" onclick="adminSystem.deleteUser('${user.id}')" 
@@ -129,6 +154,20 @@ class AdminSystem {
         const user = this.users.find(u => u.id === userId);
         if (!user) {
             this.showNotification('Пользователь не найден.', 'error');
+            return;
+        }
+
+        // Запрет менять собственную роль
+        const currentUserId = window.authSystem.getCurrentUser()?.id;
+        if (user.id === currentUserId) {
+            this.showNotification('Нельзя менять собственную роль.', 'error');
+            return;
+        }
+
+        // Должен оставаться хотя бы один администратор
+        const adminsCount = this.users.filter(u => u.role === 'admin').length;
+        if (user.role === 'admin' && adminsCount <= 1) {
+            this.showNotification('Должен остаться хотя бы один администратор.', 'error');
             return;
         }
 
