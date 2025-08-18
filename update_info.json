@@ -1,6 +1,977 @@
 {
   "total_cars": 194,
-  "new_cars_count": 0,
-  "last_update": "2025-08-18T22:12:10.673780",
-  "new_cars": []
+  "new_cars_count": 194,
+  "last_update": "2025-08-18T23:15:42.484935",
+  "new_cars": [
+    {
+      "brand": "Abarth",
+      "name": "1500 Biposto Bertone B.A.T 1 '52",
+      "year": "52"
+    },
+    {
+      "brand": "Abarth",
+      "name": "Abarth 500 '09",
+      "year": "09"
+    },
+    {
+      "brand": "Abarth",
+      "name": "Abarth 595 SS '70",
+      "year": "70"
+    },
+    {
+      "brand": "AFEELA",
+      "name": "AFEELA Prototype 2024",
+      "year": ""
+    },
+    {
+      "brand": "Alfa Romeo",
+      "name": "155 2.5 V6 TI '93",
+      "year": "93"
+    },
+    {
+      "brand": "Alfa Romeo",
+      "name": "4C '14",
+      "year": "14"
+    },
+    {
+      "brand": "Alfa Romeo",
+      "name": "4C Gr.3",
+      "year": ""
+    },
+    {
+      "brand": "Alfa Romeo",
+      "name": "4C Gr.3 Road Car",
+      "year": ""
+    },
+    {
+      "brand": "Alfa Romeo",
+      "name": "4C Gr.4",
+      "year": ""
+    },
+    {
+      "brand": "Alfa Romeo",
+      "name": "8C 2900B Touring Berlinetta '38",
+      "year": "38"
+    },
+    {
+      "brand": "Alfa Romeo",
+      "name": "8C Competizione '08",
+      "year": "08"
+    },
+    {
+      "brand": "Alfa Romeo",
+      "name": "Giulia GTAm '20",
+      "year": "20"
+    },
+    {
+      "brand": "Alfa Romeo",
+      "name": "Giulia Sprint GT Veloce '67",
+      "year": "67"
+    },
+    {
+      "brand": "Alfa Romeo",
+      "name": "GIULIA TZ2 carrozzata da ZAGATO '65",
+      "year": "65"
+    },
+    {
+      "brand": "Alfa Romeo",
+      "name": "MiTo ‘09",
+      "year": ""
+    },
+    {
+      "brand": "Alpine",
+      "name": "A110 '17",
+      "year": "17"
+    },
+    {
+      "brand": "Alpine",
+      "name": "A110 '72",
+      "year": "72"
+    },
+    {
+      "brand": "Alpine",
+      "name": "A220 Race Car '68",
+      "year": "68"
+    },
+    {
+      "brand": "Alpine",
+      "name": "Alpine VGT",
+      "year": ""
+    },
+    {
+      "brand": "Alpine",
+      "name": "Alpine VGT '17",
+      "year": "17"
+    },
+    {
+      "brand": "Alpine",
+      "name": "Alpine VGT Race",
+      "year": ""
+    },
+    {
+      "brand": "AMG",
+      "name": "300 SEL 6.8 AMG '71",
+      "year": "71"
+    },
+    {
+      "brand": "AMG",
+      "name": "A 45 AMG '13",
+      "year": "13"
+    },
+    {
+      "brand": "AMG",
+      "name": "Mercedes-AMG C 63 S '15",
+      "year": "15"
+    },
+    {
+      "brand": "AMG",
+      "name": "Mercedes-AMG GT Black Series '20",
+      "year": "20"
+    },
+    {
+      "brand": "AMG",
+      "name": "Mercedes-AMG GT R '17",
+      "year": "17"
+    },
+    {
+      "brand": "AMG",
+      "name": "Mercedes-AMG GT S '15",
+      "year": "15"
+    },
+    {
+      "brand": "AMG",
+      "name": "Mercedes-AMG GT Safety Car",
+      "year": ""
+    },
+    {
+      "brand": "AMG",
+      "name": "Mercedes-AMG GT3 '16",
+      "year": "16"
+    },
+    {
+      "brand": "AMG",
+      "name": "Mercedes-AMG GT3 '20",
+      "year": "20"
+    },
+    {
+      "brand": "AMG",
+      "name": "Mercedes-Benz AMG VGT",
+      "year": ""
+    },
+    {
+      "brand": "AMG",
+      "name": "Mercedes-Benz AMG VGT Racing Series",
+      "year": ""
+    },
+    {
+      "brand": "AMG",
+      "name": "SLS AMG '10",
+      "year": "10"
+    },
+    {
+      "brand": "AMG",
+      "name": "SLS AMG Gr.4",
+      "year": ""
+    },
+    {
+      "brand": "AMG",
+      "name": "SLS AMG GT3 '11",
+      "year": "11"
+    },
+    {
+      "brand": "Amuse",
+      "name": "Amuse NISMO 380RS Super Leggera",
+      "year": ""
+    },
+    {
+      "brand": "Amuse",
+      "name": "Amuse S2000 GT1 Turbo",
+      "year": ""
+    },
+    {
+      "brand": "Aston Martin",
+      "name": "DB11 '16",
+      "year": "16"
+    },
+    {
+      "brand": "Aston Martin",
+      "name": "DB3S '53",
+      "year": "53"
+    },
+    {
+      "brand": "Aston Martin",
+      "name": "DB5 '64",
+      "year": "64"
+    },
+    {
+      "brand": "Aston Martin",
+      "name": "DBR9 GT1 '10",
+      "year": "10"
+    },
+    {
+      "brand": "Aston Martin",
+      "name": "DP-100 VGT",
+      "year": ""
+    },
+    {
+      "brand": "Aston Martin",
+      "name": "One-77 '11",
+      "year": "11"
+    },
+    {
+      "brand": "Aston Martin",
+      "name": "V12 Vantage GT3 '12",
+      "year": "12"
+    },
+    {
+      "brand": "Aston Martin",
+      "name": "V8 Vantage Gr.4",
+      "year": ""
+    },
+    {
+      "brand": "Aston Martin",
+      "name": "V8 Vantage S '15",
+      "year": "15"
+    },
+    {
+      "brand": "Aston Martin",
+      "name": "Valkyrie '21",
+      "year": "21"
+    },
+    {
+      "brand": "Aston Martin",
+      "name": "Vantage '18",
+      "year": "18"
+    },
+    {
+      "brand": "Aston Martin",
+      "name": "Vulcan '16",
+      "year": "16"
+    },
+    {
+      "brand": "Audi",
+      "name": "Audi e-tron VGT",
+      "year": ""
+    },
+    {
+      "brand": "Audi",
+      "name": "Audi VGT",
+      "year": ""
+    },
+    {
+      "brand": "Audi",
+      "name": "R18 '16",
+      "year": "16"
+    },
+    {
+      "brand": "Audi",
+      "name": "R18 TDI '11",
+      "year": "11"
+    },
+    {
+      "brand": "Audi",
+      "name": "R8 4.2 '07",
+      "year": "07"
+    },
+    {
+      "brand": "Audi",
+      "name": "R8 Coupé V10 plus '16",
+      "year": "16"
+    },
+    {
+      "brand": "Audi",
+      "name": "R8 LMS '15",
+      "year": "15"
+    },
+    {
+      "brand": "Audi",
+      "name": "R8 LMS Evo '19",
+      "year": "19"
+    },
+    {
+      "brand": "Audi",
+      "name": "RS 5 Turbo DTM '19",
+      "year": "19"
+    },
+    {
+      "brand": "Audi",
+      "name": "Sport quattro S1 Pikes Peak '87",
+      "year": "87"
+    },
+    {
+      "brand": "Audi",
+      "name": "TT Coupé 3.2 quattro '03",
+      "year": "03"
+    },
+    {
+      "brand": "Audi",
+      "name": "TT Cup '16",
+      "year": "16"
+    },
+    {
+      "brand": "Audi",
+      "name": "TTS Coupé '09",
+      "year": "09"
+    },
+    {
+      "brand": "Audi",
+      "name": "TTS Coupé '14",
+      "year": "14"
+    },
+    {
+      "brand": "Autobianchi",
+      "name": "A112 Abarth '85",
+      "year": "85"
+    },
+    {
+      "brand": "BAC",
+      "name": "Mono '16",
+      "year": "16"
+    },
+    {
+      "brand": "BMW",
+      "name": "3.0 CSL '71",
+      "year": "71"
+    },
+    {
+      "brand": "BMW",
+      "name": "3.0 CSL '73",
+      "year": "73"
+    },
+    {
+      "brand": "BMW",
+      "name": "BMW VGT",
+      "year": ""
+    },
+    {
+      "brand": "BMW",
+      "name": "i3 '15",
+      "year": "15"
+    },
+    {
+      "brand": "BMW",
+      "name": "M2 Competition '18",
+      "year": "18"
+    },
+    {
+      "brand": "BMW",
+      "name": "M3 '03",
+      "year": "03"
+    },
+    {
+      "brand": "BMW",
+      "name": "M3 '07",
+      "year": "07"
+    },
+    {
+      "brand": "BMW",
+      "name": "M3 '89",
+      "year": "89"
+    },
+    {
+      "brand": "BMW",
+      "name": "M3 '97",
+      "year": "97"
+    },
+    {
+      "brand": "BMW",
+      "name": "M3 GT '11",
+      "year": "11"
+    },
+    {
+      "brand": "BMW",
+      "name": "M3 Sport Evolution '89",
+      "year": "89"
+    },
+    {
+      "brand": "BMW",
+      "name": "M4 '14",
+      "year": "14"
+    },
+    {
+      "brand": "BMW",
+      "name": "M4 Gr.4",
+      "year": ""
+    },
+    {
+      "brand": "BMW",
+      "name": "M4 Safety Car",
+      "year": ""
+    },
+    {
+      "brand": "BMW",
+      "name": "M6 GT3 Endurance Model '16",
+      "year": "16"
+    },
+    {
+      "brand": "BMW",
+      "name": "M6 GT3 Sprint Model '16",
+      "year": "16"
+    },
+    {
+      "brand": "BMW",
+      "name": "McLaren F1 GTR Race Car '97",
+      "year": "97"
+    },
+    {
+      "brand": "BMW",
+      "name": "Z4 3.0i '03",
+      "year": "03"
+    },
+    {
+      "brand": "BMW",
+      "name": "Z4 GT3 '11",
+      "year": "11"
+    },
+    {
+      "brand": "BMW",
+      "name": "Z8 '01",
+      "year": "01"
+    },
+    {
+      "brand": "Bugatti",
+      "name": "Bugatti VGT",
+      "year": ""
+    },
+    {
+      "brand": "Bugatti",
+      "name": "Bugatti VGT (Gr.1)",
+      "year": ""
+    },
+    {
+      "brand": "Bugatti",
+      "name": "Chiron '16",
+      "year": "16"
+    },
+    {
+      "brand": "Bugatti",
+      "name": "Veyron 16.4 '13",
+      "year": "13"
+    },
+    {
+      "brand": "Bugatti",
+      "name": "Veyron Gr.4",
+      "year": ""
+    },
+    {
+      "brand": "BVLGARI",
+      "name": "BVLGARI Aluminium VGT",
+      "year": ""
+    },
+    {
+      "brand": "Chaparral",
+      "name": "2J '70",
+      "year": "70"
+    },
+    {
+      "brand": "Chaparral",
+      "name": "Chaparral 2X VGT",
+      "year": ""
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Camaro SS '16",
+      "year": "16"
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Camaro Z28 '69",
+      "year": "69"
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Camaro ZL1 1LE Package '18",
+      "year": "18"
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Chevelle SS 454 '70",
+      "year": "70"
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Corvette (C1) '58",
+      "year": "58"
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Corvette (C2) '63",
+      "year": "63"
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Corvette C7 '14",
+      "year": "14"
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Corvette C7 Gr.3",
+      "year": ""
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Corvette C7 Gr.3 Road Car",
+      "year": ""
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Corvette C7 Gr.4",
+      "year": ""
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Corvette C7 ZR1 '19",
+      "year": "19"
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Corvette C8 '20",
+      "year": "20"
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Corvette Convertible (C3) '69",
+      "year": "69"
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Corvette Stingray (C3) '69",
+      "year": "69"
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Corvette Stingray Racer Concept '59",
+      "year": "59"
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Corvette Z06 (C5) '01",
+      "year": "01"
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Corvette ZR-1 (C4) '89",
+      "year": "89"
+    },
+    {
+      "brand": "Chevrolet",
+      "name": "Corvette ZR1 (C6) '09",
+      "year": "09"
+    },
+    {
+      "brand": "Chris Holstrom Concepts",
+      "name": "CHC 1967 Chevy Nova",
+      "year": ""
+    },
+    {
+      "brand": "Citroёn",
+      "name": "BX 19 TRS '87",
+      "year": "87"
+    },
+    {
+      "brand": "Citroёn",
+      "name": "DS 21 Pallas '70",
+      "year": "70"
+    },
+    {
+      "brand": "Citroёn",
+      "name": "GT by Citroën Gr.4",
+      "year": ""
+    },
+    {
+      "brand": "Citroёn",
+      "name": "GT by Citroën Race Car (Gr.3)",
+      "year": ""
+    },
+    {
+      "brand": "Citroёn",
+      "name": "GT by Citroën Road Car",
+      "year": ""
+    },
+    {
+      "brand": "Daihatsu",
+      "name": "Copen '02",
+      "year": "02"
+    },
+    {
+      "brand": "Daihatsu",
+      "name": "COPEN RJ VGT",
+      "year": ""
+    },
+    {
+      "brand": "De Tomaso",
+      "name": "Mangusta '69",
+      "year": "69"
+    },
+    {
+      "brand": "De Tomaso",
+      "name": "Pantera '71",
+      "year": "71"
+    },
+    {
+      "brand": "DMC",
+      "name": "DeLorean S2 '04",
+      "year": "04"
+    },
+    {
+      "brand": "Dodge",
+      "name": "Challenger RT '70",
+      "year": "70"
+    },
+    {
+      "brand": "Dodge",
+      "name": "Challenger SRT Demon '18",
+      "year": "18"
+    },
+    {
+      "brand": "Dodge",
+      "name": "Charger RT 426 Hemi '68",
+      "year": "68"
+    },
+    {
+      "brand": "Dodge",
+      "name": "Charger SRT Hellcat '15",
+      "year": "15"
+    },
+    {
+      "brand": "Dodge",
+      "name": "Charger SRT Hellcat Safety Car",
+      "year": ""
+    },
+    {
+      "brand": "Dodge",
+      "name": "SRT Tomahawk GTS-R VGT",
+      "year": ""
+    },
+    {
+      "brand": "Dodge",
+      "name": "SRT Tomahawk S VGT",
+      "year": ""
+    },
+    {
+      "brand": "Dodge",
+      "name": "SRT Tomahawk VGT (Gr.1)",
+      "year": ""
+    },
+    {
+      "brand": "Dodge",
+      "name": "SRT Tomahawk X VGT",
+      "year": ""
+    },
+    {
+      "brand": "Dodge",
+      "name": "Super Bee '70",
+      "year": "70"
+    },
+    {
+      "brand": "Dodge",
+      "name": "Viper Gr.4",
+      "year": ""
+    },
+    {
+      "brand": "Dodge",
+      "name": "Viper GTS '02",
+      "year": "02"
+    },
+    {
+      "brand": "Dodge",
+      "name": "Viper GTS '13",
+      "year": "13"
+    },
+    {
+      "brand": "Dodge",
+      "name": "Viper SRT GT3-R '15",
+      "year": "15"
+    },
+    {
+      "brand": "Dodge",
+      "name": "Viper SRT10 Coupe '06",
+      "year": "06"
+    },
+    {
+      "brand": "DS AUTOMOBILES",
+      "name": "DS 3 Racing '11",
+      "year": "11"
+    },
+    {
+      "brand": "Eckert's Rod & Custom",
+      "name": "Mach Forty",
+      "year": ""
+    },
+    {
+      "brand": "Ferrari",
+      "name": "250 GT Berlinetta passo corto '61",
+      "year": "61"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "250 GTO '62",
+      "year": "62"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "308 GTB '75",
+      "year": "75"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "330 P4 '67",
+      "year": "67"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "365 GTB4 '71",
+      "year": "71"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "430 Scuderia '07",
+      "year": "07"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "458 Italia '09",
+      "year": "09"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "458 Italia Gr.4",
+      "year": ""
+    },
+    {
+      "brand": "Ferrari",
+      "name": "458 Italia GT3 '13",
+      "year": "13"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "500 Mondial Pinin Farina Coupe '54",
+      "year": "54"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "512 BB '76",
+      "year": "76"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "812 Superfast '17",
+      "year": "17"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "Dino 246 GT '71",
+      "year": "71"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "Enzo Ferrari '02",
+      "year": "02"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "F12berlinetta '12",
+      "year": "12"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "F40 '92",
+      "year": "92"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "F430 '06",
+      "year": "06"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "F50 '95",
+      "year": "95"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "F8 Tributo '19",
+      "year": "19"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "Ferrari VGT",
+      "year": ""
+    },
+    {
+      "brand": "Ferrari",
+      "name": "FXX K '14",
+      "year": "14"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "GTO '84",
+      "year": "84"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "LaFerrari '13",
+      "year": "13"
+    },
+    {
+      "brand": "Ferrari",
+      "name": "Testarossa '91",
+      "year": "91"
+    },
+    {
+      "brand": "FIAT",
+      "name": "500 1.2 8V Lounge SS '08",
+      "year": "08"
+    },
+    {
+      "brand": "FIAT",
+      "name": "500 F '68",
+      "year": "68"
+    },
+    {
+      "brand": "Ford",
+      "name": "Escort RS Cosworth '92",
+      "year": "92"
+    },
+    {
+      "brand": "Ford",
+      "name": "F-150 SVT Raptor '11",
+      "year": "11"
+    },
+    {
+      "brand": "Ford",
+      "name": "Focus Gr.B Rally Car",
+      "year": ""
+    },
+    {
+      "brand": "Ford",
+      "name": "Focus RS '18",
+      "year": "18"
+    },
+    {
+      "brand": "Ford",
+      "name": "Focus ST '15",
+      "year": "15"
+    },
+    {
+      "brand": "Ford",
+      "name": "Ford GT '06",
+      "year": "06"
+    },
+    {
+      "brand": "Ford",
+      "name": "Ford GT '17",
+      "year": "17"
+    },
+    {
+      "brand": "Ford",
+      "name": "Ford GT LM Race Car Spec II",
+      "year": ""
+    },
+    {
+      "brand": "Ford",
+      "name": "Ford GT LM Spec II Test Car",
+      "year": ""
+    },
+    {
+      "brand": "Ford",
+      "name": "Ford GT Race Car '18",
+      "year": "18"
+    },
+    {
+      "brand": "Ford",
+      "name": "Ford Roadster",
+      "year": ""
+    },
+    {
+      "brand": "Ford",
+      "name": "GT40 Mark I '66",
+      "year": "66"
+    },
+    {
+      "brand": "Ford",
+      "name": "Mark IV Race Car '67",
+      "year": "67"
+    },
+    {
+      "brand": "Ford",
+      "name": "Mustang Boss 429 '69",
+      "year": "69"
+    },
+    {
+      "brand": "Ford",
+      "name": "Mustang Gr.3",
+      "year": ""
+    },
+    {
+      "brand": "Ford",
+      "name": "Mustang Gr.3 Road Car",
+      "year": ""
+    },
+    {
+      "brand": "Ford",
+      "name": "Mustang Gr.4",
+      "year": ""
+    },
+    {
+      "brand": "Ford",
+      "name": "Mustang Gr.B Rally Car",
+      "year": ""
+    },
+    {
+      "brand": "Ford",
+      "name": "Mustang GT '15",
+      "year": "15"
+    },
+    {
+      "brand": "Ford",
+      "name": "Mustang Mach 1 '71",
+      "year": "71"
+    },
+    {
+      "brand": "Ford",
+      "name": "Shelby GT350R '16",
+      "year": "16"
+    },
+    {
+      "brand": "Ford",
+      "name": "Sierra RS 500 Cosworth '87",
+      "year": "87"
+    },
+    {
+      "brand": "Garage RCR",
+      "name": "Garage RCR Civic",
+      "year": ""
+    },
+    {
+      "brand": "Genesis",
+      "name": "G70 3.3T AWD P.Package '22",
+      "year": "22"
+    },
+    {
+      "brand": "Genesis",
+      "name": "G70 GR4",
+      "year": ""
+    },
+    {
+      "brand": "Genesis",
+      "name": "Genesis X GR3",
+      "year": ""
+    },
+    {
+      "brand": "Genesis",
+      "name": "Genesis X Gran Berlinetta VGT Concept",
+      "year": ""
+    },
+    {
+      "brand": "Genesis",
+      "name": "Genesis X Gran Racer VGT Concept",
+      "year": ""
+    },
+    {
+      "brand": "GReddy",
+      "name": "GReddy Fugu Z",
+      "year": ""
+    }
+  ]
 }

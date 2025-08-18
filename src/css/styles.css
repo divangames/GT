@@ -2399,9 +2399,9 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
-    width: 420px;
+    width: 400px;
     background: linear-gradient(135deg, rgba(25, 25, 25, 0.95) 0%, rgba(35, 35, 35, 0.95) 100%);
-    border-radius: 20px;
+    border-radius: 16px;
     border: 1px solid rgba(100, 181, 246, 0.2);
     box-shadow: 
         0 20px 60px rgba(0, 0, 0, 0.4),
@@ -2422,59 +2422,63 @@ body {
 }
 
 .push-player-content {
-    padding: 20px;
-}
-
-.push-player-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 16px;
-}
-
-.push-player-author {
+    padding: 16px;
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
+.push-player-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.push-player-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .push-player-avatar {
-    width: 100px;
-    height: 100px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
-    border: 3px solid rgba(100, 181, 246, 0.4);
+    border: 2px solid rgba(100, 181, 246, 0.4);
     object-fit: cover;
-    box-shadow: 0 4px 20px rgba(100, 181, 246, 0.2);
+    flex-shrink: 0;
 }
 
 .push-player-author-info {
     display: flex;
     flex-direction: column;
+    gap: 2px;
 }
 
 .push-player-author-name {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 700;
     color: rgba(255, 255, 255, 1);
-    line-height: 1.2;
-    margin-bottom: 4px;
+    line-height: 1.1;
 }
 
 .push-player-author-role {
-    font-size: 13px;
+    font-size: 10px;
     color: rgba(255, 255, 255, 0.7);
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .push-player-close {
     background: none;
     border: none;
     color: rgba(255, 255, 255, 0.6);
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
-    padding: 8px;
+    padding: 6px;
     border-radius: 50%;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .push-player-close:hover {
@@ -2482,21 +2486,24 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
-
+.push-player-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
 .push-player-title {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     color: rgba(255, 255, 255, 0.9);
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
-    margin-top: 12px;
 }
 
 .push-player-title i {
     color: rgba(100, 181, 246, 0.8);
-    font-size: 16px;
+    font-size: 14px;
 }
 
 
@@ -2512,38 +2519,33 @@ body {
     }
     
     .push-player-content {
-        padding: 16px;
-    }
-    
-    .push-player-header {
-        margin-bottom: 14px;
-    }
-    
-    .push-player-author {
+        padding: 12px;
         gap: 12px;
     }
     
+    .push-player-info {
+        gap: 6px;
+    }
+    
     .push-player-avatar {
-        width: 80px;
-        height: 80px;
-        border-width: 2px;
+        width: 56px;
+        height: 56px;
     }
     
     .push-player-author-name {
-        font-size: 14px;
-    }
-    
-    .push-player-author-role {
         font-size: 11px;
     }
     
+    .push-player-author-role {
+        font-size: 9px;
+    }
+    
     .push-player-title {
-        font-size: 13px;
-        margin-top: 10px;
+        font-size: 12px;
     }
     
     .push-player-title i {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 
