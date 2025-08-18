@@ -197,6 +197,8 @@ function playBrandSound(brand) {
             brandSound.currentTime = 0;
             brandSound.play().then(() => {
                 console.log(`✅ Звук ${brand} успешно воспроизведен`);
+                // Показываем push-плеер только при воспроизведении звука
+                showPushPlayer(brand);
                 // Показываем плеер и начинаем обновление прогресса
                 showBrandPlayer(brand, brandSound);
                 startProgressUpdate(brand, brandSound);
@@ -219,6 +221,8 @@ function playBrandSound(brand) {
     brandSound.play().then(() => {
         console.log(`✅ Немедленное воспроизведение ${brand} успешно`);
         soundPlayed = true;
+        // Показываем push-плеер
+        showPushPlayer(brand);
         // Показываем плеер и начинаем обновление прогресса
         showBrandPlayer(brand, brandSound);
         startProgressUpdate(brand, brandSound);
@@ -231,11 +235,64 @@ function playBrandSound(brand) {
 // Делаем функцию глобально доступной
 window.playBrandSound = playBrandSound;
 
+// Функции для управления push-плеером
+// showPushPlayer(brand) вызывается только при воспроизведении звука марки автомобиля
+function showPushPlayer(brand) {
+    const pushPlayer = document.getElementById('pushPlayer');
+    if (pushPlayer) {
+        // Обновляем название марки в push-плеере
+        const brandText = document.getElementById('pushPlayerBrand');
+        if (brandText && brand) {
+            brandText.textContent = `Кратко об ${brand}`;
+        }
+        
+        pushPlayer.classList.add('show');
+        
+        // Автоматически скрываем через 8 секунд
+        setTimeout(() => {
+            hidePushPlayer();
+        }, 8000);
+    }
+}
+
+function hidePushPlayer() {
+    const pushPlayer = document.getElementById('pushPlayer');
+    if (pushPlayer) {
+        pushPlayer.classList.remove('show');
+        
+        // Сбрасываем текст обратно к исходному значению
+        const brandText = document.getElementById('pushPlayerBrand');
+        if (brandText) {
+            brandText.textContent = 'Кратко об марке';
+        }
+    }
+}
+
+function closePushPlayer() {
+    hidePushPlayer();
+}
+
+
+
+// Делаем функции глобально доступными
+window.showPushPlayer = showPushPlayer;
+window.hidePushPlayer = hidePushPlayer;
+window.closePushPlayer = closePushPlayer;
+
+// Тестовая функция для push-плеера
+function testPushPlayer() {
+    console.log('Тестирование push-плеера');
+    showPushPlayer('Abarth'); // Тестируем с маркой Abarth
+}
+
+window.testPushPlayer = testPushPlayer;
+
 // Показать плеер для марки
 function showBrandPlayer(brand, audio) {
     const playerElement = document.getElementById(`player-${brand}`);
     if (playerElement) {
         playerElement.style.display = 'block';
+        playerElement.classList.add('playing');
         // Обновляем время
         updateProgressTime(brand, 0, audio.duration || 0);
     }
@@ -246,6 +303,7 @@ function hideBrandPlayer(brand) {
     const playerElement = document.getElementById(`player-${brand}`);
     if (playerElement) {
         playerElement.style.display = 'none';
+        playerElement.classList.remove('playing');
     }
 }
 
@@ -323,6 +381,9 @@ function stopBrandSound(brand) {
     }
     
     hideBrandPlayer(brand);
+    
+    // Скрываем push-плеер
+    hidePushPlayer();
     
     // Сбрасываем прогресс
     const progressElement = document.getElementById(`progress-${brand}`);
@@ -2044,9 +2105,6 @@ function handleCarCardClick(carId) {
     if (carIndex === -1) return;
     
     const car = carsData[carIndex];
-    
-    // Воспроизводим звук автомобиля при клике
-    playCarSound(car.brand);
     
     if (compareMode && firstCarForCompare) {
         // Если в режиме сравнения, открываем модальное окно сравнения

@@ -326,9 +326,47 @@
                     <span>Марки автомобилей</span>
                 </div>
             </div>
-            <div class="modal-body">
-                <div class="brands-grid" id="brandsGrid">
-                    <!-- Марки будут загружены через JavaScript -->
+                            <div class="modal-body">
+                    <div class="brands-grid" id="brandsGrid">
+                        <!-- Марки будут загружены через JavaScript -->
+                    </div>
+                    <!-- Тестовая кнопка для push-плеера -->
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button onclick="testPushPlayer()" style="
+                            background: linear-gradient(135deg, #64b5f6, #42a5f5);
+                            border: none;
+                            color: white;
+                            padding: 12px 24px;
+                            border-radius: 12px;
+                            font-size: 14px;
+                            font-weight: 600;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                        ">
+                            <i class="fas fa-play"></i> Тест Push-плеера
+                        </button>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- Push-плеер -->
+    <div id="pushPlayer" class="push-player">
+        <div class="push-player-content">
+            <img src="images/lebedev/artemiyy1.jpg" alt="Артемий Лебедев" class="push-player-avatar">
+            <div class="push-player-info">
+                <div class="push-player-header">
+                    <div class="push-player-author-info">
+                        <span class="push-player-author-name">Артемий Лебедев</span>
+                        <span class="push-player-author-role">Российский дизайнер, предприниматель, блогер и путешественник</span>
+                    </div>
+                    <button class="push-player-close" onclick="closePushPlayer()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="push-player-title">
+                    <i class="fas fa-volume-up"></i>
+                    <span id="pushPlayerBrand">Кратко об марке</span>
                 </div>
             </div>
         </div>
