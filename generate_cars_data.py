@@ -26,9 +26,9 @@ def read_car_info(info_file_path):
             content = f.read()
             lines = content.split('\n')
             
-            # Первая строка - краткое описание
+            # Загружаем весь файл info.txt в description для правильного парсинга
             if lines:
-                car_info['description'] = lines[0].strip()
+                car_info['description'] = content.strip()
             
             # Парсим остальные строки
             for i, line in enumerate(lines):

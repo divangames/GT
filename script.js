@@ -96,7 +96,7 @@ function initPreloader() {
     
     // ИЗМЕНИТЬ ВРЕМЯ ПРЕЛОАДЕРА ЗДЕСЬ (в миллисекундах)
     // 5000 = 5 секунд, 10000 = 10 секунд, 15000 = 15 секунд
-    const preloaderDuration = 2500;
+    const preloaderDuration = 3000;
     
     // Скрываем прелоадер через указанное время
     setTimeout(() => {
@@ -797,6 +797,47 @@ function openCarModal(carId) {
     startSlideInterval();
 }
 
+// Разделение описания на заголовок и основной текст
+function splitDescriptionText(rawText) {
+    if (!rawText || typeof rawText !== 'string') {
+        return { title: '', body: '' };
+    }
+    
+    const text = rawText.trim();
+    const lines = text.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+    
+    if (lines.length === 0) {
+        return { title: '', body: '' };
+    }
+    
+    // Первая строка - заголовок
+    const title = lines[0];
+    
+    // Ищем начало описания (после первой пустой строки)
+    let descriptionStartIndex = 1;
+    for (let i = 1; i < lines.length; i++) {
+        if (lines[i] === '') {
+            descriptionStartIndex = i + 1;
+            break;
+        }
+    }
+    
+    // Ищем конец описания (до следующей пустой строки или до характеристик)
+    let descriptionEndIndex = lines.length;
+    for (let i = descriptionStartIndex; i < lines.length; i++) {
+        if (lines[i] === '' || lines[i].includes('Гр.') || lines[i].includes('ТР')) {
+            descriptionEndIndex = i;
+            break;
+        }
+    }
+    
+    // Формируем описание
+    const descriptionLines = lines.slice(descriptionStartIndex, descriptionEndIndex);
+    const body = descriptionLines.join(' ').trim();
+    
+    return { title, body: body || title };
+}
+
 // Обновление содержимого модального окна
 function updateModalContent() {
     const car = carsData[currentCarIndex];
@@ -807,12 +848,22 @@ function updateModalContent() {
     document.getElementById('modalModel').textContent = car.name;
     document.getElementById('modalBrandLogo').src = car.brand_logo;
     
-    // Обновляем описание
-    document.getElementById('modalDescription').textContent = car.description;
-    document.getElementById('modalFullDescription').textContent = getFullDescription(car);
+    // Обновляем описание: первая фраза — заголовок, остальное — описание
+    const { title: descTitle, body: descBody } = splitDescriptionText(car.description || '');
+    document.getElementById('modalDescription').textContent = descTitle || (car.description || '');
+    document.getElementById('modalFullDescription').textContent = descBody;
     
     // Обновляем заголовок спецификаций
-    const specHeader = `${car.category || 'Gr.N'} ${car.pp || ''}`.trim();
+    const categoryText = car.category || 'Gr.N';
+    let specHeader = categoryText;
+    if (car.pp) {
+        const catUpper = categoryText.toUpperCase();
+        const ppStr = String(car.pp).trim();
+        // Не добавляем PP, если категория уже содержит "ТР" или само значение PP
+        if (!catUpper.startsWith('ТР') && !catUpper.includes(ppStr)) {
+            specHeader = `${categoryText} ${ppStr}`.trim();
+        }
+    }
     document.getElementById('modalSpecHeader').textContent = specHeader;
     
     // Обновляем спецификации
