@@ -51,8 +51,14 @@
                     <!-- Секция авторизации -->
                     <div id="authSection" class="auth-section">
                         <div class="auth-buttons">
-                            <button id="loginBtn" class="auth-btn" onclick="if(window.authSystem) authSystem.showLoginModal()">Войти</button>
-                            <button id="registerBtn" class="auth-btn primary" onclick="if(window.authSystem) authSystem.showRegisterModal()">Регистрация</button>
+                            <button id="loginBtn" class="auth-btn" onclick="if(window.authSystem) authSystem.showLoginModal()">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <span>Войти</span>
+                            </button>
+                            <button id="registerBtn" class="auth-btn primary" onclick="if(window.authSystem) authSystem.showRegisterModal()">
+                                <i class="fas fa-user-plus"></i>
+                                <span>Регистрация</span>
+                            </button>
                         </div>
                     </div>
                     

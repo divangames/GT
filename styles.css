@@ -2740,15 +2740,16 @@ body {
     display: flex;
 }
 
-/* Футер */
+/* Футер - Современный дизайн */
 .footer {
     position: relative;
-    background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(35, 35, 35, 0.95) 50%, rgba(20, 20, 20, 0.95) 100%);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 80px;
+    background: linear-gradient(135deg, rgba(15, 15, 25, 0.98) 0%, rgba(25, 25, 40, 0.95) 50%, rgba(15, 15, 25, 0.98) 100%);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-top: 2px solid rgba(100, 181, 246, 0.2);
+    margin-top: 100px;
     overflow: hidden;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .footer-background {
@@ -2768,16 +2769,19 @@ body {
     bottom: 0;
     background: 
         linear-gradient(135deg, 
-            rgba(15, 15, 20, 0.98) 0%,
-            rgba(25, 25, 35, 0.95) 25%,
-            rgba(35, 35, 45, 0.92) 50%,
-            rgba(25, 25, 35, 0.95) 75%,
-            rgba(15, 15, 20, 0.98) 100%),
+            rgba(15, 15, 25, 0.98) 0%,
+            rgba(25, 25, 40, 0.95) 25%,
+            rgba(35, 35, 50, 0.92) 50%,
+            rgba(25, 25, 40, 0.95) 75%,
+            rgba(15, 15, 25, 0.98) 100%),
         radial-gradient(ellipse at top center, 
-            rgba(100, 181, 246, 0.1) 0%, 
-            transparent 50%),
+            rgba(100, 181, 246, 0.15) 0%, 
+            transparent 60%),
         radial-gradient(ellipse at bottom center, 
-            rgba(156, 39, 176, 0.08) 0%, 
+            rgba(156, 39, 176, 0.1) 0%, 
+            transparent 60%),
+        radial-gradient(ellipse at 30% 70%, 
+            rgba(59, 130, 246, 0.08) 0%, 
             transparent 50%);
 }
 
@@ -2799,36 +2803,36 @@ body {
 
 @keyframes footerPattern {
     0%, 100% { 
-        opacity: 0.6; 
+        opacity: 0.7; 
         transform: scale(1) rotate(0deg); 
     }
     25% { 
-        opacity: 0.8; 
-        transform: scale(1.02) rotate(1deg); 
+        opacity: 0.9; 
+        transform: scale(1.03) rotate(1deg); 
     }
     50% { 
-        opacity: 0.9; 
-        transform: scale(1.05) rotate(0deg); 
+        opacity: 1; 
+        transform: scale(1.06) rotate(0deg); 
     }
     75% { 
-        opacity: 0.7; 
-        transform: scale(1.03) rotate(-1deg); 
+        opacity: 0.8; 
+        transform: scale(1.04) rotate(-1deg); 
     }
 }
 
 .footer-content {
     position: relative;
     z-index: 1;
-    padding: 60px 20px 30px;
-    max-width: 1200px;
+    padding: 80px 40px 40px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 .footer-main {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    gap: 50px;
-    margin-bottom: 40px;
+    gap: 60px;
+    margin-bottom: 50px;
 }
 
 /* Заголовок футера */
@@ -2846,15 +2850,22 @@ body {
 
 .footer-logo {
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 25px;
 }
 
 .footer-logo-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: brightness(1.2) contrast(1.1);
+    filter: drop-shadow(0 0 25px rgba(100, 181, 246, 0.4));
+    transition: all 0.3s ease;
+}
+
+.footer-logo:hover .footer-logo-img {
+    filter: drop-shadow(0 0 35px rgba(100, 181, 246, 0.6));
+    transform: scale(1.05);
 }
 
 .footer-logo-glow {
@@ -2862,16 +2873,17 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 120%;
-    height: 120%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, rgba(100, 181, 246, 0.25) 0%, transparent 70%);
     border-radius: 50%;
-    animation: logoGlow 3s ease-in-out infinite alternate;
+    animation: logoGlow 4s ease-in-out infinite;
 }
 
 @keyframes logoGlow {
-    0% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
-    100% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+    0% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+    100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
 }
 
 .footer-brand-info h3 {
@@ -2892,86 +2904,135 @@ body {
 
 .footer-stats {
     display: flex;
-    gap: 30px;
+    gap: 40px;
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(100, 181, 246, 0.1) 0%, rgba(100, 181, 246, 0.05) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(100, 181, 246, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .footer-stat {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
 }
 
 .footer-stat-number {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 800;
     color: rgba(255, 255, 255, 1);
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #64b5f6, #42a5f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .footer-stat-label {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.8);
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-weight: 600;
 }
 
 .footer-stat-date {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(100, 181, 246, 0.9);
     font-weight: 600;
 }
 
 /* Описание проекта */
 .footer-description h4 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
     color: rgba(255, 255, 255, 1);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.footer-description h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #64b5f6, #42a5f5);
+    border-radius: 2px;
 }
 
 .footer-description p {
     font-size: 16px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 25px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 30px;
 }
 
 .footer-features {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 20px;
 }
 
 .feature-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 16px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
+    gap: 12px;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #64b5f6, #42a5f5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .feature-item:hover {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
-    border-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, rgba(100, 181, 246, 0.18) 0%, rgba(100, 181, 246, 0.1) 100%);
+    border-color: rgba(100, 181, 246, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(100, 181, 246, 0.25);
+}
+
+.feature-item:hover::before {
+    opacity: 1;
 }
 
 .feature-item i {
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    color: rgba(100, 181, 246, 0.9);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover i {
+    color: rgba(100, 181, 246, 1);
+    transform: scale(1.1);
 }
 
 .feature-item span {
     font-size: 14px;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
 }
 
 /* Автор проекта */
@@ -3089,9 +3150,11 @@ body {
 }
 
 .footer-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
-    margin: 0 0 30px 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(100, 181, 246, 0.3) 25%, rgba(100, 181, 246, 0.5) 50%, rgba(100, 181, 246, 0.3) 75%, transparent 100%);
+    margin: 0 0 40px 0;
+    border-radius: 1px;
+    box-shadow: 0 0 20px rgba(100, 181, 246, 0.2);
 }
 
 .footer-bottom {
@@ -3099,7 +3162,8 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
+    padding: 30px 0;
 }
 
 .footer-copyright p {
@@ -3115,43 +3179,68 @@ body {
 }
 
 .partners-title {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
+    margin-bottom: 15px;
 }
 
 .partners-logos {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .partner-logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.partner-logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(100, 181, 246, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .partner-logo:hover {
-    transform: translateY(-3px);
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px) scale(1.05);
+    border-color: rgba(100, 181, 246, 0.4);
+    box-shadow: 0 12px 30px rgba(100, 181, 246, 0.25);
+}
+
+.partner-logo:hover::before {
+    opacity: 1;
 }
 
 .partner-img {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     object-fit: contain;
-    filter: brightness(1.2) contrast(1.1);
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+    transition: all 0.3s ease;
+}
+
+.partner-logo:hover .partner-img {
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+    transform: scale(1.1);
 }
 
 /* Адаптивные стили для футера */

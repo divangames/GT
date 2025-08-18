@@ -16,20 +16,30 @@
     background: linear-gradient(135deg, rgba(100, 181, 246, 0.1), rgba(100, 181, 246, 0.2));
     border: 1px solid rgba(100, 181, 246, 0.3);
     color: #64B5F6;
-    padding: 5px 10px;
-    border-radius: 16px;
-    font-size: 12px;
-    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
-    min-width: 56px;
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
 }
 
 .auth-btn:hover {
     background: linear-gradient(135deg, rgba(100, 181, 246, 0.2), rgba(100, 181, 246, 0.3));
     border-color: rgba(100, 181, 246, 0.5);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(100, 181, 246, 0.25);
+}
+
+.auth-btn:active {
+    transform: translateY(0);
     box-shadow: 0 4px 12px rgba(100, 181, 246, 0.2);
 }
 
@@ -37,11 +47,70 @@
     background: linear-gradient(135deg, #64B5F6, #42A5F5);
     border-color: #64B5F6;
     color: white;
+    box-shadow: 0 4px 15px rgba(100, 181, 246, 0.3);
 }
 
 .auth-btn.primary:hover {
     background: linear-gradient(135deg, #42A5F5, #2196F3);
-    box-shadow: 0 4px 12px rgba(100, 181, 246, 0.4);
+    box-shadow: 0 8px 25px rgba(100, 181, 246, 0.4);
+    transform: translateY(-2px);
+}
+
+.auth-btn.primary:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(100, 181, 246, 0.3);
+}
+
+/* Стили для иконок в кнопках */
+.auth-btn i {
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.auth-btn:hover i {
+    transform: scale(1.1);
+}
+
+.auth-btn.primary i {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.auth-btn.primary:hover i {
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Анимация для кнопок */
+.auth-btn {
+    animation: buttonFadeIn 0.5s ease-out;
+}
+
+@keyframes buttonFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивность для кнопок авторизации */
+@media (max-width: 768px) {
+    .auth-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+        min-width: 70px;
+        gap: 6px;
+    }
+    
+    .auth-btn i {
+        font-size: 12px;
+    }
+    
+    .auth-buttons {
+        gap: 8px;
+    }
 }
 
 /* Секция пользователя */
