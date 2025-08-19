@@ -279,13 +279,7 @@ window.showPushPlayer = showPushPlayer;
 window.hidePushPlayer = hidePushPlayer;
 window.closePushPlayer = closePushPlayer;
 
-// Тестовая функция для push-плеера
-function testPushPlayer() {
-    console.log('Тестирование push-плеера');
-    showPushPlayer('Abarth'); // Тестируем с маркой Abarth
-}
 
-window.testPushPlayer = testPushPlayer;
 
 // Показать плеер для марки
 function showBrandPlayer(brand, audio) {
