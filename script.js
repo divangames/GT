@@ -87,25 +87,135 @@ function playStartSound() {
     }
 }
 
-// Функция для управления прелоадером
+// Функция для принудительного запуска видео
+function forceVideoPlay() {
+    const video = document.querySelector('.preloader-video');
+    if (video) {
+        console.log('Найден видео элемент:', video);
+        console.log('Текущий readyState:', video.readyState);
+        console.log('Текущий networkState:', video.networkState);
+        
+        // Устанавливаем все необходимые атрибуты
+        video.muted = true;
+        video.volume = 0;
+        video.autoplay = true;
+        video.loop = true;
+        video.playsInline = true;
+        video.preload = 'auto';
+        
+        // Добавляем обработчики событий для отладки
+        video.addEventListener('loadstart', () => console.log('Видео: loadstart'));
+        video.addEventListener('durationchange', () => console.log('Видео: durationchange, длительность:', video.duration));
+        video.addEventListener('loadedmetadata', () => console.log('Видео: loadedmetadata'));
+        video.addEventListener('loadeddata', () => console.log('Видео: loadeddata'));
+        video.addEventListener('canplay', () => console.log('Видео: canplay'));
+        video.addEventListener('canplaythrough', () => console.log('Видео: canplaythrough'));
+        video.addEventListener('play', () => console.log('Видео: play'));
+        video.addEventListener('playing', () => console.log('Видео: playing'));
+        video.addEventListener('error', (e) => console.error('Видео: error', e));
+        
+        // Пытаемся запустить видео
+        const attemptPlay = () => {
+            console.log('Попытка воспроизведения видео...');
+            video.play().then(() => {
+                console.log('✅ Видео успешно запущено');
+            }).catch(error => {
+                console.warn('❌ Ошибка воспроизведения:', error);
+                console.log('Код ошибки:', error.name);
+                console.log('Сообщение ошибки:', error.message);
+                
+                // Пробуем еще раз через небольшую задержку
+                setTimeout(attemptPlay, 200);
+            });
+        };
+        
+        // Запускаем попытку воспроизведения
+        if (video.readyState >= 2) {
+            console.log('Видео готово, запускаем...');
+            attemptPlay();
+        } else {
+            console.log('Видео не готово, ждем loadedmetadata...');
+            video.addEventListener('loadedmetadata', () => {
+                console.log('Получены метаданные, запускаем...');
+                attemptPlay();
+            });
+        }
+        
+        // Дополнительные обработчики для мобильных устройств
+        video.addEventListener('canplay', () => {
+            console.log('Видео может воспроизводиться, запускаем...');
+            attemptPlay();
+        });
+        
+        video.addEventListener('loadeddata', () => {
+            console.log('Данные загружены, запускаем...');
+            attemptPlay();
+        });
+        
+        // Обработчик для принудительного запуска по клику
+        video.addEventListener('click', () => {
+            console.log('Клик по видео, запускаем...');
+            attemptPlay();
+        });
+        
+        // Обработчик для touch событий на мобильных
+        video.addEventListener('touchstart', () => {
+            console.log('Touch событие, запускаем...');
+            attemptPlay();
+        });
+    } else {
+        console.error('❌ Видео элемент не найден!');
+    }
+}
+
+// Функция для управления прелоадером с видео фоном
 function initPreloader() {
     const preloader = document.getElementById('preloader');
+    const progressFill = document.querySelector('.progress-fill');
+    const progressText = document.querySelector('.progress-text');
+    const video = document.querySelector('.preloader-video');
+    
+    // Принудительно запускаем видео
+    forceVideoPlay();
     
     // Воспроизводим стартовый звук
     playStartSound();
     
     // ИЗМЕНИТЬ ВРЕМЯ ПРЕЛОАДЕРА ЗДЕСЬ (в миллисекундах)
     // 5000 = 5 секунд, 10000 = 10 секунд, 15000 = 15 секунд
-    const preloaderDuration = 3000;
+    const preloaderDuration = 4000;
+    
+    // Анимация прогресс бара
+    let progress = 0;
+    const progressInterval = setInterval(() => {
+        progress += Math.random() * 15 + 5; // Случайный прогресс 5-20%
+        if (progress > 100) progress = 100;
+        
+        if (progressFill && progressText) {
+            progressFill.style.width = progress + '%';
+            progressText.textContent = Math.round(progress) + '%';
+        }
+        
+        if (progress >= 100) {
+            clearInterval(progressInterval);
+        }
+    }, 200);
     
     // Скрываем прелоадер через указанное время
     setTimeout(() => {
-        preloader.classList.add('hidden');
+        if (progressFill && progressText) {
+            progressFill.style.width = '100%';
+            progressText.textContent = '100%';
+        }
         
-        // Удаляем прелоадер из DOM после анимации
         setTimeout(() => {
-            preloader.remove();
-        }, 800);
+            preloader.classList.add('hidden');
+            
+            // Удаляем прелоадер из DOM после анимации
+            setTimeout(() => {
+                preloader.remove();
+            }, 1000);
+        }, 500);
     }, preloaderDuration);
 }
 
@@ -650,12 +760,20 @@ function closeInstructions() {
     }
 }
 
+// Принудительный запуск видео при загрузке страницы
+window.addEventListener('load', function() {
+    forceVideoPlay();
+});
+
 // Загрузка данных при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM загружен, инициализирую приложение...');
     
     // Инициализируем звуки
     initSounds();
+    
+    // Принудительно запускаем видео прелоадера
+    forceVideoPlay();
     
     // Инициализируем прелоадер
     initPreloader();

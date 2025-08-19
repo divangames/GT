@@ -77,25 +77,84 @@ function playStartSound() {
     }
 }
 
-// Функция для управления прелоадером
+// Функция для управления прелоадером с видео фоном
 function initPreloader() {
     const preloader = document.getElementById('preloader');
+    const progressFill = document.querySelector('.progress-fill');
+    const progressText = document.querySelector('.progress-text');
+    const video = document.querySelector('.preloader-video');
+    
+    // Принудительно запускаем видео
+    if (video) {
+        // Устанавливаем громкость в 0
+        video.volume = 0;
+        video.muted = true;
+        
+        // Пытаемся воспроизвести видео
+        const playVideo = async () => {
+            try {
+                await video.play();
+                console.log('Видео успешно запущено');
+            } catch (error) {
+                console.warn('Ошибка автовоспроизведения видео:', error);
+                // Пробуем запустить по клику пользователя
+                video.addEventListener('click', () => {
+                    video.play().catch(e => console.warn('Ошибка воспроизведения по клику:', e));
+                });
+            }
+        };
+        
+        // Запускаем видео после загрузки метаданных
+        if (video.readyState >= 2) {
+            playVideo();
+        } else {
+            video.addEventListener('loadedmetadata', playVideo);
+        }
+        
+        // Дополнительная проверка для мобильных устройств
+        video.addEventListener('canplay', () => {
+            video.play().catch(e => console.warn('Ошибка canplay:', e));
+        });
+    }
     
     // Воспроизводим стартовый звук
     playStartSound();
     
     // ИЗМЕНИТЬ ВРЕМЯ ПРЕЛОАДЕРА ЗДЕСЬ (в миллисекундах)
     // 5000 = 5 секунд, 10000 = 10 секунд, 15000 = 15 секунд
-    const preloaderDuration = 2500;
+    const preloaderDuration = 4000;
+    
+    // Анимация прогресс бара
+    let progress = 0;
+    const progressInterval = setInterval(() => {
+        progress += Math.random() * 15 + 5; // Случайный прогресс 5-20%
+        if (progress > 100) progress = 100;
+        
+        if (progressFill && progressText) {
+            progressFill.style.width = progress + '%';
+            progressText.textContent = Math.round(progress) + '%';
+        }
+        
+        if (progress >= 100) {
+            clearInterval(progressInterval);
+        }
+    }, 200);
     
     // Скрываем прелоадер через указанное время
     setTimeout(() => {
-        preloader.classList.add('hidden');
+        if (progressFill && progressText) {
+            progressFill.style.width = '100%';
+            progressText.textContent = '100%';
+        }
         
-        // Удаляем прелоадер из DOM после анимации
         setTimeout(() => {
-            preloader.remove();
-        }, 800);
+            preloader.classList.add('hidden');
+            
+            // Удаляем прелоадер из DOM после анимации
+            setTimeout(() => {
+                preloader.remove();
+            }, 1000);
+        }, 500);
     }, preloaderDuration);
 }
 

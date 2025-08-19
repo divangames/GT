@@ -28,21 +28,21 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Прелоадер */
+/* Прелоадер с видео фоном */
 .preloader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    overflow: hidden;
 }
 
 .preloader.hidden {
@@ -50,48 +50,126 @@ html {
     visibility: hidden;
 }
 
+/* Видео контейнер */
+.preloader-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Fallback градиентный фон на случай, если видео не загрузится */
+    background: linear-gradient(135deg, 
+        rgba(15, 15, 25, 0.98) 0%, 
+        rgba(25, 25, 40, 0.95) 25%, 
+        rgba(35, 35, 50, 0.92) 50%,
+        rgba(25, 25, 40, 0.95) 75%, 
+        rgba(15, 15, 25, 0.98) 100%);
+}
+
+.preloader-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7) contrast(1.1);
+    /* Дополнительные стили для лучшей поддержки */
+    position: relative;
+    z-index: 2;
+    /* Принудительное воспроизведение */
+    autoplay: true;
+    muted: true;
+    loop: true;
+    playsinline: true;
+}
+
+.preloader-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(0, 0, 0, 0.6) 0%, 
+        rgba(0, 0, 0, 0.4) 50%, 
+        rgba(0, 0, 0, 0.6) 100%);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+/* Контент прелоадера */
 .preloader-content {
+    position: relative;
+    z-index: 2;
     text-align: center;
-    animation: preloaderFadeIn 1s ease-out;
+    animation: preloaderFadeIn 1.5s ease-out;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 60px 80px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .preloader-logo {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    position: relative;
 }
 
 .logo-animation {
-    width: 220px;
+    width: 280px;
     height: auto;
-    animation: logoPulse 2s ease-in-out infinite;
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+    animation: logoPulse 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 30px rgba(100, 181, 246, 0.5));
+    transition: all 0.3s ease;
+}
+
+.logo-glow-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(100, 181, 246, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: logoGlow 4s ease-in-out infinite;
+    z-index: -1;
 }
 
 .preloader-text {
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .loading-text {
     display: block;
-    margin-bottom: 15px;
-    animation: textGlow 2s ease-in-out infinite;
+    margin-bottom: 20px;
+    animation: textGlow 3s ease-in-out infinite;
+    background: linear-gradient(135deg, #ffffff, #64b5f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .loading-dots {
     display: flex;
     justify-content: center;
-    gap: 8px;
+    gap: 12px;
 }
 
 .loading-dots span {
-    width: 8px;
-    height: 8px;
-    background: linear-gradient(45deg, #ffffff, #cccccc);
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(45deg, #64b5f6, #42a5f5);
     border-radius: 50%;
-    animation: dotsBounce 1.4s ease-in-out infinite;
+    animation: dotsBounce 1.6s ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(100, 181, 246, 0.5);
 }
 
 .loading-dots span:nth-child(1) {
@@ -106,48 +184,167 @@ html {
     animation-delay: 0.4s;
 }
 
+/* Прогресс бар */
+.preloader-progress {
+    margin-top: 30px;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #64b5f6, #42a5f5);
+    border-radius: 3px;
+    width: 0%;
+    transition: width 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: progressShine 2s ease-in-out infinite;
+}
+
+.progress-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
 /* Анимации прелоадера */
 @keyframes preloaderFadeIn {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(50px) scale(0.9);
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
 }
 
 @keyframes logoPulse {
     0%, 100% {
         transform: scale(1);
-        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+        filter: drop-shadow(0 0 30px rgba(100, 181, 246, 0.5));
     }
     50% {
-        transform: scale(1.05);
-        filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.5));
+        transform: scale(1.08);
+        filter: drop-shadow(0 0 40px rgba(100, 181, 246, 0.8));
+    }
+}
+
+@keyframes logoGlow {
+    0%, 100% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1);
     }
 }
 
 @keyframes textGlow {
     0%, 100% {
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        filter: brightness(1);
     }
     50% {
-        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        filter: brightness(1.3);
     }
 }
 
 @keyframes dotsBounce {
     0%, 80%, 100% {
-        transform: scale(0.8);
-        opacity: 0.5;
+        transform: scale(1);
+        opacity: 0.7;
     }
     40% {
         transform: scale(1.2);
         opacity: 1;
     }
 }
+
+@keyframes progressShine {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Адаптивные стили для прелоадера */
+@media (max-width: 768px) {
+    .preloader-content {
+        padding: 40px 30px;
+        margin: 0 20px;
+    }
+    
+    .logo-animation {
+        width: 200px;
+    }
+    
+    .logo-glow-effect {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .preloader-text {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    
+    .progress-bar {
+        width: 250px;
+    }
+    
+    .loading-dots span {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .preloader-content {
+        padding: 30px 20px;
+    }
+    
+    .logo-animation {
+        width: 160px;
+    }
+    
+    .logo-glow-effect {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .preloader-text {
+        font-size: 16px;
+    }
+    
+    .progress-bar {
+        width: 200px;
+    }
+}
+
+
 
 /* Адаптивные стили для прелоадера */
 @media (max-width: 768px) {

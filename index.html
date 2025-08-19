@@ -13,11 +13,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Прелоадер -->
+    <!-- Прелоадер с видео фоном -->
     <div id="preloader" class="preloader">
+        <!-- Видео фон -->
+        <div class="preloader-video-container">
+            <video 
+                class="preloader-video" 
+                autoplay 
+                muted 
+                loop 
+                playsinline
+                preload="auto"
+                webkit-playsinline
+                x5-playsinline
+                x5-video-player-type="h5"
+                x5-video-player-fullscreen="true">
+                <source src="video/intro.mp4" type="video/mp4">
+                <source src="video/intro.webm" type="video/webm">
+                <!-- Fallback изображение на случай, если видео не поддерживается -->
+                <img src="images/logo_gt7.svg" alt="Gran Turismo 7" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.3;">
+                Ваш браузер не поддерживает видео.
+            </video>
+            <div class="preloader-video-overlay"></div>
+        </div>
+        
+        <!-- Контент прелоадера -->
         <div class="preloader-content">
             <div class="preloader-logo">
                 <img src="images/logo_gt7.svg" alt="Gran Turismo 7" class="logo-animation">
+                <div class="logo-glow-effect"></div>
             </div>
             <div class="preloader-text">
                 <span class="loading-text">Загрузка Автомобилей</span>
@@ -26,6 +50,12 @@
                     <span></span>
                     <span></span>
                 </div>
+            </div>
+            <div class="preloader-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <span class="progress-text">0%</span>
             </div>
         </div>
     </div>
