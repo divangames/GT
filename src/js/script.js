@@ -868,14 +868,13 @@ function splitDescriptionText(rawText) {
     // Первая строка - заголовок
     const title = lines[0];
     
-    // Ищем начало описания (после первой пустой строки)
-    let descriptionStartIndex = 1;
-    for (let i = 1; i < lines.length; i++) {
-        if (lines[i] === '') {
-            descriptionStartIndex = i + 1;
-            break;
-        }
+    // Если есть только одна строка, возвращаем её как заголовок
+    if (lines.length === 1) {
+        return { title, body: '' };
     }
+    
+    // Ищем начало описания (после первой строки, если нет пустой строки)
+    let descriptionStartIndex = 1;
     
     // Ищем конец описания (до следующей пустой строки или до характеристик)
     let descriptionEndIndex = lines.length;
@@ -890,7 +889,7 @@ function splitDescriptionText(rawText) {
     const descriptionLines = lines.slice(descriptionStartIndex, descriptionEndIndex);
     const body = descriptionLines.join(' ').trim();
     
-    return { title, body: body || title };
+    return { title, body: body || '' };
 }
 
 // Обновление содержимого модального окна
@@ -903,10 +902,10 @@ function updateModalContent() {
     document.getElementById('modalModel').textContent = car.name;
     document.getElementById('modalBrandLogo').src = car.brand_logo;
     
-    // Обновляем описание: первая фраза — заголовок, остальное — описание
-    const { title: descTitle, body: descBody } = splitDescriptionText(car.description || '');
-    document.getElementById('modalDescription').textContent = descTitle || (car.description || '');
-    document.getElementById('modalFullDescription').textContent = descBody;
+    // Обновляем описание: показываем только основное описание без дублирования заголовка
+    const { body: descBody } = splitDescriptionText(car.description || '');
+    document.getElementById('modalDescription').textContent = descBody || '';
+    document.getElementById('modalFullDescription').textContent = '';
     
     // Обновляем заголовок спецификаций
     const categoryText = car.category || 'Gr.N';
