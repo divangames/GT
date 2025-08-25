@@ -5841,11 +5841,11 @@
     "image": "images/cars/Garage RCR/Garage RCR Civic/car3526.png",
     "brand_logo": "images/cars/Garage RCR/tnr157.png",
     "screenshots": [
-      "images/cars/Garage RCR/Garage RCR Civic/car3522_1_01-C8vva3m_.jpg",
-      "images/cars/Garage RCR/Garage RCR Civic/car3522_1_02-C_PBg3xX.jpg",
-      "images/cars/Garage RCR/Garage RCR Civic/car3522_2_01-CVgJ1GlO.jpg",
-      "images/cars/Garage RCR/Garage RCR Civic/car3522_2_02-DTpyko4f.jpg",
-      "images/cars/Garage RCR/Garage RCR Civic/car3522_3_01-B7693TUD.jpg"
+      "images/cars/Garage RCR/Garage RCR Civic/car3526_1_01-C_6HSGY-.jpg",
+      "images/cars/Garage RCR/Garage RCR Civic/car3526_1_02-bO0cskJu.jpg",
+      "images/cars/Garage RCR/Garage RCR Civic/car3526_2_01-CWxOuIb3.jpg",
+      "images/cars/Garage RCR/Garage RCR Civic/car3526_2_02-CYWcm7ou.jpg",
+      "images/cars/Garage RCR/Garage RCR Civic/car3526_3_01-CNMVjBx-.jpg"
     ],
     "description": "Впечатляющий хот-род с мотором мощностью 1216 л. с. в ностальгическом кузове.\nЭтот Ford Maverick 1971 года, удостоенный высшей награды SEMA 2018 года, был создан компанией Greening Auto Company. Дорожный просвет, уменьшенный до минимально возможных значений, придает ему весьма оригинальный вид. Под капотом автомобиля стоит 7-литровый V8-двигатель Windsor с двумя турбонагнетателями, развивающий 1216 л. с., однако электронный блок управления этим монстром поддерживает не только гоночный режим, но и комфортную езду по городу.\n\nГр. N\nТР 681.15\nОбъем двигателя\n6 997 см³\nПривод\nFR\nМакс. мощность\n1 216 л. с. / 7 500 об/мин\nМакс. крутящий момент\n1 219,1 Н/м / 4 500 об/мин\nМасса\n1 633 кг\nНаддув\nT (турбонаддув)\nДлина\n4 579 мм\nШирина\n1 914 мм\nВысота\n1 290 мм",
     "category": "ТР 681.15",
@@ -6021,6 +6021,193 @@
   },
   {
     "id": 194,
+    "brand": "Gran Turismo",
+    "name": "F1500T-A",
+    "name_short": "F1500T-A",
+    "year": "",
+    "type": "modern",
+    "power": "1 000 л. с. / 11 000 об/мин",
+    "torque": "658,2 Н/м / 9 500 об/мин",
+    "weight": "540 кг",
+    "price": "N/A",
+    "image": "images/cars/Gran Turismo/F1500T-A/car3342.png",
+    "brand_logo": "images/cars/Gran Turismo/tnr33.png",
+    "screenshots": [
+      "images/cars/Gran Turismo/F1500T-A/car3342_1_01-C-8ND_ds.jpg",
+      "images/cars/Gran Turismo/F1500T-A/car3342_2_01-6W46Hwie.jpg",
+      "images/cars/Gran Turismo/F1500T-A/car3342_2_02-CsUravTv.jpg",
+      "images/cars/Gran Turismo/F1500T-A/car3342_3_01-DE4Q7SeB.jpg"
+    ],
+    "description": "Оригинальный гоночный автомобиль с открытыми колесами, по характеристикам аналогичный \"Формуле-1\" 1980-х.\n\nКонцепт-кар Gran Turismo F1500T-A представляет собой современную интерпретацию гоночного автомобиля 1980-х годов - периода, который считается золотым веком дизайна \"Формулы-1\". Длина его углепластикового шасси составляет 4 235 мм, ширина - 2 146 мм, а колесная база - 2 718 мм. 1,5-литровый двигатель V6, типичный для \"Формулы\" 80-х, развивает мощность 1000 л. с. на 11 000 об/мин.\n\nГр. X\nТР 936.70\nОбъем двигателя\n- см³\nПривод\nMR\nМакс. мощность\n1 000 л. с. / 11 000 об/мин\nМакс. крутящий момент\n658,2 Н/м / 9 500 об/мин\nМасса\n540 кг\nНаддув\nT (турбонаддув)\nДлина\n4 235 мм\nШирина\n2 146 мм\nВысота\n1 003 мм",
+    "category": "Gr.N",
+    "pp": "936.70",
+    "displacement": "- см³",
+    "drivetrain": "MR",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 235 мм",
+      "width": "2 146 мм",
+      "height": "1 003 мм"
+    }
+  },
+  {
+    "id": 195,
+    "brand": "Gran Turismo",
+    "name": "F3500-A",
+    "name_short": "F3500-A",
+    "year": "",
+    "type": "modern",
+    "power": "784 л. с. / 14 000 об/мин",
+    "torque": "405,9 Н/м / 12 000 об/мин",
+    "weight": "505 кг",
+    "price": "N/A",
+    "image": "images/cars/Gran Turismo/F3500-A/car3562.png",
+    "brand_logo": "images/cars/Gran Turismo/tnr33.png",
+    "screenshots": [
+      "images/cars/Gran Turismo/F3500-A/car3562_1_01-CKGAuIaF.jpg",
+      "images/cars/Gran Turismo/F3500-A/car3562_1_02-D-b28YHx.jpg",
+      "images/cars/Gran Turismo/F3500-A/car3562_2_01-CPNXt6bf.jpg",
+      "images/cars/Gran Turismo/F3500-A/car3562_2_02-BNLT40i5.jpg",
+      "images/cars/Gran Turismo/F3500-A/car3562_3_01-CC7KjSke.jpg"
+    ],
+    "description": "Оригинальный одноместный автомобиль, вдохновленный классикой \"Формулы-1\".\n\nНазвание F3500-A носит оригинальная машина Gran Turismo с открытыми колесами, вдохновленная болидами \"Формулы-1\" начала 1990-х годов. Ее шасси представляет собой углепластиковый монокок, а подвеска выполнена по штанговой схеме. 3,5-литровый атмосферный двигатель V12, обороты которого достигают 15 000 об/мин, соединен с 6-ступенчатой полуавтоматической КПП. Машины \"Формулы-1\" постоянно развиваются. F3500-A особенно наглядно иллюстрирует это утверждение.\n\nГр. X\nТР 984.06\nОбъем двигателя\n3 496 см³\nПривод\nMR\nМакс. мощность\n784 л. с. / 14 000 об/мин\nМакс. крутящий момент\n405,9 Н/м / 12 000 об/мин\nМасса\n505 кг\nНаддув\nА (атмосферный)\nДлина\n4 285 мм\nШирина\n2 134 мм\nВысота\n984 мм",
+    "category": "Gr.N",
+    "pp": "984.06",
+    "displacement": "3 496 см³",
+    "drivetrain": "MR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 285 мм",
+      "width": "2 134 мм",
+      "height": "984 мм"
+    }
+  },
+  {
+    "id": 196,
+    "brand": "Gran Turismo",
+    "name": "Racing Kart 125 Shifter",
+    "name_short": "Racing Kart 125 Shifter",
+    "year": "",
+    "type": "modern",
+    "power": "50 л. с. / 14 000 об/мин",
+    "torque": "25,0 Н/м / 14 000 об/мин",
+    "weight": "105 кг",
+    "price": "N/A",
+    "image": "images/cars/Gran Turismo/Racing Kart 125 Shifter/car2060.png",
+    "brand_logo": "images/cars/Gran Turismo/tnr33.png",
+    "screenshots": [
+      "images/cars/Gran Turismo/Racing Kart 125 Shifter/car2060_1_01-B7xh2jzQ.jpg",
+      "images/cars/Gran Turismo/Racing Kart 125 Shifter/car2060_2_01-hlnOG4X5.jpg",
+      "images/cars/Gran Turismo/Racing Kart 125 Shifter/car2060_2_02-BbW4Iju0.jpg",
+      "images/cars/Gran Turismo/Racing Kart 125 Shifter/car2060_3_01-C-JG9jyM.jpg"
+    ],
+    "description": "Полноценная гоночная машина с 6-ступенчатой КПП, достаточно быстрая для больших трасс.\n\nХотя картинг в автоспорте считается дисциплиной для новичков, эта модель уже ближе к младшей формуле. Двухтактный двигатель водяного охлаждения объемом 125 см³ в сочетании с 6-ступенчатой КПП позволяет ей разгоняться до 200 км/ч. Несмотря на то что тормоза у нее предусмотрены только на передних колесах, она представляет собой полноценную гоночную машину, подходящую для тренировок чемпионов.\n\nГр. X\nТР 561.31\nОбъем двигателя\n- см³\nПривод\nMR\nМакс. мощность\n50 л. с. / 14 000 об/мин\nМакс. крутящий момент\n25,0 Н/м / 14 000 об/мин\nМасса\n105 кг\nНаддув\nА (атмосферный)\nДлина\n2 030 мм\nШирина\n1 368 мм\nВысота\n545 мм",
+    "category": "Gr.N",
+    "pp": "561.31",
+    "displacement": "- см³",
+    "drivetrain": "MR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "2 030 мм",
+      "width": "1 368 мм",
+      "height": "545 мм"
+    }
+  },
+  {
+    "id": 197,
+    "brand": "Gran Turismo",
+    "name": "Red Bull X2014 Junior",
+    "name_short": "Red Bull X2014 Junior",
+    "year": "",
+    "type": "modern",
+    "power": "250 л. с. / 8 500 об/мин",
+    "torque": "225,5 Н/м / 7 500 об/мин",
+    "weight": "550 кг",
+    "price": "N/A",
+    "image": "images/cars/Gran Turismo/Red Bull X2014 Junior/car2078.png",
+    "brand_logo": "images/cars/Gran Turismo/tnr33.png",
+    "screenshots": [
+      "images/cars/Gran Turismo/Red Bull X2014 Junior/car2078_1_01-fgUZxyyp.jpg",
+      "images/cars/Gran Turismo/Red Bull X2014 Junior/car2078_2_01-BUubBHcz.jpg",
+      "images/cars/Gran Turismo/Red Bull X2014 Junior/car2078_2_02-BuFBZZQg.jpg",
+      "images/cars/Gran Turismo/Red Bull X2014 Junior/car2078_3_01-BpwqBdEd.jpg"
+    ],
+    "description": "Автомобиль начального уровня для обучения базовым навыкам вождения машин с открытыми колесами.\n\nСерия X2014 родилась из совместного проекта Red Bull Racing и Gran Turismo по созданию \"вентиляторного автомобиля\". Модель X2014 Junior рассчитана на новичков. Благодаря компактному кузову и двигателю мощностью около 250 л. с. она идеально подходит для гонщиков, только начинающих осваивать машины с открытыми колесами.\n\nГр. X\nТР 714.00\nОбъем двигателя\n2 000 см³\nПривод\nMR\nМакс. мощность\n250 л. с. / 8 500 об/мин\nМакс. крутящий момент\n225,5 Н/м / 7 500 об/мин\nМасса\n550 кг\nНаддув\nА (атмосферный)\nДлина\n4 399 мм\nШирина\n1 824 мм\nВысота\n1 000 мм",
+    "category": "Gr.N",
+    "pp": "714.00",
+    "displacement": "2 000 см³",
+    "drivetrain": "MR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 399 мм",
+      "width": "1 824 мм",
+      "height": "1 000 мм"
+    }
+  },
+  {
+    "id": 198,
+    "brand": "Gran Turismo",
+    "name": "Red Bull X2014 Standard",
+    "name_short": "Red Bull X2014 Standard",
+    "year": "",
+    "type": "modern",
+    "power": "810 л. с. / 16 000 об/мин",
+    "torque": "380,0 Н/м / 13 000 об/мин",
+    "weight": "650 кг",
+    "price": "N/A",
+    "image": "images/cars/Gran Turismo/Red Bull X2014 Standard/car2077.png",
+    "brand_logo": "images/cars/Gran Turismo/tnr33.png",
+    "screenshots": [
+      "images/cars/Gran Turismo/Red Bull X2014 Standard/car2077_1_01-As5AJn-4.jpg",
+      "images/cars/Gran Turismo/Red Bull X2014 Standard/car2077_2_01-BXGZhijp.jpg",
+      "images/cars/Gran Turismo/Red Bull X2014 Standard/car2077_2_02-B7QQdskm.jpg",
+      "images/cars/Gran Turismo/Red Bull X2014 Standard/car2077_3_01-CqG-1Bzv.jpg"
+    ],
+    "description": "Традиционный автомобиль с вентилятором продольного обдува и боковыми спойлерами, позаимствованными у старшей модели X2014.\n\nСерия X2014 родилась из совместного проекта Red Bull Racing и Gran Turismo по созданию \"вентиляторного автомобиля\". Модель X2014 Standard рассчитана на гонщиков среднего уровня; ее аэродинамика основана на традиционном эффекте Вентури. Весь дизайн машины, включая колпаки колес и стеклянный фонарь кабины, работает на снижение лобового сопротивления и увеличение прижимающей силы.\n\nГр. X\nТР 1034.41\nОбъем двигателя\n2 000 см³\nПривод\nMR\nМакс. мощность\n810 л. с. / 16 000 об/мин\nМакс. крутящий момент\n380,0 Н/м / 13 000 об/мин\nМасса\n650 кг\nНаддув\nT (турбонаддув)\nДлина\n5 098 мм\nШирина\n2 164 мм\nВысота\n1 000 мм",
+    "category": "Gr.N",
+    "pp": "1034.41",
+    "displacement": "2 000 см³",
+    "drivetrain": "MR",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "5 098 мм",
+      "width": "2 164 мм",
+      "height": "1 000 мм"
+    }
+  },
+  {
+    "id": 199,
+    "brand": "Gran Turismo",
+    "name": "Red Bull X2019 Competition",
+    "name_short": "Red Bull X2019 Competition",
+    "year": "",
+    "type": "modern",
+    "power": "816 л. с. / 18 000 об/мин",
+    "torque": "329,7 Н/м / 16 500 об/мин",
+    "weight": "650 кг",
+    "price": "N/A",
+    "image": "images/cars/Gran Turismo/Red Bull X2019 Competition/car3374.png",
+    "brand_logo": "images/cars/Gran Turismo/tnr33.png",
+    "screenshots": [
+      "images/cars/Gran Turismo/Red Bull X2019 Competition/car3374_1_01-WpPcG3O2.jpg",
+      "images/cars/Gran Turismo/Red Bull X2019 Competition/car3374_2_01-B7Rsr3Ld.jpg",
+      "images/cars/Gran Turismo/Red Bull X2019 Competition/car3374_2_02-gCHiT5GF.jpg",
+      "images/cars/Gran Turismo/Red Bull X2019 Competition/car3374_3_01-DcvCPSiI.jpg"
+    ],
+    "description": "Эта модель, разработанная специально для чемпионата FIA Gran Turismo Championships, представляет собой дальнейшее развитие X2014.\nМодель X2019 Competition была создана специально для чемпионата Gran Turismo Championship: она проектировалась как автомобиль, интересный и для гонщиков, и для зрителей. Взяв за основу X2014 Standard, дизайнеры изменили ее передние колеса, заднюю часть кузова и колпаки задних колес. Кроме того, 2-литровый турбодвигатель базовой модели был заменен на 3-литровый атмосферный мотор, а система управления газом стала традиционной.\n\nГр. X\nТР 966.31\nОбъем двигателя\n- см³\nПривод\nMR\nМакс. мощность\n816 л. с. / 18 000 об/мин\nМакс. крутящий момент\n329,7 Н/м / 16 500 об/мин\nМасса\n650 кг\nНаддув\nА (атмосферный)\nДлина\n5 098 мм\nШирина\n2 164 мм\nВысота\n1 000 мм",
+    "category": "Gr.N",
+    "pp": "966.31",
+    "displacement": "- см³",
+    "drivetrain": "MR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "5 098 мм",
+      "width": "2 164 мм",
+      "height": "1 000 мм"
+    }
+  },
+  {
+    "id": 200,
     "brand": "GReddy",
     "name": "GReddy Fugu Z",
     "name_short": "GReddy Fugu Z",
@@ -6051,7 +6238,39 @@
     }
   },
   {
-    "id": 195,
+    "id": 201,
+    "brand": "Greening Auto Company",
+    "name": "GAC Maverick",
+    "name_short": "GAC Maverick",
+    "year": "",
+    "type": "modern",
+    "power": "1 216 л. с. / 7 500 об/мин",
+    "torque": "1 219,1 Н/м / 4 500 об/мин",
+    "weight": "1 633 кг",
+    "price": "N/A",
+    "image": "images/cars/Greening Auto Company/GAC Maverick/car3522.png",
+    "brand_logo": "images/cars/Greening Auto Company/tnr156.png",
+    "screenshots": [
+      "images/cars/Greening Auto Company/GAC Maverick/car3522_1_01-C8vva3m_.jpg",
+      "images/cars/Greening Auto Company/GAC Maverick/car3522_1_02-C_PBg3xX.jpg",
+      "images/cars/Greening Auto Company/GAC Maverick/car3522_2_01-CVgJ1GlO.jpg",
+      "images/cars/Greening Auto Company/GAC Maverick/car3522_2_02-DTpyko4f.jpg",
+      "images/cars/Greening Auto Company/GAC Maverick/car3522_3_01-B7693TUD.jpg"
+    ],
+    "description": "Впечатляющий хот-род с мотором мощностью 1216 л. с. в ностальгическом кузове.\n\nЭтот Ford Maverick 1971 года, удостоенный высшей награды SEMA 2018 года, был создан компанией Greening Auto Company. Дорожный просвет, уменьшенный до минимально возможных значений, придает ему весьма оригинальный вид. Под капотом автомобиля стоит 7-литровый V8-двигатель Windsor с двумя турбонагнетателями, развивающий 1216 л. с., однако электронный блок управления этим монстром поддерживает не только гоночный режим, но и комфортную езду по городу.\n\nГр. N\nТР 681.15\nОбъем двигателя\n6 997 см³\nПривод\nFR\nМакс. мощность\n1 216 л. с. / 7 500 об/мин\nМакс. крутящий момент\n1 219,1 Н/м / 4 500 об/мин\nМасса\n1 633 кг\nНаддув\nT (турбонаддув)\nДлина\n4 579 мм\nШирина\n1 914 мм\nВысота\n1 290 мм",
+    "category": "ТР 681.15",
+    "pp": "681.15",
+    "displacement": "6 997 см³",
+    "drivetrain": "FR",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 579 мм",
+      "width": "1 914 мм",
+      "height": "1 290 мм"
+    }
+  },
+  {
+    "id": 202,
     "brand": "Honda",
     "name": "2&4 powered by RC213V",
     "name_short": "2&4 powered by RC213V",
@@ -6082,7 +6301,7 @@
     }
   },
   {
-    "id": 196,
+    "id": 203,
     "brand": "Honda",
     "name": "Beat '91",
     "name_short": "Beat",
@@ -6113,7 +6332,7 @@
     }
   },
   {
-    "id": 197,
+    "id": 204,
     "brand": "Honda",
     "name": "Civic Si Extra (EF) '87",
     "name_short": "Civic Si Extra (EF)",
@@ -6145,7 +6364,7 @@
     }
   },
   {
-    "id": 198,
+    "id": 205,
     "brand": "Honda",
     "name": "Civic SiR･II (EG) '93",
     "name_short": "Civic SiR･II (EG)",
@@ -6177,7 +6396,7 @@
     }
   },
   {
-    "id": 199,
+    "id": 206,
     "brand": "Honda",
     "name": "Civic Type R (EK) '97",
     "name_short": "Civic Type R (EK)",
@@ -6208,7 +6427,7 @@
     }
   },
   {
-    "id": 200,
+    "id": 207,
     "brand": "Honda",
     "name": "Civic Type R (EK) '98",
     "name_short": "Civic Type R (EK)",
@@ -6239,7 +6458,7 @@
     }
   },
   {
-    "id": 201,
+    "id": 208,
     "brand": "Honda",
     "name": "Civic Type R (EK) Touring Car",
     "name_short": "Civic Type R (EK) Touring Car",
@@ -6270,7 +6489,7 @@
     }
   },
   {
-    "id": 202,
+    "id": 209,
     "brand": "Honda",
     "name": "Civic Type R (FK2) '15",
     "name_short": "Civic Type R (FK2)",
@@ -6301,7 +6520,7 @@
     }
   },
   {
-    "id": 203,
+    "id": 210,
     "brand": "Honda",
     "name": "Civic Type R (FL5) '22",
     "name_short": "Civic Type R (FL5)",
@@ -6333,7 +6552,7 @@
     }
   },
   {
-    "id": 204,
+    "id": 211,
     "brand": "Honda",
     "name": "Civic Type R Limited Edition (FK8) '20",
     "name_short": "Civic Type R Limited Edition (FK8)",
@@ -6365,7 +6584,7 @@
     }
   },
   {
-    "id": 205,
+    "id": 212,
     "brand": "Honda",
     "name": "CR-V eHEV EX・Black Edition '21",
     "name_short": "CR-V eHEV EX・Black Edition",
@@ -6397,7 +6616,7 @@
     }
   },
   {
-    "id": 206,
+    "id": 213,
     "brand": "Honda",
     "name": "Fit Hybrid '14",
     "name_short": "Fit Hybrid",
@@ -6428,7 +6647,7 @@
     }
   },
   {
-    "id": 207,
+    "id": 214,
     "brand": "Honda",
     "name": "Honda Sports VGT",
     "name_short": "Honda Sports VGT",
@@ -6459,7 +6678,7 @@
     }
   },
   {
-    "id": 208,
+    "id": 215,
     "brand": "Honda",
     "name": "Integra Type R (DC2) '95",
     "name_short": "Integra Type R (DC2)",
@@ -6490,7 +6709,7 @@
     }
   },
   {
-    "id": 209,
+    "id": 216,
     "brand": "Honda",
     "name": "Integra Type R (DC2) '98",
     "name_short": "Integra Type R (DC2)",
@@ -6521,7 +6740,7 @@
     }
   },
   {
-    "id": 210,
+    "id": 217,
     "brand": "Honda",
     "name": "N-ONE RS '22",
     "name_short": "N-ONE RS",
@@ -6553,7 +6772,7 @@
     }
   },
   {
-    "id": 211,
+    "id": 218,
     "brand": "Honda",
     "name": "NSX '17",
     "name_short": "NSX",
@@ -6584,7 +6803,7 @@
     }
   },
   {
-    "id": 212,
+    "id": 219,
     "brand": "Honda",
     "name": "NSX CONCEPT-GT '16",
     "name_short": "NSX CONCEPT-GT",
@@ -6615,7 +6834,7 @@
     }
   },
   {
-    "id": 213,
+    "id": 220,
     "brand": "Honda",
     "name": "NSX Gr.3",
     "name_short": "NSX Gr.3",
@@ -6646,7 +6865,7 @@
     }
   },
   {
-    "id": 214,
+    "id": 221,
     "brand": "Honda",
     "name": "NSX Gr.4",
     "name_short": "NSX Gr.4",
@@ -6677,7 +6896,7 @@
     }
   },
   {
-    "id": 215,
+    "id": 222,
     "brand": "Honda",
     "name": "NSX Gr.B Rally Car",
     "name_short": "NSX Gr.B Rally Car",
@@ -6708,7 +6927,7 @@
     }
   },
   {
-    "id": 216,
+    "id": 223,
     "brand": "Honda",
     "name": "NSX GT500 '00",
     "name_short": "NSX GT500",
@@ -6740,7 +6959,7 @@
     }
   },
   {
-    "id": 217,
+    "id": 224,
     "brand": "Honda",
     "name": "NSX GT500 '08",
     "name_short": "NSX GT500",
@@ -6771,7 +6990,7 @@
     }
   },
   {
-    "id": 218,
+    "id": 225,
     "brand": "Honda",
     "name": "NSX Type R '02",
     "name_short": "NSX Type R",
@@ -6802,7 +7021,7 @@
     }
   },
   {
-    "id": 219,
+    "id": 226,
     "brand": "Honda",
     "name": "NSX Type R '92",
     "name_short": "NSX Type R",
@@ -6833,7 +7052,7 @@
     }
   },
   {
-    "id": 220,
+    "id": 227,
     "brand": "Honda",
     "name": "RA272 '65",
     "name_short": "RA272",
@@ -6865,7 +7084,7 @@
     }
   },
   {
-    "id": 221,
+    "id": 228,
     "brand": "Honda",
     "name": "S2000 '99",
     "name_short": "S2000",
@@ -6896,7 +7115,7 @@
     }
   },
   {
-    "id": 222,
+    "id": 229,
     "brand": "Honda",
     "name": "S660 '15",
     "name_short": "S660",
@@ -6927,7 +7146,7 @@
     }
   },
   {
-    "id": 223,
+    "id": 230,
     "brand": "Honda",
     "name": "S800 '66",
     "name_short": "S800",
@@ -6958,7 +7177,7 @@
     }
   },
   {
-    "id": 224,
+    "id": 231,
     "brand": "Hyundai",
     "name": "Genesis Coupe 3.8 '13",
     "name_short": "Genesis Coupe 3.8",
@@ -6989,7 +7208,7 @@
     }
   },
   {
-    "id": 225,
+    "id": 232,
     "brand": "Hyundai",
     "name": "Genesis Gr.3",
     "name_short": "Genesis Gr.3",
@@ -7020,7 +7239,7 @@
     }
   },
   {
-    "id": 226,
+    "id": 233,
     "brand": "Hyundai",
     "name": "Genesis Gr.4",
     "name_short": "Genesis Gr.4",
@@ -7051,7 +7270,7 @@
     }
   },
   {
-    "id": 227,
+    "id": 234,
     "brand": "Hyundai",
     "name": "Genesis Gr.B Rally Car",
     "name_short": "Genesis Gr.B Rally Car",
@@ -7082,7 +7301,7 @@
     }
   },
   {
-    "id": 228,
+    "id": 235,
     "brand": "Hyundai",
     "name": "HYUNDAI N 2025 VGT",
     "name_short": "HYUNDAI N 2025 VGT",
@@ -7113,7 +7332,7 @@
     }
   },
   {
-    "id": 229,
+    "id": 236,
     "brand": "Hyundai",
     "name": "HYUNDAI N 2025 VGT (Gr.1)",
     "name_short": "HYUNDAI N 2025 VGT (Gr.1)",
@@ -7144,7 +7363,7 @@
     }
   },
   {
-    "id": 230,
+    "id": 237,
     "brand": "Hyundai",
     "name": "IONIQ 5 N '24",
     "name_short": "IONIQ 5 N",
@@ -7176,7 +7395,7 @@
     }
   },
   {
-    "id": 231,
+    "id": 238,
     "brand": "Infiniti",
     "name": "INFINITI CONCEPT VG",
     "name_short": "INFINITI CONCEPT VG",
@@ -7206,7 +7425,7 @@
     }
   },
   {
-    "id": 232,
+    "id": 239,
     "brand": "Italdesign",
     "name": "Italdesign VGT Off-road Mode",
     "name_short": "Italdesign VGT Off-road Mode",
@@ -7238,7 +7457,7 @@
     }
   },
   {
-    "id": 233,
+    "id": 240,
     "brand": "Italdesign",
     "name": "Italdesign VGT Street Mode",
     "name_short": "Italdesign VGT Street Mode",
@@ -7270,7 +7489,7 @@
     }
   },
   {
-    "id": 234,
+    "id": 241,
     "brand": "Jaguar",
     "name": "D-type '54",
     "name_short": "D-type",
@@ -7301,7 +7520,7 @@
     }
   },
   {
-    "id": 235,
+    "id": 242,
     "brand": "Jaguar",
     "name": "E-type Coupé '61",
     "name_short": "E-type Coupé",
@@ -7332,7 +7551,7 @@
     }
   },
   {
-    "id": 236,
+    "id": 243,
     "brand": "Jaguar",
     "name": "F-type Gr.3",
     "name_short": "F-type Gr.3",
@@ -7363,7 +7582,7 @@
     }
   },
   {
-    "id": 237,
+    "id": 244,
     "brand": "Jaguar",
     "name": "F-type Gr.4",
     "name_short": "F-type Gr.4",
@@ -7394,7 +7613,7 @@
     }
   },
   {
-    "id": 238,
+    "id": 245,
     "brand": "Jaguar",
     "name": "F-type R '14",
     "name_short": "F-type R",
@@ -7425,7 +7644,7 @@
     }
   },
   {
-    "id": 239,
+    "id": 246,
     "brand": "Jaguar",
     "name": "Jaguar VGT Coupé",
     "name_short": "Jaguar VGT Coupé",
@@ -7456,7 +7675,7 @@
     }
   },
   {
-    "id": 240,
+    "id": 247,
     "brand": "Jaguar",
     "name": "Jaguar VGT Roadster",
     "name_short": "Jaguar VGT Roadster",
@@ -7487,7 +7706,7 @@
     }
   },
   {
-    "id": 241,
+    "id": 248,
     "brand": "Jaguar",
     "name": "Jaguar VGT SV",
     "name_short": "Jaguar VGT SV",
@@ -7519,7 +7738,7 @@
     }
   },
   {
-    "id": 242,
+    "id": 249,
     "brand": "Jaguar",
     "name": "XJ13 '66",
     "name_short": "XJ13",
@@ -7550,7 +7769,7 @@
     }
   },
   {
-    "id": 243,
+    "id": 250,
     "brand": "Jaguar",
     "name": "XJ220 '92",
     "name_short": "XJ220",
@@ -7582,7 +7801,7 @@
     }
   },
   {
-    "id": 244,
+    "id": 251,
     "brand": "Jaguar",
     "name": "XJR-9 '88",
     "name_short": "XJR-9",
@@ -7613,7 +7832,7 @@
     }
   },
   {
-    "id": 245,
+    "id": 252,
     "brand": "Jeep",
     "name": "Willys MB '45",
     "name_short": "Willys MB",
@@ -7644,7 +7863,7 @@
     }
   },
   {
-    "id": 246,
+    "id": 253,
     "brand": "KTM",
     "name": "X-BOW R '12",
     "name_short": "X-BOW R",
@@ -7675,7 +7894,7 @@
     }
   },
   {
-    "id": 247,
+    "id": 254,
     "brand": "Lamborghini",
     "name": "Aventador LP 700-4 '11",
     "name_short": "Aventador LP 700-4",
@@ -7706,7 +7925,7 @@
     }
   },
   {
-    "id": 248,
+    "id": 255,
     "brand": "Lamborghini",
     "name": "Aventador LP 750-4 SV '15",
     "name_short": "Aventador LP 750-4 SV",
@@ -7737,7 +7956,7 @@
     }
   },
   {
-    "id": 249,
+    "id": 256,
     "brand": "Lamborghini",
     "name": "Countach 25th Anniversary '88",
     "name_short": "Countach 25th Anniversary",
@@ -7768,7 +7987,7 @@
     }
   },
   {
-    "id": 250,
+    "id": 257,
     "brand": "Lamborghini",
     "name": "Countach LP400 '74",
     "name_short": "Countach LP400",
@@ -7799,7 +8018,7 @@
     }
   },
   {
-    "id": 251,
+    "id": 258,
     "brand": "Lamborghini",
     "name": "Gallardo LP 560-4 '08",
     "name_short": "Gallardo LP 560-4",
@@ -7831,7 +8050,7 @@
     }
   },
   {
-    "id": 252,
+    "id": 259,
     "brand": "Lamborghini",
     "name": "Huracán Gr.4",
     "name_short": "Huracán Gr.4",
@@ -7862,7 +8081,7 @@
     }
   },
   {
-    "id": 253,
+    "id": 260,
     "brand": "Lamborghini",
     "name": "Huracán GT3 '15",
     "name_short": "Huracán GT3",
@@ -7894,7 +8113,7 @@
     }
   },
   {
-    "id": 254,
+    "id": 261,
     "brand": "Lamborghini",
     "name": "Huracán LP 610-4 '15",
     "name_short": "Huracán LP 610-4",
@@ -7925,7 +8144,7 @@
     }
   },
   {
-    "id": 255,
+    "id": 262,
     "brand": "Lamborghini",
     "name": "Lambo V12 VGT",
     "name_short": "Lambo V12 VGT",
@@ -7956,7 +8175,7 @@
     }
   },
   {
-    "id": 256,
+    "id": 263,
     "brand": "Lamborghini",
     "name": "Miura P400 Bertone Prototype '67",
     "name_short": "Miura P400 Bertone Prototype",
@@ -7987,7 +8206,7 @@
     }
   },
   {
-    "id": 257,
+    "id": 264,
     "brand": "Lamborghini",
     "name": "Murciélago LP 640 '09",
     "name_short": "Murciélago LP 640",
@@ -8018,7 +8237,7 @@
     }
   },
   {
-    "id": 258,
+    "id": 265,
     "brand": "Lamborghini",
     "name": "Urus '18",
     "name_short": "Urus",
@@ -8050,7 +8269,7 @@
     }
   },
   {
-    "id": 259,
+    "id": 266,
     "brand": "Lamborghini",
     "name": "Veneno '14",
     "name_short": "Veneno",
@@ -8081,7 +8300,7 @@
     }
   },
   {
-    "id": 260,
+    "id": 267,
     "brand": "Lancia",
     "name": "Delta HF Integrale Evoluzione '91",
     "name_short": "Delta HF Integrale Evoluzione",
@@ -8112,7 +8331,7 @@
     }
   },
   {
-    "id": 261,
+    "id": 268,
     "brand": "Lancia",
     "name": "Delta HF Integrale Rally Car '92",
     "name_short": "Delta HF Integrale Rally Car",
@@ -8144,7 +8363,7 @@
     }
   },
   {
-    "id": 262,
+    "id": 269,
     "brand": "Lancia",
     "name": "Stratos '73",
     "name_short": "Stratos",
@@ -8175,7 +8394,7 @@
     }
   },
   {
-    "id": 263,
+    "id": 270,
     "brand": "Lexus",
     "name": "LC500 '17",
     "name_short": "LC500",
@@ -8206,7 +8425,7 @@
     }
   },
   {
-    "id": 264,
+    "id": 271,
     "brand": "Lexus",
     "name": "LF-LC GT VGT",
     "name_short": "LF-LC GT VGT",
@@ -8236,7 +8455,7 @@
     }
   },
   {
-    "id": 265,
+    "id": 272,
     "brand": "Lexus",
     "name": "LFA '10",
     "name_short": "LFA",
@@ -8268,7 +8487,7 @@
     }
   },
   {
-    "id": 266,
+    "id": 273,
     "brand": "Lexus",
     "name": "RC F '14",
     "name_short": "RC F",
@@ -8299,7 +8518,7 @@
     }
   },
   {
-    "id": 267,
+    "id": 274,
     "brand": "Lexus",
     "name": "RC F Gr.4",
     "name_short": "RC F Gr.4",
@@ -8330,7 +8549,7 @@
     }
   },
   {
-    "id": 268,
+    "id": 275,
     "brand": "Lexus",
     "name": "RC F GT3 '17",
     "name_short": "RC F GT3",
@@ -8361,7 +8580,7 @@
     }
   },
   {
-    "id": 269,
+    "id": 276,
     "brand": "Lexus",
     "name": "RC F GT3 prototype '16",
     "name_short": "RC F GT3 prototype",
@@ -8392,7 +8611,7 @@
     }
   },
   {
-    "id": 270,
+    "id": 277,
     "brand": "Lexus",
     "name": "RC F GT500 '16",
     "name_short": "RC F GT500",
@@ -8423,7 +8642,7 @@
     }
   },
   {
-    "id": 271,
+    "id": 278,
     "brand": "Lexus",
     "name": "SC430 GT500 '08",
     "name_short": "SC430 GT500",
@@ -8454,7 +8673,7 @@
     }
   },
   {
-    "id": 272,
+    "id": 279,
     "brand": "Maserati",
     "name": "A6GCS53 Spyder '54",
     "name_short": "A6GCS53 Spyder",
@@ -8486,7 +8705,7 @@
     }
   },
   {
-    "id": 273,
+    "id": 280,
     "brand": "Maserati",
     "name": "GranTurismo S '08",
     "name_short": "GranTurismo S",
@@ -8517,7 +8736,7 @@
     }
   },
   {
-    "id": 274,
+    "id": 281,
     "brand": "Maserati",
     "name": "MC20 '20",
     "name_short": "MC20",
@@ -8549,7 +8768,7 @@
     }
   },
   {
-    "id": 275,
+    "id": 282,
     "brand": "Maserati",
     "name": "Merak SS '80",
     "name_short": "Merak SS",
@@ -8578,6 +8797,661 @@
       "length": "4 330 мм",
       "width": "1 768 мм",
       "height": "1 134 мм"
+    }
+  },
+  {
+    "id": 283,
+    "brand": "Mazda",
+    "name": "787B '91",
+    "name_short": "787B",
+    "year": "91",
+    "type": "modern",
+    "power": "700 л. с. / 9 100 об/мин",
+    "torque": "607,6 Н/м / 6 500 об/мин",
+    "weight": "830 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/787B '91/car296.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/787B '91/car296_1_01-BzOASC_T.jpg",
+      "images/cars/Mazda/787B '91/car296_2_01-kgx7OLOd.jpg",
+      "images/cars/Mazda/787B '91/car296_2_02-DFP_b5Qj.jpg",
+      "images/cars/Mazda/787B '91/car296_3_01-D87PDlaQ.jpg"
+    ],
+    "description": "Легендарная машина, благодаря которой Mazda первой среди японских компаний одержала победу в Ле-Мане.\n\nГоночный автомобиль 787B, который завершил \"24 часа Ле-Мана\" 1991 г. без единой механической проблемы, стал первым японским автомобилем, выигравшим эту гонку в общем зачете. Компания Mazda, чьи автомобили с роторными двигателями выступали в Ле-Мане с 1974 г., разработала прототип 787 в качестве последней попытки одержать победу с роторным двигателем, поскольку очередное изменение регламента должно было запретить этот тип моторов. После неудачи в 1990 г. этот прототип был основательно доработан и получил обозначение 787B.\n\nГр. 1\nТР 839.74\nОбъем двигателя\n654x4 см³\nПривод\nMR\nМакс. мощность\n700 л. с. / 9 100 об/мин\nМакс. крутящий момент\n607,6 Н/м / 6 500 об/мин\nМасса\n830 кг\nНаддув\nА (атмосферный)\nДлина\n4 782 мм\nШирина\n1 994 мм\nВысота\n1 003 мм",
+    "category": "Gr.N",
+    "pp": "839.74",
+    "displacement": "654x4 см³",
+    "drivetrain": "MR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 782 мм",
+      "width": "1 994 мм",
+      "height": "1 003 мм"
+    }
+  },
+  {
+    "id": 284,
+    "brand": "Mazda",
+    "name": "Atenza Gr.3",
+    "name_short": "Atenza Gr.3",
+    "year": "",
+    "type": "modern",
+    "power": "575 л. с. / 8 000 об/мин",
+    "torque": "568,6 Н/м / 5 500 об/мин",
+    "weight": "1 280 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/Atenza Gr.3/car3237.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/Atenza Gr.3/car3237_1_01-BjhO6Kw4.jpg",
+      "images/cars/Mazda/Atenza Gr.3/car3237_2_01-CT_mAiH5.jpg",
+      "images/cars/Mazda/Atenza Gr.3/car3237_2_02-Y33YQcPo.jpg",
+      "images/cars/Mazda/Atenza Gr.3/car3237_3_01-Bu5NAKQT.jpg"
+    ],
+    "description": "Оригинальный гоночный вариант флагманской Mazda Atenza, соответствующий требованиям класса \"Гр. 3\".\n\nЭта машина класса \"Гр. 3\" разработана специально для Gran Turismo Original на базе седана Atenza, выпускаемого компанией Mazda для мирового рынка. Простой, но агрессивный дизайн ее аэродинамических элементов выполнен в полном соответствии с фирменной концепцией \"KODO\". Для повышения жесткости кузова в задней части салона установлена перегородка, а для компенсации ухудшения обзора используется камера заднего вида.\n\nГр. 3\nТР 722.21\nОбъем двигателя\n- см³\nПривод\nFR\nМакс. мощность\n575 л. с. / 8 000 об/мин\nМакс. крутящий момент\n568,6 Н/м / 5 500 об/мин\nМасса\n1 280 кг\nНаддув\nT (турбонаддув)\nДлина\n5 080 мм\nШирина\n2 050 мм\nВысота\n1 380 мм",
+    "category": "Gr.N",
+    "pp": "722.21",
+    "displacement": "- см³",
+    "drivetrain": "FR",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "5 080 мм",
+      "width": "2 050 мм",
+      "height": "1 380 мм"
+    }
+  },
+  {
+    "id": 285,
+    "brand": "Mazda",
+    "name": "Atenza Gr.3 Road Car",
+    "name_short": "Atenza Gr.3 Road Car",
+    "year": "",
+    "type": "modern",
+    "power": "490 л. с. / 8 000 об/мин",
+    "torque": "460,3 Н/м / 5 500 об/мин",
+    "weight": "1 450 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/Atenza Gr.3 Road Car/car3306.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/Atenza Gr.3 Road Car/car3306_1_01-ir3o4Mpy.jpg",
+      "images/cars/Mazda/Atenza Gr.3 Road Car/car3306_2_01-JeU9HEV5.jpg",
+      "images/cars/Mazda/Atenza Gr.3 Road Car/car3306_2_02-B194sUjs.jpg",
+      "images/cars/Mazda/Atenza Gr.3 Road Car/car3306_3_01-CIBhCMOf.jpg"
+    ],
+    "description": "Модель Atenza третьего поколения с изящным обтекаемым кузовом и технологией SkyActiv.\n\nЭта машина класса \"Гр. 3\" разработана на базе седана Atenza, выпускаемого компанией Mazda для мирового рынка. Она не просто адаптирована для гонок, но превращена в настоящего 400-лошадного монстра. Интересно, что ее дизайнеры учитывали даже форму бликов и отражений на поверхности кузова.\n\nГр. N\nТР 574.69\nОбъем двигателя\n- см³\nПривод\nFR\nМакс. мощность\n490 л. с. / 8 000 об/мин\nМакс. крутящий момент\n460,3 Н/м / 5 500 об/мин\nМасса\n1 450 кг\nНаддув\nT (турбонаддув)\nДлина\n4 990 мм\nШирина\n2 050 мм\nВысота\n1 380 мм",
+    "category": "ТР 574.69",
+    "pp": "574.69",
+    "displacement": "- см³",
+    "drivetrain": "FR",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 990 мм",
+      "width": "2 050 мм",
+      "height": "1 380 мм"
+    }
+  },
+  {
+    "id": 286,
+    "brand": "Mazda",
+    "name": "Atenza Gr.4",
+    "name_short": "Atenza Gr.4",
+    "year": "",
+    "type": "modern",
+    "power": "399 л. с. / 7 000 об/мин",
+    "torque": "428,9 Н/м / 4 500 об/мин",
+    "weight": "1 380 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/Atenza Gr.4/car3256.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/Atenza Gr.4/car3256_1_01-D6aZRjoi.jpg",
+      "images/cars/Mazda/Atenza Gr.4/car3256_2_01-BiIKFrQ2.jpg",
+      "images/cars/Mazda/Atenza Gr.4/car3256_2_02-iU3IVC_q.jpg",
+      "images/cars/Mazda/Atenza Gr.4/car3256_3_01-DWBW7krm.jpg"
+    ],
+    "description": "Оригинальный гоночный вариант флагманской Mazda Atenza, соответствующий требованиям класса \"Гр. 4\".\n\nЭта машина класса \"Гр. 3\" разработана специально для Gran Turismo Original на базе седана Atenza, выпускаемого компанией Mazda для мирового рынка. Ее система полного привода обеспечивает превосходную тягу. Большая решетка радиатора в стиле \"Гр. 3\" и дополнительные воздухозаборники на капоте помогают ее 4-цилиндровому турбодвигателю развивать невероятные 400 л. с.\n\nГр. 4\nТР 619.30\nОбъем двигателя\n2 188 см³\nПривод\n4WD\nМакс. мощность\n399 л. с. / 7 000 об/мин\nМакс. крутящий момент\n428,9 Н/м / 4 500 об/мин\nМасса\n1 380 кг\nНаддув\nT (турбонаддув)\nДлина\n4 990 мм\nШирина\n1 840 мм\nВысота\n1 370 мм",
+    "category": "Gr.N",
+    "pp": "619.30",
+    "displacement": "2 188 см³",
+    "drivetrain": "4WD",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 990 мм",
+      "width": "1 840 мм",
+      "height": "1 370 мм"
+    }
+  },
+  {
+    "id": 287,
+    "brand": "Mazda",
+    "name": "Atenza Sedan XD L Package '15",
+    "name_short": "Atenza Sedan XD L Package",
+    "year": "15",
+    "type": "modern",
+    "power": "175 л. с. / 4 400 об/мин",
+    "torque": "419,4 Н/м / 2 000 об/мин",
+    "weight": "1 600 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/Atenza Sedan XD L Package '15/car2173.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/Atenza Sedan XD L Package '15/car2173_1_01-CJMCIQEN.jpg",
+      "images/cars/Mazda/Atenza Sedan XD L Package '15/car2173_2_01-DDPpmifc.jpg",
+      "images/cars/Mazda/Atenza Sedan XD L Package '15/car2173_2_02-CQT7fkmm.jpg",
+      "images/cars/Mazda/Atenza Sedan XD L Package '15/car2173_3_01-Bkp6vI-T.jpg"
+    ],
+    "description": "Модель Atenza третьего поколения (Mazda 6) с изящным обтекаемым кузовом и технологией SKYACTIV.\n\nМодель Atenza третьего поколения получила дизельный двигатель Mazda SKYACTIV-D. Прозванная XD, она выпускается в трех комплектациях, наилучшая из которых носит обозначение L. Система остановки и запуска двигателя, рекуперативное торможение i-ELOOP и другие экологические решения, реализованные на автомобилях с мотором SKYACTIV-D, позволили снизить расход топлива до 4,5 л/100 км в режиме JC08.\n\nГр. N\nТР 376.23\nОбъем двигателя\n2 188 см³\nПривод\n4WD\nМакс. мощность\n175 л. с. / 4 400 об/мин\nМакс. крутящий момент\n419,4 Н/м / 2 000 об/мин\nМасса\n1 600 кг\nНаддув\nT (турбонаддув)\nДлина\n4 865 мм\nШирина\n1 840 мм\nВысота\n1 450 мм",
+    "category": "ТР 376.23",
+    "pp": "376.23",
+    "displacement": "2 188 см³",
+    "drivetrain": "4WD",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 865 мм",
+      "width": "1 840 мм",
+      "height": "1 450 мм"
+    }
+  },
+  {
+    "id": 288,
+    "brand": "Mazda",
+    "name": "CX-30 X Smart Edition '21",
+    "name_short": "CX-30 X Smart Edition",
+    "year": "21",
+    "type": "modern",
+    "power": "190 л. с. / 6 000 об/мин",
+    "torque": "240,1 Н/м / 4 500 об/мин",
+    "weight": "1 490 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/CX-30 X Smart Edition '21/car3566.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/CX-30 X Smart Edition '21/car3566_1_01-DoqjjWMK.jpg",
+      "images/cars/Mazda/CX-30 X Smart Edition '21/car3566_1_02-DUs77QXE.jpg",
+      "images/cars/Mazda/CX-30 X Smart Edition '21/car3566_2_01-C51htW77.jpg",
+      "images/cars/Mazda/CX-30 X Smart Edition '21/car3566_2_02-DLDw1TMG.jpg",
+      "images/cars/Mazda/CX-30 X Smart Edition '21/car3566_3_01-BYiBX_rp.jpg"
+    ],
+    "description": "Кроссовер Mazda с революционной конструкцией двигателя.\n\nКроссовер CX-30 был разработан для того, чтобы заполнить нишу между CX-3 и CX-5. Его относительно компактный кузов соответствует фирменной эстетике \"KODO\" с ее плавными линиями, что особенно заметно по носовой части и игре бликов на поверхностях. Модификация CX-30 X Smart Edition, которую вы видите здесь, выпущена в 2021 году. Она примечательна двигателем SKYACTIV-X, а также многочисленными функциями помощи водителю и улучшенным ощущением от педалей.\n\nГр. N\nТР 400.53\nОбъем двигателя\n1 997 см³\nПривод\nFF\nМакс. мощность\n190 л. с. / 6 000 об/мин\nМакс. крутящий момент\n240,1 Н/м / 4 500 об/мин\nМасса\n1 490 кг\nНаддув\nА (атмосферный)\nДлина\n4 395 мм\nШирина\n1 795 мм\nВысота\n1 540 мм",
+    "category": "ТР 400.53",
+    "pp": "400.53",
+    "displacement": "1 997 см³",
+    "drivetrain": "FF",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 395 мм",
+      "width": "1 795 мм",
+      "height": "1 540 мм"
+    }
+  },
+  {
+    "id": 289,
+    "brand": "Mazda",
+    "name": "Demio XD Touring '15",
+    "name_short": "Demio XD Touring",
+    "year": "15",
+    "type": "modern",
+    "power": "105 л. с. / 4 000 об/мин",
+    "torque": "219,5 Н/м / 1 500 об/мин",
+    "weight": "1 080 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/Demio XD Touring '15/car3383.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/Demio XD Touring '15/car3383_1_01-CWz7cjjY.jpg",
+      "images/cars/Mazda/Demio XD Touring '15/car3383_2_01-BOaZWlp9.jpg",
+      "images/cars/Mazda/Demio XD Touring '15/car3383_2_02-oc3pTJBy.jpg",
+      "images/cars/Mazda/Demio XD Touring '15/car3383_3_01-BfflE3MK.jpg"
+    ],
+    "description": "Этот дизельный компакт от Mazda удивительно роскошен для своего класса.\n\nВ 2014 году увидела свет Mazda Demio четвертого поколения, прошедшая полную ревизию. Ее дизайн, соответствующий новой фирменной философии \"KODO\", достойно выглядел на фоне конкурирующих европейских моделей. Одной из самых примечательных особенностей этой машины стал новый 1,5-литровый дизельный турбодвигатель SKYACTIV-D 1.5. Он пользовался особой популярностью из-за превосходных топливно-экономических характеристик: более 60% от всех заказов приходилось именно на дизельные модели.\n\nГр. N\nТР 334.99\nОбъем двигателя\n1 498 см³\nПривод\nFF\nМакс. мощность\n105 л. с. / 4 000 об/мин\nМакс. крутящий момент\n219,5 Н/м / 1 500 об/мин\nМасса\n1 080 кг\nНаддув\nT (турбонаддув)\nДлина\n4 060 мм\nШирина\n1 695 мм\nВысота\n1 500 мм",
+    "category": "ТР 334.99",
+    "pp": "334.99",
+    "displacement": "1 498 см³",
+    "drivetrain": "FF",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 060 мм",
+      "width": "1 695 мм",
+      "height": "1 500 мм"
+    }
+  },
+  {
+    "id": 290,
+    "brand": "Mazda",
+    "name": "Eunos Roadster (NA) '89",
+    "name_short": "Eunos Roadster (NA)",
+    "year": "89",
+    "type": "modern",
+    "power": "119 л. с. / 6 500 об/мин",
+    "torque": "137,2 Н/м / 5 500 об/мин",
+    "weight": "940 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/Eunos Roadster (NA) '89/car201.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/Eunos Roadster (NA) '89/car201_1_01-BsWKOGbL.jpg",
+      "images/cars/Mazda/Eunos Roadster (NA) '89/car201_2_01-vFADEOQe.jpg",
+      "images/cars/Mazda/Eunos Roadster (NA) '89/car201_2_02-CamZgRg-.jpg",
+      "images/cars/Mazda/Eunos Roadster (NA) '89/car201_3_01-6UGiRl-J.jpg"
+    ],
+    "description": "Невероятно популярная модель, положившая начало моде на компактные спорткары.\n\nЭтот шедевр автоиндустрии возродил концепцию легких спорткаров в конце XX века. Впервые выпущенный в 1989 году, изначально он комплектовался 1,6-литровым двигателем, а в 1993 году объем его мотора был увеличен до 1,8 л. Главное достоинство этого автомобиля заключается в его конструкции: КПП и задний дифференциал соединены алюминиевой рамой двигателя, подвеска выполнена на сдвоенных А-образных рычагах, а тормоза всех 4 колес дисковые. Все это обеспечивает четкое и отзывчивое управление.\n\nГр. N\nТР 381.78\nОбъем двигателя\n1 597 см³\nПривод\nFR\nМакс. мощность\n119 л. с. / 6 500 об/мин\nМакс. крутящий момент\n137,2 Н/м / 5 500 об/мин\nМасса\n940 кг\nНаддув\nА (атмосферный)\nДлина\n3 970 мм\nШирина\n1 675 мм\nВысота\n1 235 мм",
+    "category": "ТР 381.78",
+    "pp": "381.78",
+    "displacement": "1 597 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "3 970 мм",
+      "width": "1 675 мм",
+      "height": "1 235 мм"
+    }
+  },
+  {
+    "id": 291,
+    "brand": "Mazda",
+    "name": "LM55 VGT",
+    "name_short": "LM55 VGT",
+    "year": "",
+    "type": "modern",
+    "power": "- л. с. / - об/мин",
+    "torque": "- Н/м / - об/мин",
+    "weight": "- кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/LM55 VGT/car2118.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/LM55 VGT/car2118_1_01-BKIGymsa.jpg",
+      "images/cars/Mazda/LM55 VGT/car2118_2_01-DC47ENI9.jpg",
+      "images/cars/Mazda/LM55 VGT/car2118_2_02-DeOKqG9g.jpg",
+      "images/cars/Mazda/LM55 VGT/car2118_3_01-D4Y-PD4P.jpg"
+    ],
+    "description": "Сочетание скорости и элегантности, порожденное духом непрерывной борьбы.\nКонцепт-кар Mazda LM55 Vision Gran Turismo разрабатывался компанией Mazda как гоночный автомобиль будущего, способный побеждать в \"24 часах Ле-Мана\". Его динамичный силуэт вдохновлен фирменной философией дизайна \"KODO\", а форма решетки радиатора развивает идеи, воплощенные во всех недавних моделях Mazda.\n\nГр. X\nТР 917.39\nОбъем двигателя\n- см³\nПривод\n4WD\nМакс. мощность\n- л. с. / - об/мин\nМакс. крутящий момент\n- Н/м / - об/мин\nМасса\n- кг\nНаддув\nА (атмосферный)\nДлина\n- мм\nШирина\n- мм\nВысота\n- мм",
+    "category": "Gr.N",
+    "pp": "917.39",
+    "displacement": "- см³",
+    "drivetrain": "4WD",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "- мм",
+      "width": "- мм",
+      "height": "- мм"
+    }
+  },
+  {
+    "id": 292,
+    "brand": "Mazda",
+    "name": "LM55 VGT (Gr.1)",
+    "name_short": "LM55 VGT (Gr.1)",
+    "year": "",
+    "type": "modern",
+    "power": "650 л. с. / 8 500 об/мин",
+    "torque": "564,4 Н/м / 6 500 об/мин",
+    "weight": "880 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/LM55 VGT (Gr.1)/car2181.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/LM55 VGT (Gr.1)/car2181_1_01-BqVRWWyc.jpg",
+      "images/cars/Mazda/LM55 VGT (Gr.1)/car2181_2_01-DbvXSxWQ.jpg",
+      "images/cars/Mazda/LM55 VGT (Gr.1)/car2181_2_02-B5dfYEM6.jpg",
+      "images/cars/Mazda/LM55 VGT (Gr.1)/car2181_3_01-DlLKkIly.jpg"
+    ],
+    "description": "Сплав скорости и элегантности, рожденный духом бескомпромиссной борьбы.\nГоночный автомобиль класса \"Гр. 1\" на основе концепт-кара Mazda LM55 Vision Gran Turismo с роторным двигателем. Эта машина обладает превосходной маневренностью, типичной для Mazda, и отличной тягой, обеспечиваемой полным приводом. Способная стремительно проходить повороты и моментально разгоняться на прямых, она действительно выглядит современным воплощением \"роторной ракеты\".\n\nГр. 1\nТР 880.58\nОбъем двигателя\n- см³\nПривод\n4WD\nМакс. мощность\n650 л. с. / 8 500 об/мин\nМакс. крутящий момент\n564,4 Н/м / 6 500 об/мин\nМасса\n880 кг\nНаддув\nА (атмосферный)\nДлина\n4 750 мм\nШирина\n2 035 мм\nВысота\n860 мм",
+    "category": "Gr.N",
+    "pp": "880.58",
+    "displacement": "- см³",
+    "drivetrain": "4WD",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 750 мм",
+      "width": "2 035 мм",
+      "height": "860 мм"
+    }
+  },
+  {
+    "id": 293,
+    "brand": "Mazda",
+    "name": "MAZDA3 '19",
+    "name_short": "MAZDA3",
+    "year": "19",
+    "type": "modern",
+    "power": "180 л. с. / 6 000 об/мин",
+    "torque": "223,4 Н/м / 4 000 об/мин",
+    "weight": "1 480 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/MAZDA3 '19/car3521.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/MAZDA3 '19/car3521_1_01-BDIyzBKH.jpg",
+      "images/cars/Mazda/MAZDA3 '19/car3521_1_02-CkXcR4kx.jpg",
+      "images/cars/Mazda/MAZDA3 '19/car3521_2_01-BVDyW8iW.jpg",
+      "images/cars/Mazda/MAZDA3 '19/car3521_2_02-D0mNMelu.jpg",
+      "images/cars/Mazda/MAZDA3 '19/car3521_3_01-CNG_PAXq.jpg"
+    ],
+    "description": "Элегантный фастбек с революционной системой зажигания.\n\nЧетвертое поколение MAZDA3 увидело свет в 2018 году. Немного позже в его линейке появилась гибридная модель M Hybrid с необычным двигателем SKYACTIV-X, использующим новую технологию компрессионного зажигания. Ее эксклюзивная модификация X Burgundy Selection, которую вы видите здесь, основана на комплектации X. Она оснащена двигателем SKYACTIV-X, а ее салон окрашен в бордовый цвет, создающий атмосферу зрелой элегантности.\n\nГр. N\nТР 422.45\nОбъем двигателя\n1 997 см³\nПривод\n4WD\nМакс. мощность\n180 л. с. / 6 000 об/мин\nМакс. крутящий момент\n223,4 Н/м / 4 000 об/мин\nМасса\n1 480 кг\nНаддув\nА (атмосферный)\nДлина\n4 460 мм\nШирина\n1 795 мм\nВысота\n1 440 мм",
+    "category": "ТР 422.45",
+    "pp": "422.45",
+    "displacement": "1 997 см³",
+    "drivetrain": "4WD",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 460 мм",
+      "width": "1 795 мм",
+      "height": "1 440 мм"
+    }
+  },
+  {
+    "id": 294,
+    "brand": "Mazda",
+    "name": "MAZDA3 Gr.4",
+    "name_short": "MAZDA3 Gr.4",
+    "year": "",
+    "type": "modern",
+    "power": "386 л. с. / 7 000 об/мин",
+    "torque": "433,1 Н/м / 4 000 об/мин",
+    "weight": "1 200 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/MAZDA3 Gr.4/car3537.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/MAZDA3 Gr.4/car3537_1_01-CJnxMrrb.jpg",
+      "images/cars/Mazda/MAZDA3 Gr.4/car3537_1_02-DMGR0KFA.jpg",
+      "images/cars/Mazda/MAZDA3 Gr.4/car3537_2_01-CmpzwfZ3.jpg",
+      "images/cars/Mazda/MAZDA3 Gr.4/car3537_2_02-B2-V3Ldg.jpg",
+      "images/cars/Mazda/MAZDA3 Gr.4/car3537_3_01-CUsN5x-h.jpg"
+    ],
+    "description": "Гоночный автомобиль, созданный для изучения возможностей биодизеля нового поколения.\n\nЭтот автомобиль создан специально для Gran Turismo по мотивам концепт-кара MAZDA3 Bio, выступавшего в классе ST-Q японской гоночной серии Super Endurance. Он использует биодизельное топливо нового поколения, изготавливаемое из отходов кулинарного растительного масла. Его кузов также изготовлен из экологически чистых гибридных материалов. Создатели этой машины поставили перед собой амбициозную цель объединить углеродную нейтральность и характеристики полноценного гоночного автомобиля.\n\nГр. 4\nТР 636.81\nОбъем двигателя\n- см³\nПривод\nFF\nМакс. мощность\n386 л. с. / 7 000 об/мин\nМакс. крутящий момент\n433,1 Н/м / 4 000 об/мин\nМасса\n1 200 кг\nНаддув\nT (турбонаддув)\nДлина\n4 470 мм\nШирина\n1 955 мм\nВысота\n1 380 мм",
+    "category": "Gr.N",
+    "pp": "636.81",
+    "displacement": "- см³",
+    "drivetrain": "FF",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 470 мм",
+      "width": "1 955 мм",
+      "height": "1 380 мм"
+    }
+  },
+  {
+    "id": 295,
+    "brand": "Mazda",
+    "name": "Roadster NR-A (ND) '22",
+    "name_short": "Roadster NR-A (ND)",
+    "year": "22",
+    "type": "modern",
+    "power": "132 л. с. / 7 000 об/мин",
+    "torque": "154,2 Н/м / 5 000 об/мин",
+    "weight": "1 010 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/Roadster NR-A (ND) '22/car3512.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/Roadster NR-A (ND) '22/car3512_1_01-0VwHNYOa.jpg",
+      "images/cars/Mazda/Roadster NR-A (ND) '22/car3512_1_02-DbXgThKC.jpg",
+      "images/cars/Mazda/Roadster NR-A (ND) '22/car3512_2_01-Dw7vO60h.jpg",
+      "images/cars/Mazda/Roadster NR-A (ND) '22/car3512_2_02-C7wVmT8O.jpg",
+      "images/cars/Mazda/Roadster NR-A (ND) '22/car3512_3_01-Dv0FZWKs.jpg"
+    ],
+    "description": "Гоночная модель начального уровня, воплотившая в себе сущность Roadster.\n\nБазовый гоночный автомобиль на основе четвертого поколения линейки Roadster. Его трансмиссия усилена с учетом специфики трассовых гонок, радиатор увеличен, а на всех колесах установлены дисковые тормоза. В подвеске используются регулируемые амортизаторы Bilstein. В 2022 году автомобиль получил систему Kinematic Posture Control, существенно повысившую устойчивость его кормы.\n\nГр. N\nТР 425.00\nОбъем двигателя\n1 496 см³\nПривод\nFR\nМакс. мощность\n132 л. с. / 7 000 об/мин\nМакс. крутящий момент\n154,2 Н/м / 5 000 об/мин\nМасса\n1 010 кг\nНаддув\nА (атмосферный)\nДлина\n3 915 мм\nШирина\n1 735 мм\nВысота\n1 235 мм",
+    "category": "ТР 425.00",
+    "pp": "425.00",
+    "displacement": "1 496 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "3 915 мм",
+      "width": "1 735 мм",
+      "height": "1 235 мм"
+    }
+  },
+  {
+    "id": 296,
+    "brand": "Mazda",
+    "name": "Roadster S (ND) '15",
+    "name_short": "Roadster S (ND)",
+    "year": "15",
+    "type": "modern",
+    "power": "130 л. с. / 7 000 об/мин",
+    "torque": "149,9 Н/м / 5 000 об/мин",
+    "weight": "990 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/Roadster S (ND) '15/car2148.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/Roadster S (ND) '15/car2148_1_01-aRMcoDuH.jpg",
+      "images/cars/Mazda/Roadster S (ND) '15/car2148_2_01-BrTc4aE5.jpg",
+      "images/cars/Mazda/Roadster S (ND) '15/car2148_2_02-DBVdDPap.jpg",
+      "images/cars/Mazda/Roadster S (ND) '15/car2148_3_01-CZ5O9MKL.jpg"
+    ],
+    "description": "Эта широкая и приземистая модель 4-го поколения Roadster весит 990 кг.\n\nМодель ND Roadster четвертого поколения была анонсирована в апреле 2014 г. на Нью-Йоркском автосалоне. Уже в сентябре того же года публика смогла оценить плавные изгибы ее широкого и низкого кузова. Предварительный заказ новинки был открыт в марте 2015 г. Самый простой вариант ее комплектации, носящий обозначение S, одновременно является и самым легким - он весит всего 990 кг, в то время как вес других вариантов превышает 1 тонну.\n\nГр. N\nТР 420.97\nОбъем двигателя\n1 496 см³\nПривод\nFR\nМакс. мощность\n130 л. с. / 7 000 об/мин\nМакс. крутящий момент\n149,9 Н/м / 5 000 об/мин\nМасса\n990 кг\nНаддув\nА (атмосферный)\nДлина\n3 915 мм\nШирина\n1 735 мм\nВысота\n1 235 мм",
+    "category": "ТР 420.97",
+    "pp": "420.97",
+    "displacement": "1 496 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "3 915 мм",
+      "width": "1 735 мм",
+      "height": "1 235 мм"
+    }
+  },
+  {
+    "id": 297,
+    "brand": "Mazda",
+    "name": "Roadster Touring Car",
+    "name_short": "Roadster Touring Car",
+    "year": "",
+    "type": "modern",
+    "power": "208 л. с. / 7 500 об/мин",
+    "torque": "201,7 Н/м / 6 500 об/мин",
+    "weight": "795 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/Roadster Touring Car/car1746.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/Roadster Touring Car/car1746_1_01-BsrUpGHJ.jpg",
+      "images/cars/Mazda/Roadster Touring Car/car1746_2_01-CE2tO8b7.jpg",
+      "images/cars/Mazda/Roadster Touring Car/car1746_2_02-CbDkAd3Q.jpg",
+      "images/cars/Mazda/Roadster Touring Car/car1746_3_01-CQyRwwZV.jpg"
+    ],
+    "description": "Модель Roadster первого поколения с тюнингом Gran Turismo.\nЭта оригинальная тюнинговая машина создана специально для Gran Turismo на базе модели Eunos Roadster (NA Special Package) '89. Ее двигатель и подвеска модифицированы, а кузов оснащен дополнительными аэродинамическими деталями, но она полностью сохранила фирменную отзывчивость управления Roadster, которую в Mazda называют \"дзинба иттай\". Эта аскетичная машина вполне подходит даже для кузовных гонок.\n\nГр. N\nТР 540.67\nОбъем двигателя\n- см³\nПривод\nFR\nМакс. мощность\n208 л. с. / 7 500 об/мин\nМакс. крутящий момент\n201,7 Н/м / 6 500 об/мин\nМасса\n795 кг\nНаддув\nА (атмосферный)\nДлина\n3 968 мм\nШирина\n1 782 мм\nВысота\n1 189 мм",
+    "category": "ТР 540.67",
+    "pp": "540.67",
+    "displacement": "- см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "3 968 мм",
+      "width": "1 782 мм",
+      "height": "1 189 мм"
+    }
+  },
+  {
+    "id": 298,
+    "brand": "Mazda",
+    "name": "RX-7 GT-X (FC) '90",
+    "name_short": "RX-7 GT-X (FC)",
+    "year": "90",
+    "type": "modern",
+    "power": "206 л. с. / 6 500 об/мин",
+    "torque": "269,5 Н/м / 3 500 об/мин",
+    "weight": "1 250 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/RX-7 GT-X (FC) '90/car374.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/RX-7 GT-X (FC) '90/car374_1_01-BlCow06K.jpg",
+      "images/cars/Mazda/RX-7 GT-X (FC) '90/car374_2_01-CWRHsnRD.jpg",
+      "images/cars/Mazda/RX-7 GT-X (FC) '90/car374_2_02-CnhFdTun.jpg",
+      "images/cars/Mazda/RX-7 GT-X (FC) '90/car374_3_01-ljGkx_V-.jpg"
+    ],
+    "description": "Вершина развития второго поколения RX-7, сочетающая отличные ходовые качества и приятные впечатления от вождения.\n\nМодель RX-7 второго поколения, получившая обозначение FC3S, дебютировала в октябре 1985 г. Ее кузов, получивший новый футуристический дизайн, уменьшился в длину, но увеличился в ширину и высоту. Вдобавок машина оказалась на целых 200 кг тяжелее предшественницы. Для компенсации возросшего веса был установлен новый роторный двигатель 13B с суммарным объемом камер сгорания 654 см³. В сочетании с нагнетателем этот мотор развивал мощность 185 л. с. и крутящий момент 245,0 Н/м.\n\nГр. N\nТР 461.93\nОбъем двигателя\n654x2 см³\nПривод\nFR\nМакс. мощность\n206 л. с. / 6 500 об/мин\nМакс. крутящий момент\n269,5 Н/м / 3 500 об/мин\nМасса\n1 250 кг\nНаддув\nT (турбонаддув)\nДлина\n4 335 мм\nШирина\n1 690 мм\nВысота\n1 270 мм",
+    "category": "ТР 461.93",
+    "pp": "461.93",
+    "displacement": "654x2 см³",
+    "drivetrain": "FR",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 335 мм",
+      "width": "1 690 мм",
+      "height": "1 270 мм"
+    }
+  },
+  {
+    "id": 299,
+    "brand": "Mazda",
+    "name": "RX-7 Spirit R Type A (FD) '02",
+    "name_short": "RX-7 Spirit R Type A (FD)",
+    "year": "02",
+    "type": "modern",
+    "power": "297 л. с. / 6 500 об/мин",
+    "torque": "332,4 Н/м / 4 500 об/мин",
+    "weight": "1 270 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/RX-7 Spirit R Type A (FD) '02/car205.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/RX-7 Spirit R Type A (FD) '02/car205_1_01-DAU55SfS.jpg",
+      "images/cars/Mazda/RX-7 Spirit R Type A (FD) '02/car205_2_01-5cwypvbi.jpg",
+      "images/cars/Mazda/RX-7 Spirit R Type A (FD) '02/car205_2_02-BooKkruP.jpg",
+      "images/cars/Mazda/RX-7 Spirit R Type A (FD) '02/car205_3_01-BlcxZLhx.jpg"
+    ],
+    "description": "Последняя юбилейная модель RX-7, завершившая 25-летнюю историю этой серии.\n\nТретье поколение RX-7, получившее обозначение FD3S, было представлено публике в декабре 1991 г. Ширина кузова новой машины была увеличена для установки более широких шин, однако ее общий вес уменьшился до 1 200 кг. Под капотом остался тот же двигатель 13B, что и у FC3S, однако последовательная система из двух турбин позволила повысить его характеристики до 255 л. с./294,0 Н/м. Самой легкой моделью в новой линейке стала Type S; ее удельная мощность достигла 4,90 kg/л. с., что является рекордом в истории RX-7.\n\nГр. N\nТР 529.12\nОбъем двигателя\n654x2 см³\nПривод\nFR\nМакс. мощность\n297 л. с. / 6 500 об/мин\nМакс. крутящий момент\n332,4 Н/м / 4 500 об/мин\nМасса\n1 270 кг\nНаддув\nT (турбонаддув)\nДлина\n4 285 мм\nШирина\n1 760 мм\nВысота\n1 230 мм",
+    "category": "ТР 529.12",
+    "pp": "529.12",
+    "displacement": "654x2 см³",
+    "drivetrain": "FR",
+    "aspiration": "T (турбонаддув)",
+    "dimensions": {
+      "length": "4 285 мм",
+      "width": "1 760 мм",
+      "height": "1 230 мм"
+    }
+  },
+  {
+    "id": 300,
+    "brand": "Mazda",
+    "name": "RX-8 Spirit R '12",
+    "name_short": "RX-8 Spirit R",
+    "year": "12",
+    "type": "modern",
+    "power": "234 л. с. / 8 000 об/мин",
+    "torque": "215,6 Н/м / 5 500 об/мин",
+    "weight": "1 350 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/RX-8 Spirit R '12/car3427.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/RX-8 Spirit R '12/car3427_1_01-CXKd8Vsn.jpg",
+      "images/cars/Mazda/RX-8 Spirit R '12/car3427_2_01-Dvsl3_L0.jpg",
+      "images/cars/Mazda/RX-8 Spirit R '12/car3427_2_02-DLj0_Fii.jpg",
+      "images/cars/Mazda/RX-8 Spirit R '12/car3427_3_01-DadN8CMB.jpg"
+    ],
+    "description": "Финальный вариант купе Mazda RX-8 с роторным двигателем и уникальным 4-дверным кузовом.\n\nЭто последняя особая модель Mazda RX-8, представленная в 2011 году. Она выпускалась в двух вариантах: Type RS с 6-ступенчатой МКПП и амортизаторами Bilstein, а также Type E с АКПП и кожаными сидениями. Оба варианта имели нестандартную отделку кузова и салона. Первоначально было выпущено 1000 экземпляров этой модели, но ажиотаж, вызванный объявлением о прекращении производства RX-8 в 2012 году, убедил компанию изготовить еще 1000.\n\nГр. N\nТР 494.76\nОбъем двигателя\n654x2 см³\nПривод\nFR\nМакс. мощность\n234 л. с. / 8 000 об/мин\nМакс. крутящий момент\n215,6 Н/м / 5 500 об/мин\nМасса\n1 350 кг\nНаддув\nА (атмосферный)\nДлина\n4 470 мм\nШирина\n1 770 мм\nВысота\n1 340 мм",
+    "category": "ТР 494.76",
+    "pp": "494.76",
+    "displacement": "654x2 см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 470 мм",
+      "width": "1 770 мм",
+      "height": "1 340 мм"
+    }
+  },
+  {
+    "id": 301,
+    "brand": "Mazda",
+    "name": "RX-VISION '15",
+    "name_short": "RX-VISION",
+    "year": "15",
+    "type": "modern",
+    "power": "525 л. с. / 8 800 об/мин",
+    "torque": "488,9 Н/м / 7 500 об/мин",
+    "weight": "1 290 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/RX-VISION '15/car3495.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/RX-VISION '15/car3495_1_01-B7my-cEO.jpg",
+      "images/cars/Mazda/RX-VISION '15/car3495_2_01-BJV-Tyh_.jpg",
+      "images/cars/Mazda/RX-VISION '15/car3495_2_02-DuxjNUmQ.jpg",
+      "images/cars/Mazda/RX-VISION '15/car3495_3_01-CADVC9A_.jpg"
+    ],
+    "description": "Элегантный концепт-кар с роторным двигателем нового поколения.\n\nЭтот спортивный концепт-кар с роторным двигателем впервые был показан на Токийском автосалоне 2015 года. Его элегантный кузов с длинным капотом и коротким салоном, лишенный каких-либо излишеств, показывает, каким Mazda видит идеальный заднеприводный спорткар. Роторный двигатель нового поколения SKYACTIV-R, которым оснащен этот автомобиль, позволяет заглянуть в будущее этого типа моторов.\n\nГр. N\nТР 629.67\nОбъем двигателя\n- см³\nПривод\nFR\nМакс. мощность\n525 л. с. / 8 800 об/мин\nМакс. крутящий момент\n488,9 Н/м / 7 500 об/мин\nМасса\n1 290 кг\nНаддув\nА (атмосферный)\nДлина\n4 389 мм\nШирина\n1 926 мм\nВысота\n1 160 мм",
+    "category": "ТР 629.67",
+    "pp": "629.67",
+    "displacement": "- см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 389 мм",
+      "width": "1 926 мм",
+      "height": "1 160 мм"
+    }
+  },
+  {
+    "id": 302,
+    "brand": "Mazda",
+    "name": "RX-VISION GT3 CONCEPT",
+    "name_short": "RX-VISION GT3 CONCEPT",
+    "year": "",
+    "type": "modern",
+    "power": "570 л. с. / 8 900 об/мин",
+    "torque": "539,0 Н/м / 6 500 об/мин",
+    "weight": "1 250 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/RX-VISION GT3 CONCEPT/car3419.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/RX-VISION GT3 CONCEPT/car3419_1_01-DoZeu3xH.jpg",
+      "images/cars/Mazda/RX-VISION GT3 CONCEPT/car3419_2_01-BnsKxeM0.jpg",
+      "images/cars/Mazda/RX-VISION GT3 CONCEPT/car3419_2_02-C7W1ZhNB.jpg",
+      "images/cars/Mazda/RX-VISION GT3 CONCEPT/car3419_3_01-QlJVsty2.jpg"
+    ],
+    "description": "Гоночная машина мечты с роторным двигателем от Mazda.\n\nЭтот автомобиль Vision Gran Turismo был создан на основе концепт-кара RX-VISION, впервые показанного на Токийском автосалоне 2015 года. Изящный дизайн базовой машины в гоночной интерпретации стал более агрессивным. Чтобы соблюсти требования класса \"Гр. 3\" к мощности силовой установки, в легкий кузов машины был установлен беспрецедентный 4-роторный двигатель, спроектированный по мотивам классического 787B с использованием новейшей технологии SKYACTIV.\n\nГр. 3\nТР 739.31\nОбъем двигателя\n- см³\nПривод\nFR\nМакс. мощность\n570 л. с. / 8 900 об/мин\nМакс. крутящий момент\n539,0 Н/м / 6 500 об/мин\nМасса\n1 250 кг\nНаддув\nА (атмосферный)\nДлина\n4 590 мм\nШирина\n2 075 мм\nВысота\n1 120 мм",
+    "category": "Gr.N",
+    "pp": "739.31",
+    "displacement": "- см³",
+    "drivetrain": "FR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 590 мм",
+      "width": "2 075 мм",
+      "height": "1 120 мм"
+    }
+  },
+  {
+    "id": 303,
+    "brand": "Mazda",
+    "name": "RX500 '70",
+    "name_short": "RX500",
+    "year": "70",
+    "type": "modern",
+    "power": "251 л. с. / 8 000 об/мин",
+    "torque": "231,2 Н/м / 6 000 об/мин",
+    "weight": "850 кг",
+    "price": "N/A",
+    "image": "images/cars/Mazda/RX500 '70/car1975.png",
+    "brand_logo": "images/cars/Mazda/tnr21.png",
+    "screenshots": [
+      "images/cars/Mazda/RX500 '70/car1975_1_01-GFKQ7RdF.jpg",
+      "images/cars/Mazda/RX500 '70/car1975_2_01-sJ10CXW2.jpg",
+      "images/cars/Mazda/RX500 '70/car1975_2_02-CTYAXOj0.jpg",
+      "images/cars/Mazda/RX500 '70/car1975_3_01-CvDZTiJJ.jpg"
+    ],
+    "description": "Концептуальный суперкар с роторным двигателем и передовыми техническими решениями.\n\nКонцепт-кар, выпущенный к 50-летию со дня основания Mazda. Его обтекаемый кузов, напоминающий пулю, смонтирован на пространственной раме из стальных труб, а под капотом установлен роторный двигатель 10A мощностью около 250 л. с., разработанный для \"24 часов Спа\". Эту машину видели в трех разных схемах окраски, однако дальнейшие исследования показали, что это был один и тот же кузов, который перекрашивали в разные цвета.\n\nГр. N\nТР 476.13\nОбъем двигателя\n491x2 см³\nПривод\nMR\nМакс. мощность\n251 л. с. / 8 000 об/мин\nМакс. крутящий момент\n231,2 Н/м / 6 000 об/мин\nМасса\n850 кг\nНаддув\nА (атмосферный)\nДлина\n4 330 мм\nШирина\n1 720 мм\nВысота\n1 065 мм",
+    "category": "ТР 476.13",
+    "pp": "476.13",
+    "displacement": "491x2 см³",
+    "drivetrain": "MR",
+    "aspiration": "А (атмосферный)",
+    "dimensions": {
+      "length": "4 330 мм",
+      "width": "1 720 мм",
+      "height": "1 065 мм"
     }
   }
 ]
