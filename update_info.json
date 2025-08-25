@@ -1,6 +1,192 @@
 {
-  "total_cars": 303,
-  "new_cars_count": 0,
-  "last_update": "2025-08-25T20:50:31.615446",
-  "new_cars": []
+  "total_cars": 340,
+  "new_cars_count": 37,
+  "last_update": "2025-08-25T21:41:06.291309",
+  "new_cars": [
+    {
+      "brand": "McLaren",
+      "name": "650S '14",
+      "year": "14"
+    },
+    {
+      "brand": "McLaren",
+      "name": "650S Gr.4",
+      "year": ""
+    },
+    {
+      "brand": "McLaren",
+      "name": "650S GT3 '15",
+      "year": "15"
+    },
+    {
+      "brand": "McLaren",
+      "name": "McLaren F1 '94",
+      "year": "94"
+    },
+    {
+      "brand": "McLaren",
+      "name": "McLaren F1 GTR - BMW '95",
+      "year": "95"
+    },
+    {
+      "brand": "McLaren",
+      "name": "McLaren P1 GTR '16",
+      "year": "16"
+    },
+    {
+      "brand": "McLaren",
+      "name": "McLaren VGT",
+      "year": ""
+    },
+    {
+      "brand": "McLaren",
+      "name": "McLaren VGT (Gr.1)",
+      "year": ""
+    },
+    {
+      "brand": "McLaren",
+      "name": "MP4-12C '10",
+      "year": "10"
+    },
+    {
+      "brand": "McLaren",
+      "name": "MP44 '88",
+      "year": "88"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "name": "190 E 2.5-16 Evolution II '91",
+      "year": "91"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "name": "300 SL (W194) '52",
+      "year": "52"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "name": "300 SL Coupé '54",
+      "year": "54"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "name": "CLK-LM '98",
+      "year": "98"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "name": "S Barker Tourer '29",
+      "year": "29"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "name": "Sauber Mercedes C9 '89",
+      "year": "89"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "name": "SLR McLaren '09",
+      "year": "09"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "name": "Unimog Type 411 '62",
+      "year": "62"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "name": "W 196 R '55",
+      "year": "55"
+    },
+    {
+      "brand": "MINI",
+      "name": "MINI Clubman VGT",
+      "year": ""
+    },
+    {
+      "brand": "MINI",
+      "name": "MINI Cooper S '05",
+      "year": "05"
+    },
+    {
+      "brand": "MINI",
+      "name": "Mini-Cooper 'S' '65",
+      "year": "65"
+    },
+    {
+      "brand": "Mitsubishi",
+      "name": "Concept XR-PHEV EVOLUTION VGT",
+      "year": ""
+    },
+    {
+      "brand": "Mitsubishi",
+      "name": "GTO Twin Turbo '91",
+      "year": "91"
+    },
+    {
+      "brand": "Mitsubishi",
+      "name": "Lancer Evolution Final '15",
+      "year": "15"
+    },
+    {
+      "brand": "Mitsubishi",
+      "name": "Lancer Evolution Final Gr.3",
+      "year": ""
+    },
+    {
+      "brand": "Mitsubishi",
+      "name": "Lancer Evolution Final Gr.4",
+      "year": ""
+    },
+    {
+      "brand": "Mitsubishi",
+      "name": "Lancer Evolution Final Gr.B Rally Car",
+      "year": ""
+    },
+    {
+      "brand": "Mitsubishi",
+      "name": "Lancer Evolution Final Gr.B Road Car",
+      "year": ""
+    },
+    {
+      "brand": "Mitsubishi",
+      "name": "Lancer Evolution III GSR '95",
+      "year": "95"
+    },
+    {
+      "brand": "Mitsubishi",
+      "name": "Lancer Evolution IV GSR '96",
+      "year": "96"
+    },
+    {
+      "brand": "Mitsubishi",
+      "name": "Lancer Evolution IX MR GSR '06",
+      "year": "06"
+    },
+    {
+      "brand": "Mitsubishi",
+      "name": "Lancer Evolution V GSR '98",
+      "year": "98"
+    },
+    {
+      "brand": "Mitsubishi",
+      "name": "Lancer Evolution VI GSR T.M. SCP '99",
+      "year": "99"
+    },
+    {
+      "brand": "Mitsubishi",
+      "name": "Lancer Evolution VIII MR GSR '04",
+      "year": "04"
+    },
+    {
+      "brand": "Nismo",
+      "name": "400R '95",
+      "year": "95"
+    },
+    {
+      "brand": "Nismo",
+      "name": "R34 GT-R Z-tune '05",
+      "year": "05"
+    }
+  ]
 }
